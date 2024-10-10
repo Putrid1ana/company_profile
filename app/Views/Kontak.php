@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk-Aktivitas</title>
+  <title>Healthy Milk-Kontak</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     /* CSS Global Styles */
@@ -39,6 +39,61 @@
       text-decoration: none;
       color: black;
       font-size: 16px;
+      margin-left: 20px;
+    }
+
+    /* Content Wrapper */
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 100px auto 0;
+      padding: 20px;
+    }
+
+    .content-left {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .contact-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .contact-box button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    .contact-box button:hover {
+      background-color: #45a049;
+    }
+
+    .maps-container {
+      flex: 1;
+      height: 400px;
       margin-left: 20px;
     }
 
@@ -81,9 +136,18 @@
         font-size: 14px;
       }
 
-      .product-container {
+      .content-wrapper {
         flex-direction: column;
-        align-items: center;
+      }
+
+      .content-left {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .maps-container {
+        margin-left: 0;
+        height: 300px;
       }
     }
   </style>
@@ -95,7 +159,7 @@
 
     <!-- Background Image Section -->
     <div style="width: 100%; height: 924px; background: #0E1A18; position: relative;">
-      <img style="width: 100%; height: 924px; object-fit: cover;" src="/aktifitas/aktivitas1.jpg" alt="Background Image">
+      <img style="width: 100%; height: 924px; object-fit: cover;" src="/contact/kontak.jpg" alt="Background Image">
       <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(14, 26, 24, 0.5);"></div>
       <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
         <h1 style="font-size: 48px; font-weight: 700;">Kontak Healthy Milk</h1>
@@ -122,43 +186,23 @@
       </div>
     </div>
 
-    <div style="width: 100%; height: 734px; position: relative; background: linear-gradient(188deg, #A6D4FF 16%, #D3E9FF 30%, white 44%);">
-      <!-- Bagian Gambar -->
-      <div style="width: 539px; height: 426px; position: absolute; right: 100px; top: 134px;">
-        <img style="width: 90%; height: 100%;" src="https://via.placeholder.com/539x426" alt="Placeholder Image" />
-      </div>
-
-      <!-- Bagian Judul Kontak -->
-      <div style="position: absolute; top: 36px; left: 60px; width: 100%;">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
-          <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-          <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter, sans-serif; font-weight: 700; line-height: 38.4px;">Kontak</div>
-          <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
+    <!-- Content Wrapper Section -->
+    <div class="content-wrapper">
+      <div class="content-left">
+        <!-- Contact Box -->
+        <div class="contact-box">
+          <h3>Kontak Kami</h3>
+          <p><strong>Alamat:</strong> Jl. Jaya Milk No. 123, Batu, Jawa Timur</p>
+          <p><strong>Email:</strong> contact@healthymilk.co.id</p>
+          <p><strong>Telepon:</strong> +62 812-3456-7890</p>
+          <button>Hubungi Kami</button>
         </div>
       </div>
 
-      <!-- Call Us Box -->
-      <div style="position: absolute; top: 141px; left: 108px;">
-        <div style="width: 319px; padding: 24px; background: #DCDDE8;">
-          <div style="display: flex; align-items: center; margin-bottom: 16px;">
-            <div style="width: 38px; height: 38px; background: #1F9CF7;"></div>
-          </div>
-          <div style="font-size: 20px; font-family: Inter, sans-serif; font-weight: 700; color: #384F4B;">Call Us</div>
-          <div style="font-size: 14px; font-family: Roboto, sans-serif; color: #444444;">+1 5589 55488 55</div>
-          <div style="font-size: 14px; font-family: Roboto, sans-serif; color: #444444;">+1 6678 254445 41</div>
-        </div>
-      </div>
-
-      <!-- Email Us Box -->
-      <div style="position: absolute; top: 413px; left: 108px;">
-        <div style="width: 319px; padding: 24px; background: #DCDDE8;">
-          <div style="display: flex; align-items: center; margin-bottom: 16px;">
-            <div style="width: 38px; height: 38px; background: #1F9CF7;"></div>
-          </div>
-          <div style="font-size: 20px; font-family: Inter, sans-serif; font-weight: 700; color: #384F4B;">Email Us</div>
-          <div style="font-size: 14px; font-family: Roboto, sans-serif; color: #444444;">info@example.com</div>
-          <div style="font-size: 14px; font-family: Roboto, sans-serif; color: #444444;">contact@example.com</div>
-        </div>
+      <!-- Google Maps Section -->
+      <div class="maps-container">
+        <!-- Embed Google Maps Iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15807.976362496498!2d112.5356125871582!3d-7.8956849999999905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788110b42bc893%3A0x2f2bf5c3f2b4eedd!2sPabrik%20Pengolahan%20Susu%20Sapi%20Kud%20%22Batu%22!5e0!3m2!1sid!2sid!4v1728281642160!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
@@ -187,10 +231,7 @@
       </div>
       <div style="color: white; font-size: 13px; font-family: DM Sans;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
     </div>
-
-    <!-- Font Awesome Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    </div>
   </div>
 </body>
 

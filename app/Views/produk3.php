@@ -4,11 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk - Aktivitas</title>
-
-  <!-- Link untuk FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+  <title>Healthy Milk - Tentang</title>
   <style>
     /* Navbar */
     .navbar {
@@ -100,8 +96,6 @@
     .tentang-kami-content img {
       max-width: 300px;
       height: auto;
-      margin-left: auto; /* Gambar akan berada di sebelah kanan */
-      display: block;
     }
 
     /* Footer */
@@ -152,10 +146,7 @@
       }
 
       .tentang-kami-content img {
-        max-width: 300px;
-        height: auto;
-        margin-left: 0; /* Kembali ke tengah pada layar kecil */
-        margin-right: 0;
+        max-width: 100%;
       }
 
       /* Footer */
@@ -209,7 +200,7 @@
 
   <!-- Banner Section -->
   <div class="banner">
-    <img src="/about/tentang6.jpg" alt="Healthy Milk Banner" />
+    <img src="/product/produk13.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
       <h1 class="banner-title">Tentang Healthy Milk</h1>
     </div>
@@ -226,10 +217,13 @@
 
     <!-- Section Content with Image -->
     <div class="tentang-kami-content">
+      <!-- Teks Konten -->
       <div>
         <p>Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
         <p>Di Healthy Milk, misi kami adalah menginspirasi dan mendukung kesehatan melalui produk susu yang alami dan bergizi. Kami percaya bahwa nutrisi yang baik adalah fondasi dari kehidupan yang bahagia dan seimbang. Kami menawarkan berbagai macam produk susu yang diproduksi dari sapi yang dipelihara dengan baik, bebas dari hormon dan antibiotik. Setiap tetes susu kami kaya akan vitamin dan mineral esensial yang diperlukan oleh tubuh Anda.</p>
       </div>
+
+      <!-- Gambar -->
       <div>
         <img src="/about/tentang1.jpg.png" alt="Susu dan Croissant" />
       </div>
@@ -259,7 +253,7 @@
         <i class="fab fa-instagram" style="color: white;"></i>
       </a>
     </div>
-    <div style="color: white; font-family: Inika; font-size: 16px;">&copy; Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
+    <div style="color: white; font-family: Inika; font-size: 16px;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
   </div>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </body>

@@ -141,19 +141,19 @@
             <div style="display: flex; justify-content: center; gap: 30px;">
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
                     <img src="/product/grefields.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="detail-greenfields.html" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>
+                    <a href="produk1" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>
                 </div>
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
                     <img src="/product/icithan.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="detail-silk-milk.html" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Icithan</a>
+                    <a href="produk2" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Icithan</a>
                 </div>
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
                     <img src="/product/silk.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="detail-arla-milk.html" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Silk Milk</a>
+                    <a href="produk3" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Silk Milk</a>
                 </div>
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
                     <img src="/product/ultramilk1.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="detail-ichitan.html" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Ultramilk</a>
+                    <a href="produk4" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Ultramilk</a>
                 </div>
             </div>
         </div>

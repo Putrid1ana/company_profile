@@ -211,7 +211,7 @@
   <div class="banner">
     <img src="/about/tentang6.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
-      <h1 class="banner-title">Tentang Healthy Milk</h1>
+      <h1 class="banner-title">Aktivitas Healthy Milk</h1>
     </div>
   </div>
 
@@ -220,7 +220,7 @@
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Tentang Kami</h1>
+      <h1>Aktivitas Kami</h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 
@@ -231,7 +231,7 @@
         <p>Di Healthy Milk, misi kami adalah menginspirasi dan mendukung kesehatan melalui produk susu yang alami dan bergizi. Kami percaya bahwa nutrisi yang baik adalah fondasi dari kehidupan yang bahagia dan seimbang. Kami menawarkan berbagai macam produk susu yang diproduksi dari sapi yang dipelihara dengan baik, bebas dari hormon dan antibiotik. Setiap tetes susu kami kaya akan vitamin dan mineral esensial yang diperlukan oleh tubuh Anda.</p>
       </div>
       <div>
-        <img src="/about/tentang1.jpg.png" alt="Susu dan Croissant" />
+        <img src="/aktifitas/ultramilk.jpg.png" alt="Susu dan Croissant" />
       </div>
     </div>
   </div>
