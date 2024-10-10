@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Milk-Produk</title>
+
+     <!-- Meta Tags -->
+  <meta name="title" content="Healthy Milk-Produk">
+  <meta name="description" content="Healthy Milk menawarkan berbagai produk susu berkualitas tinggi yang mendukung gaya hidup sehat. Temukan pilihan susu terbaik untuk nutrisi harian Anda.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* CSS Global Styles */
@@ -140,20 +148,20 @@
             </div>
             <div style="display: flex; justify-content: center; gap: 30px;">
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
-                    <img src="/product/grefields.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="produk1" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>
+                    <img src="/product/grefields.jpg.png" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
+                    <a href="produk/greenfields" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>
                 </div>
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
-                    <img src="/product/icithan.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="produk2" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Icithan</a>
+                    <img src="/product/icithan.jpg.png" alt="susu icithan" style="width: 100%; border-radius: 20px;">
+                    <a href="produk/icithan" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Icithan</a>
                 </div>
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
-                    <img src="/product/silk.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="produk3" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Silk Milk</a>
+                    <img src="/product/silk.jpg.png" alt="susu silk" style="width: 100%; border-radius: 20px;">
+                    <a href="produk/silk" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Silk Milk</a>
                 </div>
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
-                    <img src="/product/ultramilk1.jpg.png" style="width: 100%; border-radius: 20px;">
-                    <a href="produk4" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Ultramilk</a>
+                    <img src="/product/ultramilk1.jpg.png" alt="susu ultramilk" style="width: 100%; border-radius: 20px;">
+                    <a href="produk/ultramilk" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Ultramilk</a>
                 </div>
             </div>
         </div>

@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Milk - Artikel</title>
+    <title>Mengapa Minum Susu Penting Untuk Kesehatan</title>
+
+     <!-- Meta Tags -->
+  <meta name="title" content="Mengapa Minum Susu Penting Untuk Kesehatan">
+  <meta name="description" content="Pelajari mengapa minum susu sangat penting untuk kesehatan tubuh. Temukan manfaat susu dalam mendukung pertumbuhan, menjaga kesehatan tulang, dan meningkatkan daya tahan tubuh.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
+
     <!-- Tambahkan font, ikon, atau CSS eksternal jika diperlukan -->
 </head>
 
@@ -73,7 +81,7 @@
         <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
             <!-- Artikel Utama -->
             <div style="flex: 2; padding-right: 20px;">
-                <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" src="/articel/artikel11.jpg" />
+                <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" alt="susu sapi import" src="/articel/artikel11.jpg" />
                 <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
                     <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
                         24 Agustus 2024
@@ -122,7 +130,7 @@
                     <!-- Artikel 1 -->
                     <a href="<?= base_url('artikel2') ?>" style="text-decoration: none; color: inherit;">
                         <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+                            <img style="width: 147px; height: auto;" alt="susu banyak manfaat" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
                             <div>
                                 <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Juni 2024</div>
                                 <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT....</div>
@@ -135,7 +143,7 @@
                     <!-- Artikel 2 -->
                     <a href="<?= base_url('artikel3') ?>" style="text-decoration: none; color: inherit;">
                         <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+                            <img style="width: 147px; height: auto;" alt="susu murni dari sapi" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
                             <div>
                                 <div style="font-size: 14px; color: black; margin-bottom: 8px;">31 Desember 2022</div>
                                 <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Inilah Manfaat Susu Murni Beserta Efek Sampingnya...</div>
@@ -148,7 +156,7 @@
                     <!-- Artikel 3 -->
                     <a href="<?= base_url('artikel4') ?>" style="text-decoration: none; color: inherit;">
                         <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+                            <img style="width: 147px; height: auto;" alt="susu untuk bahan pangan" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
                             <div>
                                 <div style="font-size: 14px; color: black; margin-bottom: 8px;">08 Agustus 2023</div>
                                 <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan....</div>

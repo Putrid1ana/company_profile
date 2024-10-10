@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk - Aktivitas</title>
+  <title>Healthy Milk - Tentang</title>
+
+   <!-- Meta Tags -->
+   <meta name="title" content="Healthy Milk - Tentang">
+   <meta name="description" content="Pelajari lebih lanjut tentang Healthy Milk, komitmen kami terhadap kualitas, dan dedikasi kami untuk menyediakan susu sehat dan bergizi bagi Anda dan keluarga.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -259,7 +266,7 @@
         <i class="fab fa-instagram" style="color: white;"></i>
       </a>
     </div>
-    <div style="color: white; font-family: Inika; font-size: 16px;">&copy; Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
+    <div style="color: white; font-family: Inika; font-size: 16px;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
   </div>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </body>

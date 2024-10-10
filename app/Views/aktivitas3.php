@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk - Aktivitas</title>
+  <title>Peternakan </title>
+
+   <!-- Meta Tags -->
+   <meta name="title" content="Peternakan">
+   <meta name="description" content="Pelajari lebih lanjut tentang peternakan, termasuk cara pemeliharaan hewan, teknologi yang digunakan, dan peran penting peternakan dalam menyediakan produk pangan berkualitas.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

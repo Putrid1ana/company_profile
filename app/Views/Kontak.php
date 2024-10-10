@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healthy Milk-Kontak</title>
+
+   <!-- Meta Tags -->
+   <meta name="title" content="Healthy Milk-Kontak">
+   <meta name="description" content="Hubungi Healthy Milk untuk informasi lebih lanjut tentang produk susu sehat dan berkualitas. Temukan cara mudah untuk menjaga kesehatan dengan susu pilihan terbaik.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     /* CSS Global Styles */

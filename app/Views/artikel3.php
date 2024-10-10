@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Milk - Artikel</title>
+    <title>Inilah Manfaat Susu Murni Beserta Efek Sampingnya</title>
+
+    <!-- Meta Tags -->
+    <meta name="title" content="Inilah Manfaat Susu Murni Beserta Efek Sampingnya">
+    <meta name="description" content="Cari tahu manfaat susu murni untuk kesehatan serta efek samping yang mungkin terjadi. Pelajari bagaimana susu murni bisa mendukung gaya hidup sehat Anda.">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="<?= current_url() ?>">
+
     <!-- Tambahkan font, ikon, atau CSS eksternal jika diperlukan -->
 </head>
 
@@ -73,40 +81,40 @@
         <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
             <!-- Artikel Utama -->
             <div style="flex: 2; padding-right: 20px;">
-                <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" src="/articel/artikel11.jpg" />
+                <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" alt="susu Utama" src="/articel/artikel11.jpg" />
                 <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
                     <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
-                    31 Desember 2022
+                        31 Desember 2022
                     </div>
                     <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
-                    Inilah Manfaat Susu Murni Beserta Efek Sampingnya
+                        Inilah Manfaat Susu Murni Beserta Efek Sampingnya
                     </div>
                     <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
-                    <br> Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi penting, seperti kalsium, vitamin D, dan protein. Meski demikian, Anda juga perlu hati-hati dalam mengonsumsinya karena dibalik manfaatnya, ada pula efek samping yang bisa merugikan kesehatan.</br>
+                        <br> Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi penting, seperti kalsium, vitamin D, dan protein. Meski demikian, Anda juga perlu hati-hati dalam mengonsumsinya karena dibalik manfaatnya, ada pula efek samping yang bisa merugikan kesehatan.</br>
 
-                <br> Susu murni adalah jenis susu yang masih segar dan belum banyak diolah, misalnya melalui pasteurisasi, sehingga kandungan nutrisinya masih cukup tinggi. Di dalam satu gelas (250 ml) susu murni terkandung setidaknya sekitar 150 kalori, 8 gram protein, 9 gram lemak, 300 mg kalsium, 300 IU vitamin A, dan 98 IU  vitamin D. </br>
-                <br> Beragam Manfaat Susu Murni </br>
-<br> Sebelum mengonsumsi susu murni, ada baiknya Anda memahami terlebih dulu apa saja manfaat dan efek susu murni bagi tubuh. Manfaatnya antara lain : </br>
+                        <br> Susu murni adalah jenis susu yang masih segar dan belum banyak diolah, misalnya melalui pasteurisasi, sehingga kandungan nutrisinya masih cukup tinggi. Di dalam satu gelas (250 ml) susu murni terkandung setidaknya sekitar 150 kalori, 8 gram protein, 9 gram lemak, 300 mg kalsium, 300 IU vitamin A, dan 98 IU vitamin D. </br>
+                        <br> Beragam Manfaat Susu Murni </br>
+                        <br> Sebelum mengonsumsi susu murni, ada baiknya Anda memahami terlebih dulu apa saja manfaat dan efek susu murni bagi tubuh. Manfaatnya antara lain : </br>
 
-<br>1. Menjaga kesehatan tulang dan otot </br>
-<br> Susu murni banyak mengandung protein, kalsium, dan vitamin D yaitu nutrisi penting yang dibutuhkan untuk menjaga kekuatan dan kesehatan tulang serta otot. Dengan tercukupinya asupan nutrisi tersebut, risiko Anda untuk terkena kerapuhan tulang (osteoporosis) bisa berkurang. </br>
+                        <br>1. Menjaga kesehatan tulang dan otot </br>
+                        <br> Susu murni banyak mengandung protein, kalsium, dan vitamin D yaitu nutrisi penting yang dibutuhkan untuk menjaga kekuatan dan kesehatan tulang serta otot. Dengan tercukupinya asupan nutrisi tersebut, risiko Anda untuk terkena kerapuhan tulang (osteoporosis) bisa berkurang. </br>
 
-<br> Sementara itu, protein pada susu murni berperan penting untuk menambah massa otot serta memperbaiki kerusakan jaringan otot dan tulang. </br>
+                        <br> Sementara itu, protein pada susu murni berperan penting untuk menambah massa otot serta memperbaiki kerusakan jaringan otot dan tulang. </br>
 
-<br> 2. Menambah energi dan stamina </br>
-<br> Susu murni mengandung cukup kalori, protein, dan lemak yang dapat menambah energi tubuh. Dengan energi yang cukup, tubuh terasa lebih kuat dan Anda akan memiliki stamina yang cukup untuk berolahraga dan menjalani aktivitas sehari-hari. </br>
+                        <br> 2. Menambah energi dan stamina </br>
+                        <br> Susu murni mengandung cukup kalori, protein, dan lemak yang dapat menambah energi tubuh. Dengan energi yang cukup, tubuh terasa lebih kuat dan Anda akan memiliki stamina yang cukup untuk berolahraga dan menjalani aktivitas sehari-hari. </br>
 
-<br> 3. Mengendalikan berat badan </br>
-<br> Beberapa riset menyebutkan bahwa konsumsi susu murni sebagai bagian dari diet seimbang dan pola makan sehat bisa membantu mengontrol berat badan. </br>
+                        <br> 3. Mengendalikan berat badan </br>
+                        <br> Beberapa riset menyebutkan bahwa konsumsi susu murni sebagai bagian dari diet seimbang dan pola makan sehat bisa membantu mengontrol berat badan. </br>
 
-<br> Dengan minum susu, Anda juga bisa merasa kenyang lebih lama dan mudah mengontrol nafsu serta porsi makan, sehingga risiko untuk terkena obesitas pun bisa berkurang. </br>
+                        <br> Dengan minum susu, Anda juga bisa merasa kenyang lebih lama dan mudah mengontrol nafsu serta porsi makan, sehingga risiko untuk terkena obesitas pun bisa berkurang. </br>
 
-<br> Namun, perlu diingat bahwa manfaat susu murni ini hanya bisa Anda peroleh jika Anda juga rutin berolahraga, mengonsumsi makanan bergizi seimbang, dan tidak minum susu secara berlebihan. Apabila pola makan Anda kurang sehat atau minum susu terlalu banyak, peningkatan berat badan bisa terjadi. </br>
+                        <br> Namun, perlu diingat bahwa manfaat susu murni ini hanya bisa Anda peroleh jika Anda juga rutin berolahraga, mengonsumsi makanan bergizi seimbang, dan tidak minum susu secara berlebihan. Apabila pola makan Anda kurang sehat atau minum susu terlalu banyak, peningkatan berat badan bisa terjadi. </br>
 
-<br> 4. Mengurangi risiko penyakit tertentu </br>
-<br> Aneka nutrisi pada susu murni diketahui bisa bermanfaat untuk mengurangi risiko terjadinya penyakit tertentu,seperti sindrom metabolik, obesitas, resistensi insulin, dan kolesterol tinggi. Konsumsi susu murni juga bisa mencegah Anda terkena diabetes dan penyakit jantung. </br>
+                        <br> 4. Mengurangi risiko penyakit tertentu </br>
+                        <br> Aneka nutrisi pada susu murni diketahui bisa bermanfaat untuk mengurangi risiko terjadinya penyakit tertentu,seperti sindrom metabolik, obesitas, resistensi insulin, dan kolesterol tinggi. Konsumsi susu murni juga bisa mencegah Anda terkena diabetes dan penyakit jantung. </br>
 
-<br> Selain yang telah disebutkan, susu murni juga bisa memberikan manfaat lain, seperti mendukung kesuburan, menjaga kesehatan dan kekuatan gigi, serta menyehatkan kulit. </br>
+                        <br> Selain yang telah disebutkan, susu murni juga bisa memberikan manfaat lain, seperti mendukung kesuburan, menjaga kesehatan dan kekuatan gigi, serta menyehatkan kulit. </br>
                     </div>
                 </div>
             </div>
@@ -120,7 +128,7 @@
                     <!-- Artikel 1 -->
                     <a href="<?= base_url('artikel1') ?>" style="text-decoration: none; color: inherit;">
                         <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+                            <img style="width: 147px; height: auto;" alt="susu penting kesehatan" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
                             <div>
                                 <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Agustus 2024</div>
                                 <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Mengapa Minum Susu Penting Untuk Kesehatan....</div>
@@ -133,7 +141,7 @@
                     <!-- Artikel 2 -->
                     <a href="<?= base_url('artikel2') ?>" style="text-decoration: none; color: inherit;">
                         <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+                            <img style="width: 147px; height: auto;" alt="susu bermanfaat" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
                             <div>
                                 <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Juni 2024</div>
                                 <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT.....</div>
@@ -146,7 +154,7 @@
                     <!-- Artikel 3 -->
                     <a href="<?= base_url('artikel4') ?>" style="text-decoration: none; color: inherit;">
                         <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+                            <img style="width: 147px; height: auto;" alt="susu banyak khasiat" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
                             <div>
                                 <div style="font-size: 14px; color: black; margin-bottom: 8px;">08 Agustus 2023</div>
                                 <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan....</div>

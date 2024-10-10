@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk - Aktivitas</title>
+  <title>Pemindahan Milk</title>
+
+   <!-- Meta Tags -->
+   <meta name="title" content="Pemindahan Milk">
+   <meta name="description" content="Pelajari cara pemindahan milk yang aman dan efisien. Pastikan kualitas susu tetap terjaga dengan proses pemindahan yang tepat dan higienis.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

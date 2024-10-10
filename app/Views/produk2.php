@@ -4,7 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk - Tentang</title>
+  <title>Icithan</title>
+
+   <!-- Meta Tags -->
+   <meta name="title" content="Icithan">
+   <meta name="description" content="Icithan menawarkan produk susu berkualitas tinggi dengan manfaat kesehatan yang luar biasa. Temukan pilihan susu terbaik untuk gaya hidup sehat Anda.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
+
   <style>
     /* Navbar */
     .navbar {
@@ -211,7 +219,7 @@
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Tentang Kami</h1>
+      <h1>Produk Kami</h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 

@@ -4,7 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Milk - Tentang</title>
+  <title>Greenfields</title>
+
+   <!-- Meta Tags -->
+   <meta name="title" content="Greenfields">
+   <meta name="description" content="Greenfields menyediakan susu segar berkualitas tinggi yang berasal dari peternakan sapi terbaik. Nikmati susu sehat dan lezat untuk menunjang gaya hidup yang lebih baik.">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="<?= current_url() ?>">
+
   <style>
     /* Navbar */
     .navbar {
@@ -202,7 +210,7 @@
   <div class="banner">
     <img src="/product/produk11.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
-      <h1 class="banner-title">Tentang Healthy Milk</h1>
+      <h1 class="banner-title">Produk Healthy Milk</h1>
     </div>
   </div>
 
@@ -211,7 +219,7 @@
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Tentang Kami</h1>
+      <h1>Produk Kami</h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 
