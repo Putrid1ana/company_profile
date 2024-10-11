@@ -15,19 +15,12 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* CSS Global Styles */
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f8f8f8;
-    }
-
-    /* Navbar Styles */
+    /* Navbar */
     .navbar {
       width: 100%;
-      max-width: 1440px;
+      max-width: none;
       height: 75px;
-      padding: 13px 184.49px;
+      padding: 13px 20px;
       background: white;
       box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -38,16 +31,89 @@
       z-index: 100;
     }
 
-    .navbar-logo {
-      font-size: 30px;
-      font-weight: 700;
+    /* Banner Section */
+    .banner {
+      width: 100%;
+      height: auto;
+      background: #0E1A18;
+      position: relative;
     }
 
-    .navbar-link {
-      text-decoration: none;
-      color: black;
-      font-size: 16px;
-      margin-left: 20px;
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(14, 26, 24, 0.50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-title {
+      color: white;
+      font-size: 48px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* Section Title */
+    .section-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h1 {
+      color: #384F4B;
+      font-size: 32px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      margin: 0 15px;
+    }
+
+    /* Footer */
+    .footer {
+      width: 100%;
+      height: 98px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.17);
+      position: relative;
+      bottom: 0;
+    }
+
+    /* Responsive Design for Mobile */
+    @media (max-width: 768px) {
+      /* Navbar */
+      .navbar {
+        height: auto;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .navbar div {
+        font-size: 24px;
+      }
+
+      /* Banner */
+      .banner-title {
+        font-size: 32px;
+      }
     }
 
     /* Content Wrapper */
@@ -161,7 +227,7 @@
   </style>
 </head>
 
-<body>
+<body style="margin: 0px;">
   <!-- Background Section -->
   <div style="width: 100%; height: 100vh; position: relative; background: conic-gradient(from 180deg at 0% 100%, #A6D4FF 307deg, #D4ECFD 360deg);">
 
@@ -176,23 +242,23 @@
 
     <!-- Navbar Section -->
     <div class="navbar">
-      <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
-      <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-        <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
-        <a href="/tentang" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Tentang</a>
-        <a href="/artikel" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Artikel</a>
-        <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
-        <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
-        <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
-        <div>
-          <select style="padding: 5px; font-family: Inika; font-size: 16px;">
-            <option value="" hidden>Bahasa</option>
-            <option value="id">Indonesia</option>
-            <option value="en">English</option>
-          </select>
-        </div>
+    <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
+    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+      <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
+      <a href="/tentang" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Tentang</a>
+      <a href="/artikel" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Artikel</a>
+      <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
+      <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
+      <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
+      <div>
+        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+          <option value="" hidden>Bahasa</option>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
       </div>
     </div>
+  </div>
 
     <!-- Content Wrapper Section -->
     <div class="content-wrapper">

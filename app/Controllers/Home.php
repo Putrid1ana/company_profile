@@ -14,6 +14,11 @@ class Home extends BaseController
         return view('tentang'); // Sama seperti di routes, gunakan huruf kecil
     }
 
+    public function tentang2(): string
+    {
+        return view('tentang2'); // Sama seperti di routes, gunakan huruf kecil
+    }
+
     public function artikel(): string
     {
         return view('artikel');

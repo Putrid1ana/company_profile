@@ -15,96 +15,182 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* CSS Global Styles */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f8f8;
-        }
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      max-width: none;
+      height: 75px;
+      padding: 13px 20px;
+      background: white;
+      box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
 
-        /* Navbar Styles */
-        .navbar {
-            width: 100%;
-            max-width: 1440px;
-            height: 75px;
-            padding: 13px 184.49px;
-            background: white;
-            box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            z-index: 100;
-        }
+    /* Banner Section */
+    .banner {
+      width: 100%;
+      height: auto;
+      background: #0E1A18;
+      position: relative;
+    }
 
-        .navbar-logo {
-            font-size: 30px;
-            font-weight: 700;
-        }
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
 
-        .navbar-link {
-            text-decoration: none;
-            color: black;
-            font-size: 16px;
-            margin-left: 20px;
-        }
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(14, 26, 24, 0.50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .product-container {
-            display: flex;
-            justify-content: space-around;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
+    .banner-title {
+      color: white;
+      font-size: 48px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      text-align: center;
+    }
 
-        /* Footer Styles */
-        .footer {
-            width: 100%;
-            height: 98px;
-            background: black;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.17);
-        }
+    /* Section Title */
+    .section-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
 
-        .social-icon {
-            width: 32px;
-            height: 32px;
-            background: rgba(255, 255, 255, 0.17);
-            border-radius: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 10px;
-        }
+    .section-title h1 {
+      color: #384F4B;
+      font-size: 32px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      margin: 0 15px;
+    }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 20px;
-                flex-direction: column;
-                gap: 10px;
-            }
+    /* Content Section */
+    .tentang-kami-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
 
-            .navbar-logo {
-                font-size: 24px;
-            }
+    .tentang-kami-content div {
+      flex: 1;
+    }
 
-            .navbar-link {
-                font-size: 14px;
-            }
+    .tentang-kami-content p {
+      text-align: justify;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.8;
+      color: black;
+    }
 
-            .product-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    .tentang-kami-content img {
+      max-width: 300px;
+      height: auto;
+      margin-left: auto; /* Gambar akan berada di sebelah kanan */
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      width: 100%;
+      height: 98px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.17);
+      position: relative;
+      bottom: 0;
+    }
+
+    /* Responsive Design for Mobile */
+    @media (max-width: 768px) {
+      /* Navbar */
+      .navbar {
+        height: auto;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .navbar div {
+        font-size: 24px;
+      }
+
+      /* Banner */
+      .banner-title {
+        font-size: 32px;
+      }
+
+      /* Content */
+      .tentang-kami-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .tentang-kami-content p {
+        font-size: 18px;
+      }
+
+      .tentang-kami-content img {
+        max-width: 300px;
+        height: auto;
+        margin-left: 0; /* Kembali ke tengah pada layar kecil */
+        margin-right: 0;
+      }
+
+      /* Footer */
+      .footer {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Reduce font sizes for very small screens */
+      .banner-title {
+        font-size: 24px;
+      }
+
+      .tentang-kami-content p {
+        font-size: 16px;
+      }
+
+      .section-title h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body style="margin: 0px;">
     <!-- Background Section -->
     <div style="width: 100%; height: 100vh; position: relative; background: conic-gradient(from 180deg at 0% 100%, #A6D4FF 307deg, #D4ECFD 360deg);">
 
@@ -119,23 +205,23 @@
 
         <!-- Navbar Section -->
         <div class="navbar">
-            <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
-            <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-                <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
-                <a href="/tentang" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Tentang</a>
-                <a href="/artikel" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Artikel</a>
-                <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
-                <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
-                <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
-                <div>
-                    <select style="padding: 5px; font-family: Inika; font-size: 16px;">
-                        <option value="" hidden>Bahasa</option>
-                        <option value="id">Indonesia</option>
-                        <option value="en">English</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+    <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
+    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+      <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
+      <a href="/tentang" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Tentang</a>
+      <a href="/artikel" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Artikel</a>
+      <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
+      <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
+      <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
+      <div>
+        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+          <option value="" hidden>Bahasa</option>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+  </div>
 
         <!-- Produk Section -->
         <div style="width: 100%; height: 600px; padding: 40px 0; background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%); display: flex; flex-direction: column; align-items: center;">
@@ -146,7 +232,7 @@
                     <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
                 </div>
             </div>
-            <div style="display: flex; justify-content: center; gap: 30px;">
+            <div style="width: 100%; display: flex; justify-content: center; gap: 30px;">
                 <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
                     <img src="/product/grefields.jpg.png" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
                     <a href="produk/greenfields" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>

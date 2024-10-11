@@ -192,7 +192,7 @@
   </style>
 </head>
 
-<body>
+<body style="margin: 0px;">
 
   <!-- Navbar Section -->
   <div class="navbar">

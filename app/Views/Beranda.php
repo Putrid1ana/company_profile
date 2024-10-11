@@ -12,15 +12,294 @@
   <meta name="description" content="Selamat datang di Beranda Healthy Milk, tempat Anda bisa menemukan informasi terbaru seputar produk susu sehat, manfaatnya, dan tips gaya hidup sehat.">
 
   <!-- Canonical Tag -->
+
+  <style>
+    /* Container styling */
+    .card-container {
+      display: flex;
+      overflow-x: scroll;
+      white-space: nowrap;
+      /* Keep cards on a single row */
+      -ms-overflow-style: none;
+      /* Hide scrollbar on IE and Edge */
+      scrollbar-width: none;
+      /* Hide scrollbar on Firefox */
+    }
+
+    .card-container::-webkit-scrollbar {
+      display: none;
+      /* Hide scrollbar on Chrome, Safari and Opera */
+    }
+
+    /* Card styling */
+    .card {
+      display: inline-block;
+      width: 250px;
+      height: 350px;
+      border-radius: 8px;
+      border: 1px solid #E0E0E0;
+      flex-direction: column;
+      padding: 18px;
+      margin-right: 16px;
+      /* Space between cards */
+    }
+
+    .card-icon-container {
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+    }
+
+    .card-icon {
+      width: 29.72px;
+      height: 22.79px;
+      background: #121212;
+    }
+
+    /* Content styling */
+    .card-content {
+      width: 100%;
+      height: auto;
+      margin-top: 12px;
+      color: black;
+      font-size: 12px;
+      font-family: Roboto;
+      font-weight: 400;
+      line-height: 30px;
+      /* Better line height */
+      overflow-wrap: break-word;
+      /* Break long words */
+      word-wrap: break-word;
+    }
+
+    /* Ensure long text stays inside */
+    .card-content span {
+      display: block;
+      width: 100%;
+      /* Ensure span takes full width */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+      /* Ensure text wraps to new lines */
+    }
+
+
+    .card-footer {
+      justify-content: flex-start;
+      align-items: center;
+      display: inline-flex;
+      margin-top: 80px;
+    }
+
+    .card-footer img {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      overflow: hidden;
+    }
+
+    .card-footer div {
+      margin-left: 8px;
+      color: #333333;
+      font-size: 16px;
+      font-family: Roboto;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+
+
+
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      max-width: none;
+      height: 75px;
+      padding: 13px 20px;
+      background: white;
+      box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Banner Section */
+    .banner {
+      width: 100%;
+      height: auto;
+      background: #0E1A18;
+      position: relative;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(14, 26, 24, 0.50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-title {
+      color: white;
+      font-size: 48px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* Section Title */
+    .section-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h1 {
+      color: #384F4B;
+      font-size: 32px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      margin: 0 15px;
+    }
+
+    /* Content Section */
+    .tentang-kami-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .tentang-kami-content div {
+      flex: 1;
+    }
+
+    .tentang-kami-content p {
+      text-align: justify;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.8;
+      color: black;
+    }
+
+    .tentang-kami-content img {
+      max-width: 300px;
+      height: auto;
+      margin-left: auto;
+      /* Gambar akan berada di sebelah kanan */
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      width: 100%;
+      height: 98px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.17);
+      position: relative;
+      bottom: 0;
+    }
+
+    /* Responsive Design for Mobile */
+    @media (max-width: 768px) {
+
+      /* Navbar */
+      .navbar {
+        height: auto;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .navbar div {
+        font-size: 24px;
+      }
+
+      /* Banner */
+      .banner-title {
+        font-size: 32px;
+      }
+
+      /* Content */
+      .tentang-kami-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .tentang-kami-content p {
+        font-size: 18px;
+      }
+
+      .tentang-kami-content img {
+        max-width: 300px;
+        height: auto;
+        margin-left: 0;
+        /* Kembali ke tengah pada layar kecil */
+        margin-right: 0;
+      }
+
+      /* Footer */
+      .footer {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      /* Reduce font sizes for very small screens */
+      .banner-title {
+        font-size: 24px;
+      }
+
+      .tentang-kami-content p {
+        font-size: 16px;
+      }
+
+      .section-title h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+
   <link rel="canonical" href="<?= current_url() ?>">
 </head>
 
-<body>
+<body style="margin:0px;">
   <!-- Main Wrapper -->
   <div style="width: 100%; background: white; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;">
 
     <!-- Navbar Section -->
-    <div style="width: 100%; max-width: 1440px; height: 75px; padding: 13px 184.49px; background: white; box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1); display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; z-index: 100;">
+    <div class="navbar">
       <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
       <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
         <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
@@ -29,8 +308,8 @@
         <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
         <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
         <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <select style="padding: 5px; font-family: Inika; font-size: 16px;">
+        <div>
+          <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
             <option value="" hidden>Bahasa</option>
             <option value="id">Indonesia</option>
             <option value="en">English</option>
@@ -81,9 +360,9 @@
       </div>
     </div>
 
-    <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; max-width: 1440px; margin: 0 auto; height: 376px; align-items: flex-start;">
+    <div style="width: 100%; display: flex; justify-content: center; gap: 10px; max-width: 1440px; margin: 0 auto; height: 376px; align-items: flex-start;">
       <!-- Card 1 -->
-      <div style="width: 464px; height: 300px; background: white; box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.10); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+      <div style="width: 300px; height: 300px; background: white; box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.10); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
         <div style="width: 77px; height: 77px; background: #01579B; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
           <div style="width: 35px; height: 35px; background: white;"></div>
         </div>
@@ -96,7 +375,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div style="width: 464px; height: 300px; background: #01579B; border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+      <div style="width: 300px; height: 300px; background: #01579B; border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
         <div style="width: 77px; height: 77px; background: white; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
           <div style="width: 29.77px; height: 26.25px; background: #01579B;"></div>
         </div>
@@ -109,7 +388,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div style="width: 464px; height: 300px; background: white; box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.10); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+      <div style="width: 300px; height: 300px; background: white; box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.10); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
         <div style="width: 77px; height: 77px; background: #01579B; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
           <div style="width: 33.26px; height: 33.26px; background: white;"></div>
         </div>
@@ -122,12 +401,13 @@
       </div>
     </div>
 
-    <div style="align-self: stretch; height: 235px; padding-top: 36px; padding-bottom: 60px; padding-left: 300px; padding-right: 300px; background: #E1F5FE; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+    <!--- icon -->
+    <div style="align-self: stretch; height: 135px; padding-top: 20px; padding-bottom: 50px; padding-left: 300px; padding-right: 300px; background: #E1F5FE; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
       <div style="width: 100%; max-width: 1200px; height: auto; display: flex; flex-direction: column; align-items: center;">
         <div style="align-self: stretch; justify-content: center; align-items: center; display: flex; flex-direction: column;">
           <div style="align-self: stretch; height: 199px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-            <div style="width: 1296px; height: 157px; position: relative; display: flex; justify-content: center; align-items: center;">
-              <div style="height: 44px; width: 44px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 70%;">
+            <div style="width: 800px; height: 157px; position: relative; display: flex; justify-content: center; align-items: center;">
+              <div style="height: 44px; width: 44px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 120%;">
                 <!-- Ikon senyum -->
                 <span style="color: white; font-size: 24px;">😊</span>
               </div>
@@ -142,7 +422,8 @@
       </div>
     </div>
 
-    <div style="align-self: stretch; height: 561px; padding-left: 150px; padding-right: 100px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+    <!-- artikel -->
+    <div style="width:100%; align-self: stretch; height: 561px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
       <div style="height: 98.39px; padding-bottom: 60px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
         <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
@@ -150,139 +431,139 @@
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
         </div>
       </div>
-      <div style="width: 1320px; height: 397px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-        <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: flex; gap: 24px;">
+      <div style="width: 1120px; height: 397px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: flex; gap: 10px;">
           <!-- Kotak Artikel -->
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-            <a href="<?= base_url('artikel1') ?>" style=" text-decoration: none; color: inherit;">
+            <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
                   <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
                   <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Mengapa Minum Susu Penting Untuk Kesehatan</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
                 </div>
               </div>
             </a>
           </div>
 
-          <!-- Kotak Artikel Lainnya -->
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-            <a href="<?= base_url('artikel2') ?>" style=" text-decoration: none; color: inherit;">
+            <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 142.70px; height: 80px" alt="susu sapi" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
                   <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Kotak Artikel Lainnya -->
+
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-            <a href="<?= base_url('artikel3') ?>" style=" text-decoration: none; color: inherit;">
+            <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 119.91px; height: 80px" alt="susu sereal" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Inilah Manfaat Susu Murni Beserta Efek Sampingnya</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Inilah Manfaat Susu Murni Beserta Efeknya</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Kotak Artikel Lainnya -->
+
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-            <a href="<?= base_url('artikel4') ?>" style=" text-decoration: none; color: inherit;">
+            <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 135.30px; height: 80px" alt="susu putih" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
                 </div>
               </div>
             </a>
           </div>
+
         </div>
       </div>
     </div>
 
-    <div style="width: 90%; max-width: none; background: linear-gradient(235deg, rgba(205, 238, 248, 0) 4%, white 50%, #A6D4FF 95%); display: flex; flex-direction: column; padding: 60px 5%; box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.10);">
-      <div style="height: 98.39px; padding-bottom: 60px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+    <!-- galeri produk -->
+    <div style="width: 100%; max-width: none; background: linear-gradient(235deg, rgba(205, 238, 248, 0) 4%, white 50%, #A6D4FF 95%); display: flex; flex-direction: column; box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.10); justify-content: center; align-items:center; padding: 10px 0px ">
+      <div style="height: 98.39px; padding-bottom: 50px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
         <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; justify-content: center; align-items: center; gap: 15px; display: inline-flex">
           <div style="width: 50px; height: 2px; background: #1BBCA3"></div>
           <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter; font-weight: 700; line-height: 38.40px;">Galeri Produk</div>
           <div style="width: 50px; height: 2px; background: #1BBCA3"></div>
         </div>
       </div>
-      <div style="height: 436px; justify-content: flex-end; align-items: center; display: flex; flex-wrap: wrap; gap: 20px; padding: 0 150px;">
-        <div style="width: 353px; height: 436px; border-radius: 8px; border: 1px #E0E0E0 solid; display: flex; flex-direction: column; padding: 10px;">
-          <div style="width: 40px; height: 40px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="flex: 1; padding-top: 8.04px; padding-bottom: 9.17px; padding-left: 5px; padding-right: 5.28px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 29.72px; height: 22.79px; background: #121212"></div>
-            </div>
+
+      <!-- Container with horizontal scroll -->
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-icon-container">
+            <div class="card-icon"></div>
           </div>
-          <div style="flex: 1; color: black; font-size: 12px; font-family: Roboto; font-weight: 400; line-height: 30px;">
-            <span>Minuman Greenfields adalah produk susu dan turunan susu yang diproduksi oleh PT Greenfields Indonesia, seperti susu pasteurisasi, susu UHT, yogurt, keju, dan whipping cream.<br /></span>
-            <span>Susu segar Greenfields <br />Yogurt Greenfields</span>
+          <div class="card-content">
+            <span class="content-card">Minuman Greenfields adalah produk susu dan turunan susu yang diproduksi oleh PT Greenfields Indonesia.<br /></span>
+            <span>• Susu segar Greenfields <br />• Yogurt Greenfields</span>
           </div>
-          <div style="width: 64px; height: 64px; border-radius: 32px; overflow: hidden; background-image: url('<?= base_url('galeri/galeri.jpg.png') ?>'); justify-content: center; align-items: center; display: inline-flex">
-            <img style="width: 64px; height: 64px" alt="susu Greenfields"src="<?= base_url('galeri/galeri.jpg.png') ?>" />
+          <div class="card-footer">
+            <img alt="susu Greenfields" src="<?= base_url('galeri/galeri.jpg.png') ?>" />
+            <div>Greenfields</div>
           </div>
-          <div style="color: #333333; font-size: 16px; font-family: Roboto; font-weight: 700; line-height: 24px;">Greenfields</div>
         </div>
 
-        <div style="width: 353px; height: 436px; border-radius: 8px; border: 1px #E0E0E0 solid; display: flex; flex-direction: column; padding: 10px;">
-          <div style="width: 40px; height: 40px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="flex: 1; padding-top: 8.04px; padding-bottom: 9.17px; padding-left: 5px; padding-right: 5.28px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 29.72px; height: 22.79px; background: #121212"></div>
-            </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-icon-container">
+            <div class="card-icon"></div>
           </div>
-          <div style="flex: 1; color: black; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 30px;">
-            <span>Minuman Ichitan adalah minuman siap saji yang diproduksi oleh PT Ichi Tan Indonesia. Ichitan menawarkan berbagai jenis minuman, seperti: <br /></span>
-            <span>Ichitan Brown Sugar Milk<br />Ichitan Thai Milk Green Tea<br />Ichitan Korean Milk</span>
+          <div class="card-content">
+            <span class="content-card">Minuman Ichitan adalah minuman siap saji yang diproduksi oleh PT Ichi Tan Indonesia. Ichitan menawarkan berbagai jenis minuman, seperti: <br /></span>
+            <span>• Ichitan Brown Sugar Milk <br />• Ichitan Thai Milk Green Tea</span>
           </div>
-          <div style="width: 64px; height: 64px; border-radius: 32px; overflow: hidden; background-image: url('<?= base_url('galeri/galeri1.jpg.png') ?>'); justify-content: center; align-items: center; display: inline-flex">
-            <img style="width: 64px; height: 64px" alt="susu Ichitan" src="<?= base_url('galeri/galeri1.jpg.png') ?>" />
+          <div class="card-footer">
+            <img alt="susu Greenfields" src="<?= base_url('galeri/galeri1.jpg.png') ?>" />
+            <div>Ichitan</div>
           </div>
-          <div style="color: #333333; font-size: 16px; font-family: Roboto; font-weight: 700; line-height: 24px;">ICHITAN</div>
         </div>
 
-        <div style="width: 353px; height: 436px; border-radius: 8px; border: 1px #E0E0E0 solid; display: flex; flex-direction: column; padding: 10px;">
-          <div style="width: 40px; height: 40px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="flex: 1; padding-top: 8.04px; padding-bottom: 9.17px; padding-left: 5px; padding-right: 5.28px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 29.72px; height: 22.79px; background: #121212"></div>
-            </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-icon-container">
+            <div class="card-icon"></div>
           </div>
-          <div style="flex: 1; color: black; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 30px;">
-            <span>Silk Nextmilk adalah susu nabati yang terbuat dari campuran gandum, kelapa, dan kedelai. Susu ini memiliki rasa, komponen nutrisi, dan komposisi molekuler yang mirip dengan susu sapi. Silk Nextmilk dirancang untuk menarik orang yang ingin beralih dari susu sapi ke susu nabati.</span>
+          <div class="card-content">
+            <span class="content-card">Silk Nextmilk adalah susu nabati yang terbuat dari campuran gandum, kelapa, dan kedelai. Susu ini memiliki rasa, komponen nutrisi, dan komposisi molekuler yang mirip dengan susu sapi. Silk Nextmilk dirancang dari susu sapi ke susu nabati.<br /></span>
           </div>
-          <div style="width: 64px; height: 64px; border-radius: 32px; overflow: hidden; background-image: url('<?= base_url('galeri/galeri2.jpg.png') ?>'); justify-content: center; align-items: center; display: inline-flex">
-            <img style="width: 64px; height: 64px" alt="susu Silk NextMilk" src="<?= base_url('galeri/galeri2.jpg.png') ?>" />
+          <div class="card-footer">
+            <img alt="susu Greenfields" src="<?= base_url('galeri/galeri2.jpg.png') ?>" />
+            <div>Silk Milk</div>
           </div>
-          <div style="color: black; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px;">Silk NextMilk</div>
         </div>
 
-        <div style="width: 353px; height: 436px; border-radius: 8px; border: 1px #E0E0E0 solid; display: flex; flex-direction: column; padding: 10px;">
-          <div style="width: 40px; height: 40px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="flex: 1; padding-top: 8.04px; padding-bottom: 9.17px; padding-left: 5px; padding-right: 5.28px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 29.72px; height: 22.79px; background: #121212"></div>
-            </div>
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-icon-container">
+            <div class="card-icon"></div>
           </div>
-          <div style="flex: 1; color: black; font-size: 12px; font-family: Roboto; font-weight: 400; line-height: 30px;">
-            <span>Ultra Milk adalah merek susu yang diproduksi oleh PT Ultrajaya Milk Industri Tbk. Ultra Milk merupakan susu segar alami yang diproses dengan teknologi Ultra High Temperature (UHT). Susu Ultra Milk mengandung berbagai nutrisi, seperti protein, karbohidrat, vitamin, dan mineral seperti kalsium, magnesium, dan fosfor.</span>
+          <div class="card-content">
+            <span class="content-card"> Ultra Milk merupakan susu segar alami yang diproses dengan teknologi Ultra High Temperature (UHT). Susu Ultra Milk mengandung berbagai nutrisi, seperti protein, karbohidrat, vitamin, dan mineral seperti kalsium, magnesium, dan fosfor.<br /></span>
           </div>
-          <div style="width: 64px; height: 64px; border-radius: 32px; overflow: hidden; background-image: url('<?= base_url('galeri/galeri3.jpg.png') ?>'); justify-content: center; align-items: center; display: inline-flex">
-            <img style="width: 64px; height: 64px" alt="susu ultramilk" src="<?= base_url('galeri/galeri3.jpg.png') ?>" />
+          <div class="card-footer">
+            <img alt="susu ultra" src="<?= base_url('galeri/galeri3.jpg.png') ?>" />
+            <div>Ultra Milk</div>
           </div>
-          <div style="color: black; font-size: 16px; font-family: Roboto; font-weight: 700; line-height: 24px;">Ultra Milk</div>
         </div>
+
       </div>
     </div>
 
 
     <!-- Main Content Section -->
-    <div style=" width: 64%; align-self: stretch; height: 778px; padding-left: 300px; padding-right: 300px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="height: 98.39px; padding-bottom: 60px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-        <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; padding-left: 470.22px; padding-right: 470.23px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
+    <div style=" width: 100%; align-self: stretch; height: 778px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+      <div style=" width:100%; height: 98.39px; padding-bottom: 60px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+        <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; padding-left: 500px; padding-right: 100px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
           <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter; font-weight: 700; line-height: 38.40px; word-wrap: break-word">Aktivitas</div>
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
@@ -291,56 +572,59 @@
       <div style="height: 491.80px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
         <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: inline-flex">
           <div style="flex: 1 1 0; height: 491.80px; padding-top: 24px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
-            <a href="<?= base_url('aktivitas1') ?>" style="text-decoration: none; color: inherit;">
-              <div style="width: 416px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
-                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 30px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
+              <div style="width: 350px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
+                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 50px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 26.14px; padding-right: 26.14px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #384F4B; font-size: 24px; font-family: Inter; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Penyajian Milk</div>
                   </div>
                 </div>
-                <div style="height: 88px; padding-bottom: 16px; left: 30px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                <div style="height: 88px; padding-bottom: 16px; left: 10px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div style="align-self: stretch; height: 72px; padding-left: 24.14px; padding-right: 24.16px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Eum ad dolor et. Autem aut fugiat debitis<br />voluptatem consequuntur sit. Et veritatis id.</div>
                   </div>
                 </div>
-                <img style="width: 391.79px; height: 220px; left: 12px; top: 36.46px; position: absolute" alt="menuang susu" src="/aktifitas/ultramilk.jpg.png" />
+                <img style="width: 310px; height: 220px; left: 12px; top: 36.46px; position: absolute" alt="menuang susu" src="/aktifitas/ultramilk.jpg.png" />
               </div>
             </a>
           </div>
+
           <div style="flex: 1 1 0; height: 491.80px; padding-top: 24px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
-            <a href="<?= base_url('aktivitas2') ?>" style="text-decoration: none; color: inherit;">
-              <div style="width: 416px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
-                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 30px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 10.61px; padding-right: 10.62px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+            <a href="<?= base_url('aktivitas/pemindahan-milk') ?>" style="text-decoration: none; color: inherit;">
+              <div style="width: 350px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
+                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 50px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 26.14px; padding-right: 26.14px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #384F4B; font-size: 24px; font-family: Inter; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Pemindahan Milk</div>
                   </div>
                 </div>
-                <div style="height: 88px; padding-bottom: 16px; left: 30px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 72px; padding-left: 22.97px; padding-right: 22.97px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Repudiandae amet nihil natus in distinctio<br />suscipit id. Doloremque ducimus ea sit non.</div>
+                <div style="height: 88px; padding-bottom: 16px; left: 10px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 72px; padding-left: 24.14px; padding-right: 24.16px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Eum ad dolor et. Autem aut fugiat debitis<br />voluptatem consequuntur sit. Et veritatis id.</div>
                   </div>
                 </div>
-                <img style="width: 391.11px; height: 220px; left: 12px; top: 39.46px; position: absolute" alt="susu kacang" src="/aktifitas/aktivitas.jpg.png" />
+                <img style="width: 310px; height: 220px; left: 12px; top: 39.46px; position: absolute" alt="susu kacang" src="/aktifitas/aktivitas.jpg.png" />
               </div>
             </a>
           </div>
+
           <div style="flex: 1 1 0; height: 491.80px; padding-top: 24px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
-            <a href="<?= base_url('aktivitas3') ?>" style="text-decoration: none; color: inherit;">
-              <div style="width: 416px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
-                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 30px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 17.59px; padding-right: 17.60px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+            <a href="<?= base_url('aktivitas/peternakan') ?>" style="text-decoration: none; color: inherit;">
+              <div style="width: 350px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
+                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 50px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 26.14px; padding-right: 26.14px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #384F4B; font-size: 24px; font-family: Inter; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Peternakan </div>
                   </div>
                 </div>
-                <div style="height: 88px; padding-bottom: 16px; left: 30px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 72px; padding-left: 11.27px; padding-right: 11.27px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Consequuntur aliquid ab incidunt. Ex quos qui et vero et aut in. Reprehenderit.</div>
+                <div style="height: 88px; padding-bottom: 16px; left: 10px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 72px; padding-left: 24.14px; padding-right: 24.16px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Eum ad dolor et. Autem aut fugiat debitis<br />voluptatem consequuntur sit. Et veritatis id.</div>
                   </div>
                 </div>
-                <img style="width: 392.47px; height: 220px; left: 12px; top: 41.46px; position: absolute" alt="susu sapi putih" src="/aktifitas/aktivitas2.jpg.png" />
+                <img style="width: 310px; height: 220px; left: 12px; top: 39.46px; position: absolute" alt="susu sapi putih" src="/aktifitas/aktivitas2.jpg.png" />
               </div>
             </a>
           </div>
+
         </div>
       </div>
     </div>
@@ -355,7 +639,7 @@
             <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Company</div>
             <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
           </div>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+          <ul style="list-style: none; padding: 10px; margin: 0; line-height: 1.8;">
             <li><a href="#" style="color: white; text-decoration: none;">Tentang</a></li>
             <li><a href="#" style="color: white; text-decoration: none;">Artikel</a></li>
             <li><a href="#" style="color: white; text-decoration: none;">Produk</a></li>
@@ -371,12 +655,9 @@
             <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
           </div>
           <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
-            <li>📍 Location:</li>
-            <li>59 Street, New York City</li>
-            <li>📞 Call Us:</li>
-            <li>+2123 5900036</li>
-            <li>✉️ Mail Us:</li>
-            <li>info@gmail.com</li>
+            <li>📍 Jl. Jaya Milk No. 123, Batu, Jawa Timur</li>
+            <li>📞 +62 812-3456-7890</li>
+            <li>✉️ info@gmail.com</li>
           </ul>
         </div>
 

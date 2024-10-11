@@ -19,7 +19,7 @@
   <style>
     /* Navbar */
     .navbar {
-      width: 97%;
+      width: 100%;
       max-width: none;
       height: 75px;
       padding: 13px 20px;
@@ -192,8 +192,13 @@
   </style>
 </head>
 
-<body>
+<body style="margin: 0px;">
 
+<div class="hamburger" onclick="toggleDropdown()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   <!-- Navbar Section -->
   <div class="navbar">
     <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
@@ -205,7 +210,7 @@
       <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
       <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
       <div>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px;">
+        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
@@ -213,6 +218,29 @@
       </div>
     </div>
   </div>
+
+  <div class="dropdown" id="dropdownMenu">
+      <a href="/">Beranda</a>
+      <a href="/tentang">Tentang</a>
+      <a href="/artikel">Artikel</a>
+      <a href="/produk">Produk</a>
+      <a href="/aktivitas">Aktivitas</a>
+      <a href="/kontak">Kontak</a>
+      <select style="padding: 5px; font-family: Inika; font-size: 16px;">
+        <option value="" hidden>Bahasa</option>
+        <option value="id">Indonesia</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Script to toggle dropdown -->
+  <script>
+    function toggleDropdown() {
+      var dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("active");
+    }
+  </script></div>
 
   <!-- Banner Section -->
   <div class="banner">
@@ -223,7 +251,7 @@
   </div>
 
   <!-- Tentang Kami Section -->
-  <div style="width: 99%; max-width: none; min-height: 828px; background: linear-gradient(180deg, #A6D4FF 0%, white 21%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 12px;">
+  <div style=" max-width: none; min-height: 828px; background: linear-gradient(180deg, #A6D4FF 0%, white 21%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 12px;">
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>

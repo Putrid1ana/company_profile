@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');          // Rute untuk halaman Beranda
 $routes->get('tentang', 'Home::tentang');  // Rute untuk halaman Tentang
+$routes->get('tentang2', 'Home::tentang2');  // Rute untuk halaman Tentang
 $routes->get('produk', 'Home::produk');    // Rute untuk halaman Produk
 $routes->get('produk/greenfields', 'Home::produk1');  // Rute untuk halaman Produk1
 $routes->get('produk/icithan', 'Home::produk2');  // Rute untuk halaman produk2

@@ -192,7 +192,7 @@
   </style>
 </head>
 
-<body>
+<body style="margin: 0px;">
 
   <!-- Navbar Section -->
   <div class="navbar">
@@ -222,7 +222,7 @@
     </div>
   </div>
 
-    <div style="align-self: stretch; height: 561px; padding-left: 150px; padding-right: 100px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+  <div style="width:100%; align-self: stretch; height: 561px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
       <div style="height: 98.39px; padding-bottom: 60px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
         <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
@@ -230,56 +230,57 @@
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
         </div>
       </div>
-      <div style="width: 1320px; height: 397px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-        <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: flex; gap: 24px;">
+      <div style="width: 1120px; height: 397px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: flex; gap: 10px;">
           <!-- Kotak Artikel -->
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
             <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 160.75px; height: 80px" alt="susu sehat" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
                   <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Mengapa Minum Susu Penting Untuk Kesehatan</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Kotak Artikel Lainnya -->
+
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
             <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 142.70px; height: 80px" alt="susu banyak Manfaat" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
                   <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Kotak Artikel Lainnya -->
+
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
             <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 119.91px; height: 80px" alt="susu murni" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Inilah Manfaat Susu Murni Beserta Efek Sampingnya</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Inilah Manfaat Susu Murni Beserta Efeknya</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Kotak Artikel Lainnya -->
+
           <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
             <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>" style=" text-decoration: none; color: inherit;">
               <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
                 <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                  <img style="width: 135.30px; height: 80px" alt="produk susu sapi" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan</div>
-                  <div style="color: #444444; font-size: 8px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
+                  <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+                  <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
+                  <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
                 </div>
               </div>
             </a>
           </div>
+          
         </div>
       </div>
     </div>

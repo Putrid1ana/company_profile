@@ -192,7 +192,7 @@
   </style>
 </head>
 
-<body>
+<body style="margin: 0px;">
 
   <!-- Navbar Section -->
   <div class="navbar">
@@ -223,9 +223,9 @@
   </div>
 
     <!-- Main Content Section -->
-    <div style=" width: 64%; align-self: stretch; height: 778px; padding-left: 300px; padding-right: 300px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="height: 98.39px; padding-bottom: 60px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-        <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; padding-left: 470.22px; padding-right: 470.23px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
+    <div style=" width: 100%; align-self: stretch; height: 778px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+      <div style=" width:100%; height: 98.39px; padding-bottom: 60px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+        <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; padding-left: 500px; padding-right: 100px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
           <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter; font-weight: 700; line-height: 38.40px; word-wrap: break-word">Aktivitas</div>
           <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
@@ -235,55 +235,58 @@
         <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: inline-flex">
           <div style="flex: 1 1 0; height: 491.80px; padding-top: 24px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
             <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
-              <div style="width: 416px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
-                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 30px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div style="width: 350px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
+                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 50px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 26.14px; padding-right: 26.14px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #384F4B; font-size: 24px; font-family: Inter; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Penyajian Milk</div>
                   </div>
                 </div>
-                <div style="height: 88px; padding-bottom: 16px; left: 30px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                <div style="height: 88px; padding-bottom: 16px; left: 10px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div style="align-self: stretch; height: 72px; padding-left: 24.14px; padding-right: 24.16px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Eum ad dolor et. Autem aut fugiat debitis<br />voluptatem consequuntur sit. Et veritatis id.</div>
                   </div>
                 </div>
-                <img style="width: 391.79px; height: 220px; left: 12px; top: 36.46px; position: absolute" alt="susu kaya manfaatnya" src="/aktifitas/ultramilk.jpg.png" />
+                <img style="width: 310px; height: 220px; left: 12px; top: 36.46px; position: absolute" alt="menuang susu" src="/aktifitas/ultramilk.jpg.png" />
               </div>
             </a>
           </div>
+
           <div style="flex: 1 1 0; height: 491.80px; padding-top: 24px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
             <a href="<?= base_url('aktivitas/pemindahan-milk') ?>" style="text-decoration: none; color: inherit;">
-              <div style="width: 416px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
-                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 30px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 10.61px; padding-right: 10.62px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+              <div style="width: 350px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
+                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 50px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 26.14px; padding-right: 26.14px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #384F4B; font-size: 24px; font-family: Inter; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Pemindahan Milk</div>
                   </div>
                 </div>
-                <div style="height: 88px; padding-bottom: 16px; left: 30px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 72px; padding-left: 22.97px; padding-right: 22.97px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Repudiandae amet nihil natus in distinctio<br />suscipit id. Doloremque ducimus ea sit non.</div>
+                <div style="height: 88px; padding-bottom: 16px; left: 10px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 72px; padding-left: 24.14px; padding-right: 24.16px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Eum ad dolor et. Autem aut fugiat debitis<br />voluptatem consequuntur sit. Et veritatis id.</div>
                   </div>
                 </div>
-                <img style="width: 391.11px; height: 220px; left: 12px; top: 39.46px; position: absolute" alt="susu putih sehat" src="/aktifitas/aktivitas.jpg.png" />
+                <img style="width: 310px; height: 220px; left: 12px; top: 39.46px; position: absolute" alt="susu kacang" src="/aktifitas/aktivitas.jpg.png" />
               </div>
             </a>
           </div>
+
           <div style="flex: 1 1 0; height: 491.80px; padding-top: 24px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
             <a href="<?= base_url('aktivitas/peternakan') ?>" style="text-decoration: none; color: inherit;">
-              <div style="width: 416px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
-                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 30px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 17.59px; padding-right: 17.60px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+              <div style="width: 350px; height: 467.80px; position: relative; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); border-radius: 6px">
+                <div style="height: 77px; padding-top: 29.10px; padding-bottom: 18px; left: 50px; top: 297px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 29.90px; padding-bottom: 0.90px; padding-left: 26.14px; padding-right: 26.14px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="align-self: stretch; text-align: center; color: #384F4B; font-size: 24px; font-family: Inter; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Peternakan </div>
                   </div>
                 </div>
-                <div style="height: 88px; padding-bottom: 16px; left: 30px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div style="align-self: stretch; height: 72px; padding-left: 11.27px; padding-right: 11.27px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Consequuntur aliquid ab incidunt. Ex quos qui et vero et aut in. Reprehenderit.</div>
+                <div style="height: 88px; padding-bottom: 16px; left: 10px; top: 373.79px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="align-self: stretch; height: 72px; padding-left: 24.14px; padding-right: 24.16px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                    <div style="align-self: stretch; text-align: center; color: #444444; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Eum ad dolor et. Autem aut fugiat debitis<br />voluptatem consequuntur sit. Et veritatis id.</div>
                   </div>
                 </div>
-                <img style="width: 392.47px; height: 220px; left: 12px; top: 41.46px; position: absolute" alt="susu sapi sehat" src="/aktifitas/aktivitas2.jpg.png" />
+                <img style="width: 310px; height: 220px; left: 12px; top: 39.46px; position: absolute" alt="susu sapi putih" src="/aktifitas/aktivitas2.jpg.png" />
               </div>
             </a>
           </div>
+
         </div>
       </div>
     </div>
