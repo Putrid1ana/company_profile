@@ -109,24 +109,75 @@
       line-height: 24px;
     }
 
-
-
-
-
     /* Navbar */
     .navbar {
-      width: 100%;
-      max-width: none;
-      height: 75px;
-      padding: 13px 20px;
-      background: white;
-      box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #FFFF;
+      padding: 15px 20px;
       position: fixed;
+      /* Menjadikan navbar tetap */
       top: 0;
+      /* Tetap di bagian atas halaman */
+      left: 0;
+      width: 100%;
+      /* Memastikan navbar mengambil seluruh lebar layar */
       z-index: 100;
+      /* Pastikan navbar berada di atas elemen lainnya */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* Memberikan bayangan untuk efek lebih jelas */
+    }
+
+    .logo {
+      font-size: 30px;
+      font-family: Roboto;
+      font-weight: 700;
+      color: black;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      font-family: Poppins;
+    }
+
+    .nav-links a:hover {
+      color: #ddd;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 1000;
+      color: black;
+      position: absolute;
+      /* Pastikan posisinya ditetapkan secara absolut */
+      right: 50px;
+      /* Geser ke kanan */
+      top: 20px;
+      /* Geser ke bawah agar tidak terlalu ke atas */
+      padding: -20px;
+      /* Tambahkan padding agar lebih mudah di-klik */
+    }
+
+    .hamburger i {
+      font-size: 24px;
+      color: black;
+      z-index: 1000;
+      /* Pastikan ikon berada di depan elemen lainnya */
     }
 
     /* Banner Section */
@@ -227,12 +278,48 @@
     @media (max-width: 768px) {
 
       /* Navbar */
-      .navbar {
-        height: auto;
-        padding: 10px 20px;
+      .nav-links {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #FFFF;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+        clip-path: circle(0px at 100% 0%);
+        transition: clip-path 0.5s ease-in-out;
+        padding-top: 50px;
+        z-index: 1000;
+        /* Pastikan ini lebih tinggi dari elemen lainnya */
+      }
+
+      .nav-links.open {
+        clip-path: circle(100% at 50% 50%);
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      /* Hover effect for list items in mobile */
+      .nav-links li:hover {
+        background-color: #333;
+        width: 100%;
+        height: 20%;
+        transition: background-color 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-links a:hover {
+        color: black;
+        transition: color 0.3s ease-in-out;
       }
 
       .navbar div {
@@ -277,6 +364,12 @@
     @media (max-width: 480px) {
 
       /* Reduce font sizes for very small screens */
+      .hamburger {
+        font-size: 20px;
+        right: 10px;
+        top: 15px;
+      }
+
       .banner-title {
         font-size: 24px;
       }
@@ -299,55 +392,46 @@
   <div style="width: 100%; background: white; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;">
 
     <!-- Navbar Section -->
-    <div class="navbar">
-      <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
-      <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-        <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
-        <a href="/tentang" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Tentang</a>
-        <a href="/artikel" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Artikel</a>
-        <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
-        <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
-        <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
-        <div>
+    <nav class="navbar">
+      <div class="logo">Healthy Milk</div>
+      <ul class="nav-links">
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/tentang">Tentang</a></li>
+        <li><a href="/artikel">Artikel</a></li>
+        <li><a href="/produk">Produk</a></li>
+        <li><a href="/aktivitas">Aktivitas</a></li>
+        <li><a href="/kontak">Kontak</a></li>
+        <li>
           <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
             <option value="" hidden>Bahasa</option>
             <option value="id">Indonesia</option>
             <option value="en">English</option>
           </select>
-        </div>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
-    </div>
+    </nav>
 
-    <!-- Media Query untuk tampilan mobile -->
-    <style>
-      @media (max-width: 768px) {
-        div[style*="width: 100%;"] {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        div[style*="font-size: 30px;"] {
-          font-size: 24px;
-          /* Logo lebih kecil di layar kecil */
-        }
+    <!-- Script to toggle dropdown menu -->
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
 
-        div[style*="font-size: 16px;"] {
-          font-size: 14px;
-          /* Teks lebih kecil di layar kecil */
-        }
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        const icon = hamburger.querySelector('i');
 
-        div[style*="flex-wrap: wrap;"] {
-          flex-direction: column;
-          /* Teks di navbar vertikal di layar kecil */
-          gap: 10px;
+        if (navLinks.classList.contains('open')) {
+          icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+        } else {
+          icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
         }
-
-        div[style*="height: 75px;"] {
-          height: auto;
-          /* Agar navbar menyesuaikan tinggi konten di layar kecil */
-        }
-      }
-    </style>
+      });
+    </script>
 
     <!-- Main Content Section -->
     <div style="width: 100%; max-width: none; margin-top: 100px; display: flex; justify-content: center; align-items: center;">

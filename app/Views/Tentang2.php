@@ -4,119 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+           html, body {
+            height: 100vh; /* Mengambil tinggi penuh layar */
+            overflow: hidden; /* Mencegah scroll bar muncul */
+        }
+          
+         .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    width: 100%;
+    height: 550px;
+    background: #0E1A18; /* Warna fallback jika gambar gagal dimuat */
+    background-image: url('/about/tentang6.jpg'); /* Gantikan dengan path gambar kamu */
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    position: relative;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #4CAF50;
-    padding: 15px 20px;
-}
 
-.logo {
-    font-size: 30px; 
-    font-family: Roboto;
-    font-weight: 700
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-     color: black; 
-     font-size: 16px; 
-     font-family: Poppins;
-}
-
-.nav-links a:hover {
-    color: #ddd;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
-        top: 0;
-        background-color: #4CAF50;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        clip-path: circle(0px at 100% 0%);
-        transition: clip-path 0.5s ease-in-out;
-    }
-
-    .nav-links.open {
-        clip-path: circle(100% at 50% 50%);
-    }
-
-    .nav-links li {
-        margin: 50px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
     </style>
+
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Healthy Milk</div>
-        <ul class="nav-links">
-            <li> <a href="/" >Beranda</a></li>
-            <li><a href="/tentang">Tentang</a></li>
-            <li><a href="/artikel" >Artikel</a></li>
-            <li><a  href="/produk">Produk</a></li>
-            <li><a href="/aktivitas">Tentang</a></li>
-            <li><a href="/kontak" >Artikel</a></li>
-       
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+<?php include 'Partials/Navbar.php'; ?>
+<div class="banner">
+<div class="banner-overlay" style="color:aliceblue">
+      <h1 class="banner-title">Tentang Healthy Milk</h1>
+    </div>
+  </div>
+  <div>mony</div>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
-    </script>
+ 
 </body>
 </html>
-----
