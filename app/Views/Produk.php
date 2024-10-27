@@ -23,16 +23,11 @@
       background-color: #FFFF;
       padding: 15px 20px;
       position: fixed;
-      /* Menjadikan navbar tetap */
       top: 0;
-      /* Tetap di bagian atas halaman */
       left: 0;
       width: 100%;
-      /* Memastikan navbar mengambil seluruh lebar layar */
       z-index: 100;
-      /* Pastikan navbar berada di atas elemen lainnya */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Memberikan bayangan untuk efek lebih jelas */
     }
 
     .logo {
@@ -70,20 +65,15 @@
       z-index: 1000;
       color: black;
       position: absolute;
-      /* Pastikan posisinya ditetapkan secara absolut */
       right: 50px;
-      /* Geser ke kanan */
-      top: 20px;
-      /* Geser ke bawah agar tidak terlalu ke atas */
-      padding: -20px;
-      /* Tambahkan padding agar lebih mudah di-klik */
+      top: 15px;
+      padding: 0;
     }
 
     .hamburger i {
       font-size: 24px;
       color: black;
       z-index: 1000;
-      /* Pastikan ikon berada di depan elemen lainnya */
     }
 
     /* Banner Section */
@@ -135,23 +125,60 @@
       margin: 0 15px;
     }
 
+    .product-container {
+      flex-wrap: nowrap;
+      /* Tetap satu baris di layar besar */
+    }
+
+    .product-item {
+      width: 235px;
+    }
+
     /* Footer */
     .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      background-color: black;
+      padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid rgba(255, 255, 255, 0.17);
       position: relative;
       bottom: 0;
+      color: white;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-icons div {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      text-decoration: none;
     }
 
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
+
+      .logo {
+        font-size: 20px;
+      }
 
       /* Navbar */
       .nav-links {
@@ -167,7 +194,6 @@
         transition: clip-path 0.5s ease-in-out;
         padding-top: 50px;
         z-index: 1000;
-        /* Pastikan ini lebih tinggi dari elemen lainnya */
       }
 
       .nav-links.open {
@@ -180,62 +206,32 @@
 
       .hamburger {
         display: block;
-      }
 
-      /* Hover effect for list items in mobile */
-      .nav-links li:hover {
-        background-color: #333;
-        width: 100%;
-        height: 20%;
-        transition: background-color 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nav-links a:hover {
-        color: black;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .navbar div {
-        font-size: 24px;
-      }
-
-      .navbar div {
-        font-size: 24px;
       }
 
       /* Banner */
       .banner-title {
-        font-size: 32px;
+        font-size: 24px;
       }
 
       /* Footer */
       .footer {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
         padding: 10px;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      /* Reduce font sizes for very small screens */
-      .hamburger {
-        font-size: 20px;
-        right: 10px;
-        top: 15px;
       }
 
-      .banner-title {
-        font-size: 24px;
+      .footer-icons div {
+        width: 24px;
+        height: 24px;
       }
 
-      .section-title h1 {
-        font-size: 24px;
+      .footer-icons a {
+        width: 16px;
+        height: 16px;
+      }
+
+      .footer {
+        font-size: 12px;
+        /* Further reduce font size for copyright */
       }
     }
   </style>
@@ -245,12 +241,11 @@
   <!-- Background Section -->
   <div style="width: 100%; height: 100vh; position: relative; background: conic-gradient(from 180deg at 0% 100%, #A6D4FF 307deg, #D4ECFD 360deg);">
 
-    <!-- Background Image Section -->
-    <div style="width: 100%; height: 924px; background: #0E1A18; position: relative;">
-      <img style="width: 100%; height: 924px; object-fit: cover;" src="/product/produk3.jpg" alt="Background Image">
-      <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(14, 26, 24, 0.5);"></div>
-      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-        <h1 style="font-size: 48px; font-weight: 700;">Produk Healthy Milk</h1>
+    <!-- Banner Section -->
+    <div class="banner">
+      <img src="/product/produk3.jpg" alt="Background Image">
+      <div class="banner-overlay">
+        <h1 class="banner-title">Produk Healthy Milk</h1>
       </div>
     </div>
 
@@ -277,8 +272,6 @@
       </div>
     </nav>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Script to toggle dropdown menu -->
     <script>
       const hamburger = document.querySelector('.hamburger');
@@ -289,15 +282,15 @@
         const icon = hamburger.querySelector('i');
 
         if (navLinks.classList.contains('open')) {
-          icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+          icon.classList.replace('fa-bars', 'fa-times');
         } else {
-          icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
+          icon.classList.replace('fa-times', 'fa-bars');
         }
       });
     </script>
 
     <!-- Produk Section -->
-    <div style="width: 100%; height: 600px; padding: 40px 0; background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%); display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 100%; height: auto; padding: 40px 0; background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%); display: flex; flex-direction: column; align-items: center;">
       <div style="text-align: center; margin-bottom: 150px;">
         <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
           <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
@@ -305,56 +298,53 @@
           <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
         </div>
       </div>
-      <div style="width: 100%; display: flex; justify-content: center; gap: 30px;">
-        <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
+      <div class="product-container" style="width: 100%; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/grefields.jpg.png" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
           <a href="produk/greenfields" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>
         </div>
-        <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
+        <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/icithan.jpg.png" alt="susu icithan" style="width: 100%; border-radius: 20px;">
           <a href="produk/icithan" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Icithan</a>
         </div>
-        <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
+        <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/silk.jpg.png" alt="susu silk" style="width: 100%; border-radius: 20px;">
           <a href="produk/silk" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Silk Milk</a>
         </div>
-        <div style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
+        <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/ultramilk1.jpg.png" alt="susu ultramilk" style="width: 100%; border-radius: 20px;">
           <a href="produk/ultramilk" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Ultramilk</a>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div style="width: 100%; height: 98px; background: black; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box; border-top: 1px solid rgba(255, 255, 255, 0.17); position: relative; bottom: 0;">
-      <div style="display: flex; gap: 15px;">
-        <!-- Icon Facebook -->
-        <a href="https://facebook.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-facebook-f" style="color: white;"></i>
-        </a>
-
-        <!-- Icon Twitter -->
-        <a href="https://twitter.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-twitter" style="color: white;"></i>
-        </a>
-
-        <!-- Icon YouTube -->
-        <a href="https://youtube.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-youtube" style="color: white;"></i>
-        </a>
-
-        <!-- Icon Instagram -->
-        <a href="https://instagram.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-instagram" style="color: white;"></i>
-        </a>
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-icons">
+          <div>
+            <a href="https://facebook.com" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>Copyright 2024 Design by Healthy Milk</div>
       </div>
-      <div style="color: white; font-size: 13px; font-family: DM Sans;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
-    </div>
 
-    <!-- Font Awesome Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-  </div>
 </body>
 
 </html>

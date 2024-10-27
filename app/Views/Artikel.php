@@ -25,16 +25,11 @@
       background-color: #FFFF;
       padding: 15px 20px;
       position: fixed;
-      /* Menjadikan navbar tetap */
       top: 0;
-      /* Tetap di bagian atas halaman */
       left: 0;
       width: 100%;
-      /* Memastikan navbar mengambil seluruh lebar layar */
       z-index: 100;
-      /* Pastikan navbar berada di atas elemen lainnya */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Memberikan bayangan untuk efek lebih jelas */
     }
 
     .logo {
@@ -72,20 +67,15 @@
       z-index: 1000;
       color: black;
       position: absolute;
-      /* Pastikan posisinya ditetapkan secara absolut */
       right: 50px;
-      /* Geser ke kanan */
       top: 20px;
-      /* Geser ke bawah agar tidak terlalu ke atas */
-      padding: -20px;
-      /* Tambahkan padding agar lebih mudah di-klik */
+      padding: 0;
     }
 
     .hamburger i {
       font-size: 24px;
       color: black;
       z-index: 1000;
-      /* Pastikan ikon berada di depan elemen lainnya */
     }
 
     /* Banner Section */
@@ -137,23 +127,153 @@
       margin: 0 15px;
     }
 
+    /* Container utama */
+    .artikel-container {
+      width: 100%;
+      height: auto;
+      padding: 40px 0;
+      background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    /* Heading */
+    .heading-container {
+      text-align: center;
+    }
+
+    .heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .heading-line {
+      width: 50px;
+      height: 2px;
+      background: #1BBCA3;
+    }
+
+    .heading-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #384F4B;
+    }
+
+    /* Kotak Artikel */
+    .artikel-box {
+      width: 320px;
+      height: 275px;
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex: 1 1 calc(25% - 16px);
+      /* Menjadi empat kolom */
+      margin: 8px;
+    }
+
+    .artikel-box a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .artikel-content {
+      width: 100%;
+      height: 251px;
+      padding: 12px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .artikel-inner {
+      width: 100%;
+      padding: 30px;
+      background: linear-gradient(180deg, #D5EBFF 0%, white 66%);
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .artikel-image {
+      width: 160.75px;
+      height: 80px;
+    }
+
+    .artikel-title {
+      color: #384F4B;
+      font-size: 10px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      text-decoration: underline;
+      line-height: 24px;
+      word-wrap: break-word;
+    }
+
+    .artikel-description {
+      color: #444444;
+      font-size: 9px;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+      word-wrap: break-word;
+    }
+
     /* Footer */
     .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      background-color: black;
+      padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid rgba(255, 255, 255, 0.17);
       position: relative;
       bottom: 0;
+      color: white;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-icons div {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      text-decoration: none;
     }
 
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
+
+      .logo {
+        font-size: 20px;
+      }
 
       /* Navbar */
       .nav-links {
@@ -169,7 +289,6 @@
         transition: clip-path 0.5s ease-in-out;
         padding-top: 50px;
         z-index: 1000;
-        /* Pastikan ini lebih tinggi dari elemen lainnya */
       }
 
       .nav-links.open {
@@ -184,56 +303,50 @@
         display: block;
       }
 
-      /* Hover effect for list items in mobile */
-      .nav-links li:hover {
-        background-color: #333;
-        width: 100%;
-        height: 20%;
-        transition: background-color 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nav-links a:hover {
-        color: black;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .navbar div {
+      /* Banner */
+      .banner-title {
         font-size: 24px;
       }
 
-      /* Banner */
-      .banner-title {
-        font-size: 32px;
+      /* Responsiveness for Article Cards */
+      .article-card {
+        flex: 1 1 calc(33.33% - 24px);
+        margin-bottom: 16px;
+      }
+
+      .article-card img {
+        width: 100%;
+        height: auto;
+      }
+
+      .article-card div {
+        font-size: 12px;
+        /* Sesuaikan ukuran font agar lebih pas di layar kecil */
+      }
+
+      .artikel-box {
+        flex: 1 1 calc(33.33% - 16px);
+        /* Membuat tiga kolom di layar kecil */
       }
 
       /* Footer */
       .footer {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
         padding: 10px;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      /* Reduce font sizes for very small screens */
-      .hamburger {
-        font-size: 20px;
-        right: 10px;
-        top: 15px;
       }
 
-      .banner-title {
-        font-size: 24px;
+      .footer-icons div {
+        width: 24px;
+        height: 24px;
       }
 
-      .section-title h1 {
-        font-size: 24px;
+      .footer-icons a {
+        width: 16px;
+        height: 16px;
+      }
+
+      .footer {
+        font-size: 12px;
+        /* Further reduce font size for copyright */
       }
     }
   </style>
@@ -243,28 +356,26 @@
 
   <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
-      <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
-          <option value="" hidden>Bahasa</option>
-          <option value="id">Indonesia</option>
-          <option value="en">English</option>
-        </select>
-      </li>
+        <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+        <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+        <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+        <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+        <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+        <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
+        <li>
+            <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+                <option value="" hidden>Bahasa</option>
+                <option value="id">Indonesia</option>
+                <option value="en">English</option>
+            </select>
+        </li>
     </ul>
     <div class="hamburger">
-      <i class="fas fa-bars"></i>
+        <i class="fas fa-bars"></i>
     </div>
-  </nav>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</nav>
 
   <!-- Script to toggle dropdown menu -->
   <script>
@@ -276,9 +387,9 @@
       const icon = hamburger.querySelector('i');
 
       if (navLinks.classList.contains('open')) {
-        icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+        icon.classList.replace('fa-bars', 'fa-times');
       } else {
-        icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
+        icon.classList.replace('fa-times', 'fa-bars');
       }
     });
   </script>
@@ -291,107 +402,98 @@
     </div>
   </div>
 
-  <div style="width:100%; align-self: stretch; height: 561px; padding-top: 60px; padding-bottom: 60px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-    <div style="height: 98.39px; padding-bottom: 60px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-      <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
-        <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
-        <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter; font-weight: 700; line-height: 38.40px; word-wrap: break-word">Artikel</div>
-        <div style="width: 50px; height: 2px; background: #1F9CF7"></div>
+  <div class="artikel-container">
+    <div class="heading-container">
+      <div class="heading">
+        <div class="heading-line"></div>
+        <div class="heading-title">Artikel</div>
+        <div class="heading-line"></div>
       </div>
     </div>
-    <div style="width: 1120px; height: 397px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-      <div style="align-self: stretch; justify-content: center; align-items: flex-start; display: flex; gap: 10px;">
-        <!-- Kotak Artikel -->
-        <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-          <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style=" text-decoration: none; color: inherit;">
-            <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
-              <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
-                <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Mengapa Minum Susu Penting Untuk Kesehatan</div>
-                <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
-              </div>
-            </div>
-          </a>
-        </div>
 
-        <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-          <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>" style=" text-decoration: none; color: inherit;">
-            <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
-              <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
-                <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
-                <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
-              </div>
-            </div>
-          </a>
+    <!-- Kotak Artikel -->
+    <?php foreach ($artikels as $artikel): ?>
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+            <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
+            <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br /><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
+          </div>
         </div>
-
-        <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-          <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style=" text-decoration: none; color: inherit;">
-            <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
-              <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-                <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Inilah Manfaat Susu Murni Beserta Efeknya</div>
-                <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div style="width: 320px; height: 275px; padding-top: 24px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-          <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>" style=" text-decoration: none; color: inherit;">
-            <div style="width: 100%; height: 251px; padding: 12px; justify-content: flex-start; align-items: flex-start; display: flex">
-              <div style="width: 100%; padding: 30px; background: linear-gradient(180deg, #D5EBFF 0%, white 66%); box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
-                <img style="width: 160.75px; height: 80px" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-                <div style="color: #384F4B; font-size: 10px; font-family: Inter; font-weight: 700; text-decoration: underline; line-height: 24px; word-wrap: break-word">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
-                <div style="color: #444444; font-size: 9px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
+      </a>
     </div>
+    <?php endforeach; ?>
+
+    <!-- <div class="artikel-box">
+      <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+            <div class="artikel-title">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
+            <div class="artikel-description">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+            <div class="artikel-title">Inilah Manfaat Susu Murni Beserta Efeknya</div>
+            <div class="artikel-description">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+            <div class="artikel-title">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
+            <div class="artikel-description">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
+          </div>
+        </div>
+      </a>
+    </div> -->
+
   </div>
 
   <!-- Footer -->
-  <div style="width: 100%; height: 98px; background: black; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box; border-top: 1px solid rgba(255, 255, 255, 0.17); position: relative; bottom: 0;">
-    <div style="display: flex; gap: 15px;">
-      <!-- Icon Facebook -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://facebook.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+  <div class="footer">
+    <div class="footer-icons">
+      <div>
+        <a href="https://facebook.com" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
       </div>
-
-      <!-- Icon Twitter -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://twitter.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://twitter.com" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
-
-      <!-- Icon YouTube -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://youtube.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://youtube.com" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
       </div>
-
-      <!-- Icon Instagram -->
-      <!-- Icon Instagram -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://instagram.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://instagram.com" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
     </div>
-    <div style="color: white; font-size: 13px; font-family: DM Sans;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
+    <div>Copyright 2024 Design by Healthy Milk</div>
   </div>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  </div>
 </body>
+
 
 </html>

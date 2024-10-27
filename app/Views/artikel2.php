@@ -66,7 +66,7 @@
       position: absolute;
       right: 50px;
       top: 20px;
-      padding: -20px;
+      padding: 0;
     }
 
     .hamburger i {
@@ -124,52 +124,90 @@
       margin: 0 15px;
     }
 
-    /* Content Section */
-    .tentang-kami-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-
-    .tentang-kami-content div {
-      flex: 1;
-    }
-
-    .tentang-kami-content p {
-      text-align: justify;
-      font-size: 20px;
-      font-style: italic;
-      line-height: 1.8;
-      color: black;
-    }
-
-    .tentang-kami-content img {
-      max-width: 300px;
+    /* Container utama */
+    .artikel-container {
+      width: 100%;
       height: auto;
-      margin-left: auto; /* Gambar akan berada di sebelah kanan */
-      display: block;
+      padding: 40px 0;
+      background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    /* Heading */
+    .heading-container {
+      text-align: center;
+    }
+
+    .heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .heading-line {
+      width: 50px;
+      height: 2px;
+      background: #1BBCA3;
+    }
+
+    .heading-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #384F4B;
     }
 
     /* Footer */
     .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      background-color: black;
+      padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid rgba(255, 255, 255, 0.17);
       position: relative;
       bottom: 0;
+      color: white;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-icons div {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      text-decoration: none;
     }
 
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
+
+      .logo {
+        font-size: 20px;
+      }
+
       /* Navbar */
       .nav-links {
         position: absolute;
@@ -184,7 +222,6 @@
         transition: clip-path 0.5s ease-in-out;
         padding-top: 50px;
         z-index: 1000;
-        /* Pastikan ini lebih tinggi dari elemen lainnya */
       }
 
       .nav-links.open {
@@ -199,97 +236,57 @@
         display: block;
       }
 
-      /* Hover effect for list items in mobile */
-      .nav-links li:hover {
-        background-color: #333;
-        width: 100%;
-        height: 20%;
-        transition: background-color 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nav-links a:hover {
-        color: black;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .navbar div {
+      /* Banner */
+      .banner-title {
         font-size: 24px;
       }
 
-      /* Banner */
-      .banner-title {
-        font-size: 32px;
-      }
-
-      /* Content */
-      .tentang-kami-content {
+      div[style*="display: flex; justify-content: space-between;"] {
         flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        margin-top: 20px;
-      }
-
-      .tentang-kami-content p {
-        font-size: 18px;
-      }
-
-      .tentang-kami-content img {
-        max-width: 300px;
-        height: auto;
-        margin-left: 0; /* Kembali ke tengah pada layar kecil */
-        margin-right: 0;
-      }
+        width: 100%;
+        padding: 10px;
+    }
+    div[style*="flex: 2; padding-right: 20px;"] {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    div[style*="flex: 1;"] {
+        margin-top: 0;
+    }
 
       /* Footer */
       .footer {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
         padding: 10px;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-      /* Reduce font sizes for very small screens */
-      .hamburger {
-        font-size: 20px;
-        right: 10px;
-        top: 15px;
       }
 
-      .banner-title {
-        font-size: 24px;
+      .footer-icons div {
+        width: 24px;
+        height: 24px;
       }
 
-      .tentang-kami-content p {
-        font-size: 16px;
+      .footer-icons a {
+        width: 16px;
+        height: 16px;
       }
 
-      .section-title h1 {
-        font-size: 24px;
+      .footer {
+        font-size: 12px;
+        /* Further reduce font size for copyright */
       }
     }
   </style>
 </head>
 
 <body style="margin: 0px;">
-    <!-- Background Section -->
-    <div style="width: 100%; height: 100vh; position: relative; background: conic-gradient(from 180deg at 0% 100%, #A6D4FF 307deg, #D4ECFD 360deg);">
+       <!-- Banner Section -->
+  <div class="banner">
+    <img src="/articel/artikel.jpg" alt="Healthy Milk Banner" />
+    <div class="banner-overlay">
+      <h1 class="banner-title">Artikel Healthy Milk</h1>
+    </div>
+  </div>
 
-        <!-- Background Image Section -->
-        <div style="width: 100%; height: 924px; background: #0E1A18; position: relative;">
-            <img style="width: 100%; height: 924px; object-fit: cover;" src="/articel/artikel.jpg" alt="Background Image">
-            <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(14, 26, 24, 0.5);"></div>
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                <h1 style="font-size: 48px; font-family: Roboto, sans-serif; font-weight: 700;">Artikel Healthy Milk</h1>
-            </div>
-        </div>
-
-         <!-- Navbar Section -->
+        <!-- Navbar Section -->
   <nav class="navbar">
     <div class="logo">Healthy Milk</div>
     <ul class="nav-links">
@@ -312,8 +309,6 @@
     </div>
   </nav>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <!-- Script to toggle dropdown menu -->
   <script>
     const hamburger = document.querySelector('.hamburger');
@@ -324,9 +319,9 @@
       const icon = hamburger.querySelector('i');
 
       if (navLinks.classList.contains('open')) {
-        icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+        icon.classList.replace('fa-bars', 'fa-times');
       } else {
-        icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
+        icon.classList.replace('fa-times', 'fa-bars');
       }
     });
   </script>
@@ -400,41 +395,34 @@
         </div>
 
         <!-- Footer -->
-        <div style="width: 100%; height: 98px; background: black; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box; border-top: 1px solid rgba(255, 255, 255, 0.17); position: relative; bottom: 0;">
-    <div style="display: flex; gap: 15px;">
-      <!-- Icon Facebook -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://facebook.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+        <div class="footer">
+    <div class="footer-icons">
+      <div>
+        <a href="https://facebook.com" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
       </div>
-
-      <!-- Icon Twitter -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://twitter.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://twitter.com" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
-
-      <!-- Icon YouTube -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://youtube.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://youtube.com" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
       </div>
-
-      <!-- Icon Instagram -->
-      <!-- Icon Instagram -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://instagram.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://instagram.com" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
     </div>
-    <div style="color: white; font-size: 13px; font-family: DM Sans;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
+    <div>Copyright 2024 Design by Healthy Milk</div>
   </div>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    </div>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </body>
 
 </html>

@@ -25,16 +25,11 @@
       background-color: #FFFF;
       padding: 15px 20px;
       position: fixed;
-      /* Menjadikan navbar tetap */
       top: 0;
-      /* Tetap di bagian atas halaman */
       left: 0;
       width: 100%;
-      /* Memastikan navbar mengambil seluruh lebar layar */
       z-index: 100;
-      /* Pastikan navbar berada di atas elemen lainnya */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Memberikan bayangan untuk efek lebih jelas */
     }
 
     .logo {
@@ -72,20 +67,15 @@
       z-index: 1000;
       color: black;
       position: absolute;
-      /* Pastikan posisinya ditetapkan secara absolut */
       right: 50px;
-      /* Geser ke kanan */
-      top: 20px;
-      /* Geser ke bawah agar tidak terlalu ke atas */
-      padding: -20px;
-      /* Tambahkan padding agar lebih mudah di-klik */
+      top: 15px;
+      padding: 0;
     }
 
     .hamburger i {
       font-size: 24px;
       color: black;
       z-index: 1000;
-      /* Pastikan ikon berada di depan elemen lainnya */
     }
 
     /* Banner Section */
@@ -163,27 +153,54 @@
       max-width: 300px;
       height: auto;
       margin-left: auto;
-      /* Gambar akan berada di sebelah kanan */
       display: block;
     }
 
     /* Footer */
     .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      background-color: black;
+      padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid rgba(255, 255, 255, 0.17);
       position: relative;
       bottom: 0;
+      color: white;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-icons div {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      text-decoration: none;
     }
 
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
+
+      .logo {
+        font-size: 20px;
+      }
 
       /* Navbar */
       .nav-links {
@@ -199,7 +216,6 @@
         transition: clip-path 0.5s ease-in-out;
         padding-top: 50px;
         z-index: 1000;
-        /* Pastikan ini lebih tinggi dari elemen lainnya */
       }
 
       .nav-links.open {
@@ -212,31 +228,12 @@
 
       .hamburger {
         display: block;
-      }
-
-      /* Hover effect for list items in mobile */
-      .nav-links li:hover {
-        background-color: #333;
-        width: 100%;
-        height: 20%;
-        transition: background-color 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nav-links a:hover {
-        color: black;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .navbar div {
-        font-size: 24px;
+        
       }
 
       /* Banner */
       .banner-title {
-        font-size: 32px;
+        font-size: 24px;
       }
 
       /* Content */
@@ -248,48 +245,38 @@
       }
 
       .tentang-kami-content p {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 20px;
       }
 
       .tentang-kami-content img {
         max-width: 300px;
         height: auto;
         margin-left: 0;
-        /* Kembali ke tengah pada layar kecil */
         margin-right: 0;
       }
 
       /* Footer */
       .footer {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
         padding: 10px;
-        text-align: center;
+      }
+
+      .footer-icons div {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-icons a {
+        width: 16px;
+        height: 16px;
+      }
+
+      .footer {
+        font-size: 12px;
+        /* Further reduce font size for copyright */
       }
     }
 
-    @media (max-width: 480px) {
-
-      /* Reduce font sizes for very small screens */
-      .hamburger {
-        font-size: 20px;
-        right: 10px;
-        top: 15px;
-      }
-
-      .banner-title {
-        font-size: 24px;
-      }
-
-      .tentang-kami-content p {
-        font-size: 16px;
-      }
-
-      .section-title h1 {
-        font-size: 24px;
-      }
-    }
   </style>
 </head>
 
@@ -318,8 +305,6 @@
     </div>
   </nav>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <!-- Script to toggle dropdown menu -->
   <script>
     const hamburger = document.querySelector('.hamburger');
@@ -330,9 +315,9 @@
       const icon = hamburger.querySelector('i');
 
       if (navLinks.classList.contains('open')) {
-        icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+        icon.classList.replace('fa-bars', 'fa-times');
       } else {
-        icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
+        icon.classList.replace('fa-times', 'fa-bars');
       }
     });
   </script>
@@ -357,7 +342,6 @@
     <!-- Section Content with Image -->
     <div class="tentang-kami-content">
       <div>
-        <p>Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
         <p>Di Healthy Milk, misi kami adalah menginspirasi dan mendukung kesehatan melalui produk susu yang alami dan bergizi. Kami percaya bahwa nutrisi yang baik adalah fondasi dari kehidupan yang bahagia dan seimbang. Kami menawarkan berbagai macam produk susu yang diproduksi dari sapi yang dipelihara dengan baik, bebas dari hormon dan antibiotik. Setiap tetes susu kami kaya akan vitamin dan mineral esensial yang diperlukan oleh tubuh Anda.</p>
       </div>
       <div>
@@ -367,39 +351,32 @@
   </div>
 
   <!-- Footer -->
-  <div style="width: 100%; height: 98px; background: black; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box; border-top: 1px solid rgba(255, 255, 255, 0.17); position: relative; bottom: 0;">
-    <div style="display: flex; gap: 15px;">
-      <!-- Icon Facebook -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://facebook.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+  <div class="footer">
+    <div class="footer-icons">
+      <div>
+        <a href="https://facebook.com" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
       </div>
-
-      <!-- Icon Twitter -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://twitter.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://twitter.com" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
-
-      <!-- Icon YouTube -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://youtube.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://youtube.com" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
       </div>
-
-      <!-- Icon Instagram -->
-      <div style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <a href="https://instagram.com" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; color: white;">
+      <div>
+        <a href="https://instagram.com" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
     </div>
-    <div style="color: white; font-size: 13px; font-family: DM Sans;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
+    <div>Copyright 2024 Design by Healthy Milk</div>
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </body>
 
 </html>

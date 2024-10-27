@@ -19,18 +19,63 @@
   <style>
     /* Navbar */
     .navbar {
-      width: 97%;
-      max-width: none;
-      height: 75px;
-      padding: 13px 20px;
-      background: white;
-      box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #FFFF;
+      padding: 15px 20px;
       position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 100;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 30px;
+      font-family: Roboto;
+      font-weight: 700;
+      color: black;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      font-family: Poppins;
+    }
+
+    .nav-links a:hover {
+      color: #ddd;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 1000;
+      color: black;
+      position: absolute;
+      right: 50px;
+      top: 15px;
+      padding: 0;
+    }
+
+    .hamburger i {
+      font-size: 24px;
+      color: black;
+      z-index: 1000;
     }
 
     /* Banner Section */
@@ -107,43 +152,88 @@
     .tentang-kami-content img {
       max-width: 300px;
       height: auto;
-      margin-left: auto; /* Gambar akan berada di sebelah kanan */
+      margin-left: auto;
       display: block;
     }
 
     /* Footer */
     .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      background-color: black;
+      padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid rgba(255, 255, 255, 0.17);
       position: relative;
       bottom: 0;
+      color: white;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-icons div {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      text-decoration: none;
     }
 
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
-      /* Navbar */
-      .navbar {
-        height: auto;
-        padding: 10px 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+
+      .logo {
+        font-size: 20px;
       }
 
-      .navbar div {
-        font-size: 24px;
+      /* Navbar */
+      .nav-links {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #FFFF;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+        clip-path: circle(0px at 100% 0%);
+        transition: clip-path 0.5s ease-in-out;
+        padding-top: 50px;
+        z-index: 1000;
+      }
+
+      .nav-links.open {
+        clip-path: circle(100% at 50% 50%);
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
+        
       }
 
       /* Banner */
       .banner-title {
-        font-size: 32px;
+        font-size: 24px;
       }
 
       /* Content */
@@ -155,87 +245,105 @@
       }
 
       .tentang-kami-content p {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 20px;
       }
 
       .tentang-kami-content img {
         max-width: 300px;
         height: auto;
-        margin-left: 0; /* Kembali ke tengah pada layar kecil */
+        margin-left: 0;
         margin-right: 0;
       }
 
       /* Footer */
       .footer {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
         padding: 10px;
-        text-align: center;
+      }
+
+      .footer-icons div {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-icons a {
+        width: 16px;
+        height: 16px;
+      }
+
+      .footer {
+        font-size: 12px;
+        /* Further reduce font size for copyright */
       }
     }
 
-    @media (max-width: 480px) {
-      /* Reduce font sizes for very small screens */
-      .banner-title {
-        font-size: 24px;
-      }
-
-      .tentang-kami-content p {
-        font-size: 16px;
-      }
-
-      .section-title h1 {
-        font-size: 24px;
-      }
-    }
   </style>
 </head>
 
 <body style="margin: 0px;">
 
   <!-- Navbar Section -->
-  <div class="navbar">
-    <div style="font-size: 30px; font-family: Roboto; font-weight: 700;">Healthy Milk</div>
-    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-      <a href="/" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Beranda</a>
-      <a href="/tentang" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Tentang</a>
-      <a href="/artikel" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Artikel</a>
-      <a href="/produk" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Produk</a>
-      <a href="/aktivitas" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Aktivitas</a>
-      <a href="/kontak" style="text-decoration: none; color: black; font-size: 16px; font-family: Poppins;">Kontak</a>
-      <div>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px;">
+  <nav class="navbar">
+    <div class="logo">Healthy Milk</div>
+    <ul class="nav-links">
+      <li><a href="/">Beranda</a></li>
+      <li><a href="/tentang">Tentang</a></li>
+      <li><a href="/artikel">Artikel</a></li>
+      <li><a href="/produk">Produk</a></li>
+      <li><a href="/aktivitas">Aktivitas</a></li>
+      <li><a href="/kontak">Kontak</a></li>
+      <li>
+        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
         </select>
-      </div>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
     </div>
-  </div>
+  </nav>
 
-  <!-- Banner Section -->
-  <div class="banner">
-    <img src="/about/tentang6.jpg" alt="Healthy Milk Banner" />
+  <!-- Script to toggle dropdown menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const icon = hamburger.querySelector('i');
+
+      if (navLinks.classList.contains('open')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+      } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+      }
+    });
+  </script>
+
+ <!-- Banner Section -->
+ <div class="banner">
+    <img src="/articel/artikel.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
       <h1 class="banner-title">Aktivitas Healthy Milk</h1>
     </div>
   </div>
 
-  <!-- Tentang Kami Section -->
-  <div style="width: 99%; max-width: none; min-height: 828px; background: linear-gradient(180deg, #A6D4FF 0%, white 21%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 12px;">
+   <!-- Tentang Kami Section -->
+   <div style="max-width: none; min-height: 828px; background: linear-gradient(180deg, #A6D4FF 0%, white 21%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 12px;">
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Aktivitas Kami</h1>
+      <h1>Penyajian Milk: Kesegaran dan Kesehatan dalam Satu Gelas</h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 
     <!-- Section Content with Image -->
     <div class="tentang-kami-content">
       <div>
-        <p>Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
-        <p>Di Healthy Milk, misi kami adalah menginspirasi dan mendukung kesehatan melalui produk susu yang alami dan bergizi. Kami percaya bahwa nutrisi yang baik adalah fondasi dari kehidupan yang bahagia dan seimbang. Kami menawarkan berbagai macam produk susu yang diproduksi dari sapi yang dipelihara dengan baik, bebas dari hormon dan antibiotik. Setiap tetes susu kami kaya akan vitamin dan mineral esensial yang diperlukan oleh tubuh Anda.</p>
+      <p>Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan. 
+        Disajikan dalam keadaan segar dan suhu yang optimal, setiap tegukan milk memberikan kelezatan alami susu yang kaya akan kalsium, protein, dan vitamin penting bagi tubuh. Cocok dinikmati kapan saja, baik pagi untuk memulai hari, setelah berolahraga untuk pemulihan energi, atau di malam hari untuk mendukung tidur yang nyenyak. Dengan berbagai varian, dari susu murni, rendah lemak, hingga susu nabati, penyajian milk dapat disesuaikan dengan kebutuhan dan gaya hidup Anda. Segelas milk bukan hanya sekadar minuman, tetapi pilihan sehat yang dapat diandalkan untuk menjaga kesehatan tulang, meningkatkan energi, dan mendukung kesejahteraan Anda setiap hari.</p>
       </div>
       <div>
         <img src="/aktifitas/ultramilk.jpg.png" alt="Susu dan Croissant" />
@@ -245,30 +353,31 @@
 
   <!-- Footer -->
   <div class="footer">
-    <div style="display: flex; gap: 15px;">
-      <!-- Icon Facebook -->
-      <a href="https://facebook.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <i class="fab fa-facebook-f" style="color: white;"></i>
-      </a>
-
-       <!-- Icon YouTube -->
-       <a href="https://youtube.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-       <i class="fab fa-youtube" style="color: white;"></i>
-          </a>
-
-      <!-- Icon Twitter -->
-      <a href="https://twitter.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <i class="fab fa-twitter" style="color: white;"></i>
-      </a>
-
-      <!-- Icon Instagram -->
-      <a href="https://instagram.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-        <i class="fab fa-instagram" style="color: white;"></i>
-      </a>
+    <div class="footer-icons">
+      <div>
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://youtube.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
-    <div style="color: white; font-family: Inika; font-size: 16px;">&copy; Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
+    <div>Copyright 2024 Design by Healthy Milk</div>
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </body>
 
 </html>

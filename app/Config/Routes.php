@@ -13,7 +13,7 @@ $routes->get('produk/greenfields', 'Home::produk1');  // Rute untuk halaman Prod
 $routes->get('produk/icithan', 'Home::produk2');  // Rute untuk halaman produk2
 $routes->get('produk/silk', 'Home::produk3');  // Rute untuk halaman produk3
 $routes->get('produk/ultramilk', 'Home::produk4');  //Rute untuk halaman produk4
-$routes->get('artikel', 'Home::artikel');  // Rute untuk halaman Artikel
+$routes->get('artikel', 'ArtikelController::index');  // Rute untuk halaman Artikel
 $routes->get('artikel/minum-susu-sehat-itu-penting', 'Home::artikel1');
 $routes->get('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat', 'Home::artikel2');
 $routes->get('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya', 'Home::artikel3');

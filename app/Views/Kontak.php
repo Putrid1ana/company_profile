@@ -23,16 +23,11 @@
       background-color: #FFFF;
       padding: 15px 20px;
       position: fixed;
-      /* Menjadikan navbar tetap */
       top: 0;
-      /* Tetap di bagian atas halaman */
       left: 0;
       width: 100%;
-      /* Memastikan navbar mengambil seluruh lebar layar */
       z-index: 100;
-      /* Pastikan navbar berada di atas elemen lainnya */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Memberikan bayangan untuk efek lebih jelas */
     }
 
     .logo {
@@ -86,6 +81,24 @@
       /* Pastikan ikon berada di depan elemen lainnya */
     }
 
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 1000;
+      color: black;
+      position: absolute;
+      right: 50px;
+      top: 15px;
+      padding: 0;
+    }
+
+    .hamburger i {
+      font-size: 24px;
+      color: black;
+      z-index: 1000;
+    }
+
     /* Banner Section */
     .banner {
       width: 100%;
@@ -135,81 +148,43 @@
       margin: 0 15px;
     }
 
-    /* Footer */
-    .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
+     /* Footer */
+     .footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      background-color: black;
+      padding: 20px;
       box-sizing: border-box;
       border-top: 1px solid rgba(255, 255, 255, 0.17);
       position: relative;
       bottom: 0;
+      color: white;
     }
 
-    /* Responsive Design for Mobile */
-    @media (max-width: 768px) {
+    .footer-icons {
+      display: flex;
+      gap: 15px;
+    }
 
-      /* Navbar */
-      .nav-links {
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: #FFFF;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 350px;
-        clip-path: circle(0px at 100% 0%);
-        transition: clip-path 0.5s ease-in-out;
-        padding-top: 50px;
-        z-index: 1000;
-        /* Pastikan ini lebih tinggi dari elemen lainnya */
-      }
+    .footer-icons div {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .nav-links.open {
-        clip-path: circle(100% at 50% 50%);
-      }
-
-      .nav-links li {
-        margin: 10px 0;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      /* Hover effect for list items in mobile */
-      .nav-links li:hover {
-        background-color: #333;
-        width: 100%;
-        height: 20%;
-        transition: background-color 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nav-links a:hover {
-        color: black;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .navbar div {
-        font-size: 24px;
-      }
-
-      .navbar div {
-        font-size: 24px;
-      }
-
-      /* Banner */
-      .banner-title {
-        font-size: 32px;
-      }
+    .footer-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      text-decoration: none;
     }
 
     /* Content Wrapper */
@@ -219,8 +194,7 @@
       align-items: center;
       width: 100%;
       max-width: 1200px;
-      margin: 100px auto 0;
-      padding: 20px;
+      margin: 20px auto 20px;
     }
 
     .content-left {
@@ -267,33 +241,39 @@
       margin-left: 20px;
     }
 
-    /* Footer Styles */
-    .footer {
-      width: 100%;
-      height: 98px;
-      background: black;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.17);
-    }
-
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      background: rgba(255, 255, 255, 0.17);
-      border-radius: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 10px;
-    }
-
     /* Media Queries */
     @media (max-width: 768px) {
-      .navbar-link {
-        font-size: 14px;
+      .logo {
+        font-size: 20px;
+      }
+
+      /* Navbar */
+      .nav-links {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #FFFF;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+        clip-path: circle(0px at 100% 0%);
+        transition: clip-path 0.5s ease-in-out;
+        padding-top: 50px;
+        z-index: 1000;
+      }
+
+      .nav-links.open {
+        clip-path: circle(100% at 50% 50%);
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
+
       }
 
       .content-wrapper {
@@ -309,15 +289,29 @@
         margin-left: 0;
         height: 300px;
       }
-    }
+           /* Banner */
+           .banner-title {
+        font-size: 24px;
+      }
 
-    @media (max-width: 480px) {
+      /* Footer */
+      .footer {
+        padding: 10px;
+      }
 
-      /* Reduce font sizes for very small screens */
-      .hamburger {
-        font-size: 20px;
-        right: 10px;
-        top: 15px;
+      .footer-icons div {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-icons a {
+        width: 16px;
+        height: 16px;
+      }
+
+      .footer {
+        font-size: 12px;
+        /* Further reduce font size for copyright */
       }
     }
 
@@ -326,18 +320,17 @@
 
 <body style="margin: 0px;">
   <!-- Background Section -->
-  <div style="width: 100%; height: 100vh; position: relative; background: conic-gradient(from 180deg at 0% 100%, #A6D4FF 307deg, #D4ECFD 360deg);">
+  <div style="width: 100%; height: 100vh; position: relative;">
 
-    <!-- Background Image Section -->
-    <div style="width: 100%; height: 924px; background: #0E1A18; position: relative;">
-      <img style="width: 100%; height: 924px; object-fit: cover;" src="/contact/kontak.jpg" alt="Background Image">
-      <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(14, 26, 24, 0.5);"></div>
-      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-        <h1 style="font-size: 48px; font-weight: 700;">Kontak Healthy Milk</h1>
+   <!-- Banner Section -->
+   <div class="banner">
+      <img src="/contact/kontak.jpg" alt="Background Image">
+      <div class="banner-overlay">
+        <h1 class="banner-title">Kontak Healthy Milk</h1>
       </div>
     </div>
 
-    <!-- Navbar Section -->
+     <!-- Navbar Section -->
      <nav class="navbar">
       <div class="logo">Healthy Milk</div>
       <ul class="nav-links">
@@ -360,8 +353,6 @@
       </div>
     </nav>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Script to toggle dropdown menu -->
     <script>
       const hamburger = document.querySelector('.hamburger');
@@ -372,9 +363,9 @@
         const icon = hamburger.querySelector('i');
 
         if (navLinks.classList.contains('open')) {
-          icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+          icon.classList.replace('fa-bars', 'fa-times');
         } else {
-          icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
+          icon.classList.replace('fa-times', 'fa-bars');
         }
       });
     </script>
@@ -399,33 +390,33 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <div style="width: 100%; height: 98px; background: black; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box; border-top: 1px solid rgba(255, 255, 255, 0.17); position: relative; bottom: 0;">
-      <div style="display: flex; gap: 15px;">
-        <!-- Icon Facebook -->
-        <a href="https://facebook.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-facebook-f" style="color: white;"></i>
-        </a>
-
-        <!-- Icon Twitter -->
-        <a href="https://twitter.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-twitter" style="color: white;"></i>
-        </a>
-
-        <!-- Icon YouTube -->
-        <a href="https://youtube.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-youtube" style="color: white;"></i>
-        </a>
-
-        <!-- Icon Instagram -->
-        <a href="https://instagram.com" target="_blank" style="width: 32px; height: 32px; background: rgba(255, 255, 255, 0.17); border-radius: 16px; display: flex; justify-content: center; align-items: center;">
-          <i class="fab fa-instagram" style="color: white;"></i>
-        </a>
+     <!-- Footer -->
+     <div class="footer">
+        <div class="footer-icons">
+          <div>
+            <a href="https://facebook.com" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>Copyright 2024 Design by Healthy Milk</div>
       </div>
-      <div style="color: white; font-size: 13px; font-family: DM Sans;">Copyright © 2024 Healthy Milk, Design by Healthy Milk</div>
-    </div>
-  </div>
-  </div>
+
 </body>
 
 </html>
