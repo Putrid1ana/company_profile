@@ -672,365 +672,365 @@
 </head>
 
 <body style="margin:0px;">
-  
-    <!-- Navbar Section -->
-    <nav class="navbar">
-      <div class="logo">Healthy Milk</div>
-      <ul class="nav-links">
-        <li><a href="/">Beranda</a></li>
-        <li><a href="/tentang">Tentang</a></li>
-        <li><a href="/artikel">Artikel</a></li>
-        <li><a href="/produk">Produk</a></li>
-        <li><a href="/aktivitas">Aktivitas</a></li>
-        <li><a href="/kontak">Kontak</a></li>
-        <li>
-          <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
-            <option value="" hidden>Bahasa</option>
-            <option value="id">Indonesia</option>
-            <option value="en">English</option>
-          </select>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <i class="fas fa-bars"></i>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">Healthy Milk</div>
+    <ul class="nav-links">
+      <li><a href="/">Beranda</a></li>
+      <li><a href="/tentang">Tentang</a></li>
+      <li><a href="/artikel">Artikel</a></li>
+      <li><a href="/produk">Produk</a></li>
+      <li><a href="/aktivitas">Aktivitas</a></li>
+      <li><a href="/kontak">Kontak</a></li>
+      <li>
+        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+          <option value="" hidden>Bahasa</option>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Script to toggle dropdown menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const icon = hamburger.querySelector('i');
+
+      if (navLinks.classList.contains('open')) {
+        icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
+      } else {
+        icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
+      }
+    });
+  </script>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div style="width: 100%; height: 100vh; background-image: url('/profile.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style="background: rgba(42, 43, 63, 0.75); padding: 40px; text-align: center; color: white; max-width: 800px;">
+        <h1 style="font-size: 4vw; font-family: Roboto; font-weight: 700; margin: 0;">Welcome To My Healthy Milk</h1>
+        <p style="font-size: 1.5vw; font-family: Poppins; font-style: italic; margin: 20px 0;">Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
+        <a href="tentang" style="padding: 10px 34px; background: #0D6EFD; border-radius: 30px; color: white; text-decoration: none; font-family: Nunito; font-weight: 700;">Baca Selengkapnya</a>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dy10ycQbDBOCJQ9exOYtxlLRSAfRdBr0CdA+cTrp29s0BdTgf9p6A8hqK1NlQRWEidL2daFFXZHMx9WzVHQjAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Script to toggle dropdown menu -->
-    <script>
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-        const icon = hamburger.querySelector('i');
-
-        if (navLinks.classList.contains('open')) {
-          icon.className = 'fas fa-times'; // Atur ikon menjadi "X"
-        } else {
-          icon.className = 'fas fa-bars'; // Kembalikan ke ikon "bars"
-        }
-      });
-    </script>
-
-    <!-- Banner Section -->
-    <div class="banner">
-      <div style="width: 100%; height: 100vh; background-image: url('/profile.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <div style="background: rgba(42, 43, 63, 0.75); padding: 40px; text-align: center; color: white; max-width: 800px;">
-          <h1 style="font-size: 4vw; font-family: Roboto; font-weight: 700; margin: 0;">Welcome To My Healthy Milk</h1>
-          <p style="font-size: 1.5vw; font-family: Poppins; font-style: italic; margin: 20px 0;">Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
-          <a href="tentang" style="padding: 10px 34px; background: #0D6EFD; border-radius: 30px; color: white; text-decoration: none; font-family: Nunito; font-weight: 700;">Baca Selengkapnya</a>
-        </div>
+  <!-- news -->
+  <div class="news-container">
+    <!-- news 1 -->
+    <div class="news-item news-white">
+      <div class="icon-circle">
+        <i class="fas fa-check-double inner-circle"></i>
+      </div>
+      <div class="title">Local Farmer</div>
+      <div class="description">
+        Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
       </div>
     </div>
 
-    <!-- news -->
-    <div class="news-container">
-      <!-- news 1 -->
-      <div class="news-item news-white">
-        <div class="icon-circle">
-          <i class="fas fa-check-double inner-circle"></i>
-        </div>
-        <div class="title">Local Farmer</div>
-        <div class="description">
-          Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
-        </div>
+    <!-- news 2 -->
+    <div class="news-item news-blue">
+      <div class="icon-circle">
+        <i class="fas fa-check-double inner-circle"></i>
       </div>
-
-      <!-- news 2 -->
-      <div class="news-item news-blue">
-        <div class="icon-circle">
-          <i class="fas fa-check-double inner-circle"></i>
-        </div>
-        <div class="title">Dairy Product</div>
-        <div class="description">
-          Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
-        </div>
-      </div>
-
-      <!-- news 3 -->
-      <div class="news-item news-white">
-        <div class="icon-circle">
-          <i class="fas fa-check-double inner-circle"></i>
-        </div>
-        <div class="title">Tour Destination</div>
-        <div class="description">
-          Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
-        </div>
+      <div class="title">Dairy Product</div>
+      <div class="description">
+        Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
       </div>
     </div>
 
-    <!--- icon -->
-    <div style="align-self: stretch; height: auto; padding: 40px; background: #E1F5FE; display: flex; justify-content: center;">
-      <div style="width: 100%; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-          <div style="width: 100%; max-width: 800px; padding: 0 12px; display: flex; justify-content: center; align-items: center;">
-            <div style="display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 20px;">
-              <span style="color: white; font-size: 24px;">😊</span>
-            </div>
-            <div style="text-align: center; color: #01579B; font-size: 40px; font-family: Roboto; font-weight: 700; line-height: 1.2; word-wrap: break-word;">
-              Love Healthy Milk & Love You More
-            </div>
+    <!-- news 3 -->
+    <div class="news-item news-white">
+      <div class="icon-circle">
+        <i class="fas fa-check-double inner-circle"></i>
+      </div>
+      <div class="title">Tour Destination</div>
+      <div class="description">
+        Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
+      </div>
+    </div>
+  </div>
+
+  <!--- icon -->
+  <div style="align-self: stretch; height: auto; padding: 40px; background: #E1F5FE; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 100%; max-width: 800px; padding: 0 12px; display: flex; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 20px;">
+            <span style="color: white; font-size: 24px;">😊</span>
+          </div>
+          <div style="text-align: center; color: #01579B; font-size: 40px; font-family: Roboto; font-weight: 700; line-height: 1.2; word-wrap: break-word;">
+            Love Healthy Milk & Love You More
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- artikel -->
-    <div class="artikel-container">
-      <div class="heading-container">
-        <div class="heading">
-          <div class="heading-line"></div>
-          <div class="heading-title">Artikel</div>
-          <div class="heading-line"></div>
+  <!-- artikel -->
+  <div class="artikel-container">
+    <div class="heading-container">
+      <div class="heading">
+        <div class="heading-line"></div>
+        <div class="heading-title">Artikel</div>
+        <div class="heading-line"></div>
+      </div>
+    </div>
+
+    <!-- Kotak Artikel -->
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+            <div class="artikel-title">Mengapa Minum Susu Penting Untuk Kesehatan</div>
+            <div class="artikel-description">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+            <div class="artikel-title">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
+            <div class="artikel-description">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+            <div class="artikel-title">Inilah Manfaat Susu Murni Beserta Efeknya</div>
+            <div class="artikel-description">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="artikel-box">
+      <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>">
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+            <div class="artikel-title">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
+            <div class="artikel-description">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- galeri produk -->
+  <div style="width: 100%; max-width: none; background: linear-gradient(235deg, rgba(205, 238, 248, 0) 4%, white 50%, #A6D4FF 95%); display: flex; flex-direction: column; box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.10); justify-content: center; align-items:center; padding: 10px 0px;">
+    <div style="height: 98.39px; padding-bottom: 50px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex;">
+      <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; justify-content: center; align-items: center; gap: 15px; display: inline-flex;">
+        <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
+        <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter; font-weight: 700; line-height: 38.40px;">Galeri Produk</div>
+        <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
+      </div>
+    </div>
+
+    <!-- Container with horizontal scroll -->
+    <div class="card-container" style="display: flex; overflow-x: auto; padding: 0 30px; gap: 10px;">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon-container">
+          <div class="card-icon"></div>
+        </div>
+        <div class="card-content">
+          <span class="content-card">Minuman Greenfields adalah produk susu dan turunan susu yang diproduksi oleh PT Greenfields Indonesia.<br /></span>
+          <span>• Susu segar Greenfields <br />• Yogurt Greenfields</span>
+        </div>
+        <div class="card-footer">
+          <img alt="susu Greenfields" src="<?= base_url('galeri/galeri.jpg.png') ?>" />
+          <div>Greenfields</div>
         </div>
       </div>
 
-      <!-- Kotak Artikel -->
-      <div class="artikel-box">
-        <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
-          <div class="artikel-content">
-            <div class="artikel-inner">
-              <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
-              <div class="artikel-title">Mengapa Minum Susu Penting Untuk Kesehatan</div>
-              <div class="artikel-description">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
-            </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon-container">
+          <div class="card-icon"></div>
+        </div>
+        <div class="card-content">
+          <span class="content-card">Minuman Ichitan adalah minuman siap saji yang diproduksi oleh PT Ichi Tan Indonesia. Ichitan menawarkan berbagai jenis minuman, seperti:<br /></span>
+          <span>• Ichitan Brown Sugar Milk <br />• Ichitan Thai Milk Green Tea</span>
+        </div>
+        <div class="card-footer">
+          <img alt="susu Ichitan" src="<?= base_url('galeri/galeri1.jpg.png') ?>" />
+          <div>Ichitan</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-icon-container">
+          <div class="card-icon"></div>
+        </div>
+        <div class="card-content">
+          <span class="content-card">Silk Nextmilk adalah susu nabati yang terbuat dari campuran gandum, kelapa, dan kedelai. Silk Milk hadir dalam berbagai rasa dan varian, mulai dari rasa plain, vanilla, hingga cokelat, dan sering digunakan dalam berbagai resep.<br /></span>
+        </div>
+        <div class="card-footer">
+          <img alt="susu Silk" src="<?= base_url('galeri/galeri2.jpg.png') ?>" />
+          <div>Silk Milk</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-icon-container">
+          <div class="card-icon"></div>
+        </div>
+        <div class="card-content">
+          <span class="content-card">Ultra Milk merupakan susu segar alami yang diproses dengan teknologi Ultra High Temperature (UHT). Susu Ultra Milk mengandung berbagai nutrisi, seperti protein, karbohidrat, vitamin, dan mineral seperti kalsium, magnesium, dan fosfor.<br /></span>
+        </div>
+        <div class="card-footer">
+          <img alt="susu Ultra" src="<?= base_url('galeri/galeri3.jpg.png') ?>" />
+          <div>Ultra Milk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div style="width: 100%; height: auto; padding: 40px 0; background: white; display: flex; flex-direction: column; align-items: center;">
+    <div style="text-align: center; margin-bottom: 150px;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
+        <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
+        <div style="font-size: 32px; font-weight: 700; color: #384F4B;">Aktivitas</div>
+        <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
+      </div>
+    </div>
+
+    <div class="activity-container">
+      <div class="activity-card">
+        <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
+          <img src="/aktifitas/ultramilk.jpg.png" alt="menuang susu" style="width: 100%; height: 220px;">
+          <div style="padding: 24px; text-align: center;">
+            <h3 style="font-size: 24px; font-weight: 700;">Penyajian Milk</h3>
+            <p style="font-size: 16px; color: #444444;">Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan. </p>
           </div>
         </a>
       </div>
 
-      <div class="artikel-box">
-        <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>">
-          <div class="artikel-content">
-            <div class="artikel-inner">
-              <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
-              <div class="artikel-title">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
-              <div class="artikel-description">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
-            </div>
+      <div class="activity-card">
+        <a href="<?= base_url('aktivitas/pemindahan-milk') ?>" style="text-decoration: none; color: inherit;">
+          <img src="/aktifitas/aktivitas.jpg.png" alt="susu kacang" style="width: 100%; height: 220px;">
+          <div style="padding: 24px; text-align: center;">
+            <h3 style="font-size: 24px; font-weight: 700;">Pemindahan Milk</h3>
+            <p style="font-size: 16px; color: #444444;">Proses yang cermat untuk menjaga kualitas susu dari sumber hingga siap untuk dikonsumsi.</p>
           </div>
         </a>
       </div>
 
-      <div class="artikel-box">
-        <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>">
-          <div class="artikel-content">
-            <div class="artikel-inner">
-              <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-              <div class="artikel-title">Inilah Manfaat Susu Murni Beserta Efeknya</div>
-              <div class="artikel-description">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
-            </div>
+      <div class="activity-card">
+        <a href="<?= base_url('aktivitas/peternakan') ?>" style="text-decoration: none; color: inherit;">
+          <img src="/aktifitas/aktivitas2.jpg.png" alt="susu sapi putih" style="width: 100%; height: 220px;">
+          <div style="padding: 24px; text-align: center;">
+            <h3 style="font-size: 24px; font-weight: 700;">Peternakan</h3>
+            <p style="font-size: 16px; color: #444444;">Tempat di mana sapi-sapi dipelihara secara intensif untuk menghasilkan produk-produk pangan, seperti susu dan daging.</p>
           </div>
         </a>
       </div>
+    </div>
+  </div>
 
-      <div class="artikel-box">
-        <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>">
-          <div class="artikel-content">
-            <div class="artikel-inner">
-              <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-              <div class="artikel-title">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
-              <div class="artikel-description">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
-            </div>
-          </div>
+  <!-- Footer atas -->
+  <div style="width: 100%; background: #01579B; padding: 40px 20px; box-sizing: border-box;">
+    <div class="footer-container" style="max-width: 1320px; margin: 0 auto; display: flex; justify-content: Center; align-items: flex-start; gap: 30px; flex-wrap: wrap;">
+
+      <!-- Company Column -->
+      <div style="flex: 1; color: white; min-width: 250px;">
+        <div style="margin-bottom: 20px;">
+          <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Company</div>
+          <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
+        </div>
+        <ul style="list-style: none; padding: 10px; margin: 0; line-height: 1.8;">
+          <li><a href="#" style="color: white; text-decoration: none;">Tentang</a></li>
+          <li><a href="#" style="color: white; text-decoration: none;">Artikel</a></li>
+          <li><a href="#" style="color: white; text-decoration: none;">Produk</a></li>
+          <li><a href="#" style="color: white; text-decoration: none;">Aktivitas</a></li>
+          <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacts Column -->
+      <div style="flex: 1; color: white; min-width: 250px;">
+        <div style="margin-bottom: 20px;">
+          <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Contacts</div>
+          <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+          <li>📍 Jl. Jaya Milk No. 123, Batu, Jawa Timur</li>
+          <li>📞 +62 812-3456-7890</li>
+          <li>✉️ info@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div style="flex: 1; color: white; min-width: 250px;">
+        <div style="margin-bottom: 20px;">
+          <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Newsletter</div>
+          <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
+        </div>
+        <p style="line-height: 1.8;">Fusce varius, dolor tempor interdum tristique bibendum</p>
+        <form>
+          <input type="email" placeholder="E-mail" style="width: 100%; padding: 10px; box-sizing: border-box; margin-bottom: 10px;">
+          <button type="submit" style="background: #0277BD; color: white; padding: 10px 20px; border: none; cursor: pointer;">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Wave Image -->
+    <div style="width: 100%; height: 100px; background: url('wave.png') no-repeat center center; background-size: cover; margin-top: 20px;"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-icons">
+      <div>
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i>
         </a>
       </div>
-
-    </div>
-
-
-    <!-- galeri produk -->
-    <div style="width: 100%; max-width: none; background: linear-gradient(235deg, rgba(205, 238, 248, 0) 4%, white 50%, #A6D4FF 95%); display: flex; flex-direction: column; box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.10); justify-content: center; align-items:center; padding: 10px 0px;">
-      <div style="height: 98.39px; padding-bottom: 50px; padding-left: 12px; padding-right: 12px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex;">
-        <div style="align-self: stretch; height: 38.39px; padding-bottom: 1.39px; justify-content: center; align-items: center; gap: 15px; display: inline-flex;">
-          <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
-          <div style="text-align: center; color: #384F4B; font-size: 32px; font-family: Inter; font-weight: 700; line-height: 38.40px;">Galeri Produk</div>
-          <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
-        </div>
+      <div>
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
       </div>
-
-      <!-- Container with horizontal scroll -->
-      <div class="card-container" style="display: flex; overflow-x: auto; padding: 0 30px; gap: 10px;">
-        <!-- Card 1 -->
-        <div class="card">
-          <div class="card-icon-container">
-            <div class="card-icon"></div>
-          </div>
-          <div class="card-content">
-            <span class="content-card">Minuman Greenfields adalah produk susu dan turunan susu yang diproduksi oleh PT Greenfields Indonesia.<br /></span>
-            <span>• Susu segar Greenfields <br />• Yogurt Greenfields</span>
-          </div>
-          <div class="card-footer">
-            <img alt="susu Greenfields" src="<?= base_url('galeri/galeri.jpg.png') ?>" />
-            <div>Greenfields</div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-          <div class="card-icon-container">
-            <div class="card-icon"></div>
-          </div>
-          <div class="card-content">
-            <span class="content-card">Minuman Ichitan adalah minuman siap saji yang diproduksi oleh PT Ichi Tan Indonesia. Ichitan menawarkan berbagai jenis minuman, seperti:<br /></span>
-            <span>• Ichitan Brown Sugar Milk <br />• Ichitan Thai Milk Green Tea</span>
-          </div>
-          <div class="card-footer">
-            <img alt="susu Ichitan" src="<?= base_url('galeri/galeri1.jpg.png') ?>" />
-            <div>Ichitan</div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card">
-          <div class="card-icon-container">
-            <div class="card-icon"></div>
-          </div>
-          <div class="card-content">
-            <span class="content-card">Silk Nextmilk adalah susu nabati yang terbuat dari campuran gandum, kelapa, dan kedelai. Silk Milk hadir dalam berbagai rasa dan varian, mulai dari rasa plain, vanilla, hingga cokelat, dan sering digunakan dalam berbagai resep.<br /></span>
-          </div>
-          <div class="card-footer">
-            <img alt="susu Silk" src="<?= base_url('galeri/galeri2.jpg.png') ?>" />
-            <div>Silk Milk</div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-          <div class="card-icon-container">
-            <div class="card-icon"></div>
-          </div>
-          <div class="card-content">
-            <span class="content-card">Ultra Milk merupakan susu segar alami yang diproses dengan teknologi Ultra High Temperature (UHT). Susu Ultra Milk mengandung berbagai nutrisi, seperti protein, karbohidrat, vitamin, dan mineral seperti kalsium, magnesium, dan fosfor.<br /></span>
-          </div>
-          <div class="card-footer">
-            <img alt="susu Ultra" src="<?= base_url('galeri/galeri3.jpg.png') ?>" />
-            <div>Ultra Milk</div>
-          </div>
-        </div>
+      <div>
+        <a href="https://youtube.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </div>
-
-    <!-- Main Content Section -->
-    <div style="width: 100%; height: auto; padding: 40px 0; background: white; display: flex; flex-direction: column; align-items: center;">
-      <div style="text-align: center; margin-bottom: 150px;">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
-          <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
-          <div style="font-size: 32px; font-weight: 700; color: #384F4B;">Aktivitas</div>
-          <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
-        </div>
-      </div>
-
-      <div class="activity-container">
-        <div class="activity-card">
-          <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
-            <img src="/aktifitas/ultramilk.jpg.png" alt="menuang susu" style="width: 100%; height: 220px;">
-            <div style="padding: 24px; text-align: center;">
-              <h3 style="font-size: 24px; font-weight: 700;">Penyajian Milk</h3>
-              <p style="font-size: 16px; color: #444444;">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="activity-card">
-          <a href="<?= base_url('aktivitas/pemindahan-milk') ?>" style="text-decoration: none; color: inherit;">
-            <img src="/aktifitas/aktivitas.jpg.png" alt="susu kacang" style="width: 100%; height: 220px;">
-            <div style="padding: 24px; text-align: center;">
-              <h3 style="font-size: 24px; font-weight: 700;">Pemindahan Milk</h3>
-              <p style="font-size: 16px; color: #444444;">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="activity-card">
-          <a href="<?= base_url('aktivitas/peternakan') ?>" style="text-decoration: none; color: inherit;">
-            <img src="/aktifitas/aktivitas2.jpg.png" alt="susu sapi putih" style="width: 100%; height: 220px;">
-            <div style="padding: 24px; text-align: center;">
-              <h3 style="font-size: 24px; font-weight: 700;">Peternakan</h3>
-              <p style="font-size: 16px; color: #444444;">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer atas -->
-    <div style="width: 100%; background: #01579B; padding: 40px 20px; box-sizing: border-box;">
-      <div class="footer-container" style="max-width: 1320px; margin: 0 auto; display: flex; justify-content: Center; align-items: flex-start; gap: 30px; flex-wrap: wrap;">
-
-        <!-- Company Column -->
-        <div style="flex: 1; color: white; min-width: 250px;">
-          <div style="margin-bottom: 20px;">
-            <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Company</div>
-            <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
-          </div>
-          <ul style="list-style: none; padding: 10px; margin: 0; line-height: 1.8;">
-            <li><a href="#" style="color: white; text-decoration: none;">Tentang</a></li>
-            <li><a href="#" style="color: white; text-decoration: none;">Artikel</a></li>
-            <li><a href="#" style="color: white; text-decoration: none;">Produk</a></li>
-            <li><a href="#" style="color: white; text-decoration: none;">Aktivitas</a></li>
-            <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Contacts Column -->
-        <div style="flex: 1; color: white; min-width: 250px;">
-          <div style="margin-bottom: 20px;">
-            <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Contacts</div>
-            <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
-          </div>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
-            <li>📍 Jl. Jaya Milk No. 123, Batu, Jawa Timur</li>
-            <li>📞 +62 812-3456-7890</li>
-            <li>✉️ info@gmail.com</li>
-          </ul>
-        </div>
-
-        <!-- Newsletter Column -->
-        <div style="flex: 1; color: white; min-width: 250px;">
-          <div style="margin-bottom: 20px;">
-            <div style="font-size: 18px; font-family: Roboto; font-weight: 500;">Newsletter</div>
-            <div style="width: 50px; height: 3px; background: rgba(178, 218, 255, 0.90);"></div>
-          </div>
-          <p style="line-height: 1.8;">Fusce varius, dolor tempor interdum tristique bibendum</p>
-          <form>
-            <input type="email" placeholder="E-mail" style="width: 100%; padding: 10px; box-sizing: border-box; margin-bottom: 10px;">
-            <button type="submit" style="background: #0277BD; color: white; padding: 10px 20px; border: none; cursor: pointer;">Subscribe Now</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Wave Image -->
-      <div style="width: 100%; height: 100px; background: url('wave.png') no-repeat center center; background-size: cover; margin-top: 20px;"></div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <div class="footer-icons">
-        <div>
-          <a href="https://facebook.com" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-        <div>
-          <a href="https://twitter.com" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-        <div>
-          <a href="https://youtube.com" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-        <div>
-          <a href="https://instagram.com" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-      </div>
-      <div>Copyright 2024 Design by Healthy Milk</div>
-    </div>
+    <div>Copyright 2024 Design by Healthy Milk</div>
+  </div>
 
 </body>
 

@@ -251,16 +251,16 @@
 
     <!-- Navbar Section -->
     <nav class="navbar">
-      <div class="logo">Healthy Milk</div>
+      <div class="logo" id="logo">Healthy Milk</div>
       <ul class="nav-links">
-        <li><a href="/">Beranda</a></li>
-        <li><a href="/tentang">Tentang</a></li>
-        <li><a href="/artikel">Artikel</a></li>
-        <li><a href="/produk">Produk</a></li>
-        <li><a href="/aktivitas">Aktivitas</a></li>
-        <li><a href="/kontak">Kontak</a></li>
+        <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+        <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+        <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+        <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+        <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+        <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
         <li>
-          <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+          <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
             <option value="" hidden>Bahasa</option>
             <option value="id">Indonesia</option>
             <option value="en">English</option>
@@ -298,11 +298,25 @@
           <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
         </div>
       </div>
+
       <div class="product-container" style="width: 100%; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <?php foreach ($produks as $produk): ?>
+          <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
+            <img src="<?= base_url('product/grefields.jpg.png') ?>" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
+            <a href="<?= base_url('produk/' . esc($produk['id_produk'])); ?>" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">
+              <?= esc($produk['nama_produk_in']); ?>
+            </a>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    
+      <!-- <div class="product-container" style="width: 100%; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
         <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/grefields.jpg.png" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
           <a href="produk/greenfields" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Greenfields</a>
         </div>
+        
         <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/icithan.jpg.png" alt="susu icithan" style="width: 100%; border-radius: 20px;">
           <a href="produk/icithan" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">Icithan</a>

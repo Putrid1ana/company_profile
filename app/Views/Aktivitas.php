@@ -15,7 +15,7 @@
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
+
   <style>
     /* Navbar */
     .navbar {
@@ -268,16 +268,16 @@
 
   <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
       <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
@@ -316,21 +316,35 @@
 
   <!-- Main Content Section -->
   <div style="width: 100%; height: auto; padding: 40px 0; background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%); display: flex; flex-direction: column; align-items: center;">
-      <div style="text-align: center; margin-bottom: 150px;">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
-          <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
-          <div style="font-size: 32px; font-weight: 700; color: #384F4B;">Aktivitas</div>
-          <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
-        </div>
+    <div style="text-align: center; margin-bottom: 150px;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
+        <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
+        <div style="font-size: 32px; font-weight: 700; color: #384F4B;">Aktivitas</div>
+        <div style="width: 50px; height: 2px; background: #1BBCA3;"></div>
       </div>
+    </div>
 
-    <div class="activity-container">
+    <div class="activity-container" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <?php foreach ($activities as $aktivitas): ?>
+        <div class="activity-card" style="width: 235px; border-radius: 20px; overflow: hidden;">
+          <a href="<?= base_url('aktivitas/' . $aktivitas['id_aktivitas']) ?>" style="text-decoration: none; color: inherit;">
+            <img src="<?= base_url('/aktifitas/ultramilk.jpg.png') ?>" alt="menuang susu" style="width: 100%; height: 220px;">
+            <div style="padding: 24px; text-align: center;">
+              <h3 style="font-size: 24px; font-weight: 700;"><?= esc($aktivitas['nama_aktivitas_in']); ?></h3>
+            </div>
+          </a>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+  <!-- <div class="activity-container">
       <div class="activity-card">
         <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
           <img src="/aktifitas/ultramilk.jpg.png" alt="menuang susu" style="width: 100%; height: 220px;">
           <div style="padding: 24px; text-align: center;">
             <h3 style="font-size: 24px; font-weight: 700;">Penyajian Milk</h3>
-            <p style="font-size: 16px; color: #444444;">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+            <p style="font-size: 16px; color: #444444;">Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan. </p>
           </div>
         </a>
       </div>
@@ -340,7 +354,7 @@
           <img src="/aktifitas/aktivitas.jpg.png" alt="susu kacang" style="width: 100%; height: 220px;">
           <div style="padding: 24px; text-align: center;">
             <h3 style="font-size: 24px; font-weight: 700;">Pemindahan Milk</h3>
-            <p style="font-size: 16px; color: #444444;">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+            <p style="font-size: 16px; color: #444444;">Proses yang cermat untuk menjaga kualitas susu dari sumber hingga siap untuk dikonsumsi.</p>
           </div>
         </a>
       </div>
@@ -350,7 +364,7 @@
           <img src="/aktifitas/aktivitas2.jpg.png" alt="susu sapi putih" style="width: 100%; height: 220px;">
           <div style="padding: 24px; text-align: center;">
             <h3 style="font-size: 24px; font-weight: 700;">Peternakan</h3>
-            <p style="font-size: 16px; color: #444444;">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+            <p style="font-size: 16px; color: #444444;">Tempat di mana sapi-sapi dipelihara secara intensif untuk menghasilkan produk-produk pangan, seperti susu dan daging.</p>
           </div>
         </a>
       </div>
