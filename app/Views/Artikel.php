@@ -417,7 +417,7 @@
       <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
         <div class="artikel-content">
           <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+            <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>" />
             <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
             <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br /><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
           </div>

@@ -302,15 +302,15 @@
       <div class="product-container" style="width: 100%; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
         <?php foreach ($produks as $produk): ?>
           <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
-            <img src="<?= base_url('product/grefields.jpg.png') ?>" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
-            <a href="<?= base_url('produk/' . esc($produk['id_produk'])); ?>" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">
+            <img src="/product/<?= esc($produk['foto_produk']) ?>" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
+            <a href="<?= base_url('produk/greenfields'); ?>" style="position: absolute; bottom: -10px; left: 0; width: 100%; background-color: #A6D4FF; text-align: center; color: black; font-size: 24px; padding: 10px 0; border-radius: 20px 20px 0 0; text-decoration: none; border-top: 3px solid white;">
               <?= esc($produk['nama_produk_in']); ?>
             </a>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
-    
+
       <!-- <div class="product-container" style="width: 100%; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
         <div class="product-item" style="position: relative; width: 235px; border-radius: 20px; overflow: hidden;">
           <img src="/product/grefields.jpg.png" alt="susu greenfields" style="width: 100%; border-radius: 20px;">
