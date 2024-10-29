@@ -128,23 +128,26 @@
     }
 
     /* Container utama */
-    .artikel-container {
-      width: 100%;
-      height: auto;
-      padding: 40px 0;
-      background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: space-between;
-    }
+.artikel-container {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  background: linear-gradient(234deg, #A6D4FF 0%, white 40%, rgba(178, 218, 255, 0.09) 96%);
+  display: flex;
+  flex-direction: row; /* Mengubah dari column ke row */
+  align-items: flex-start; /* Menyelaraskan item di bagian atas */
+  flex-wrap: wrap; /* Memungkinkan item berpindah ke baris berikutnya */
+  gap: 16px; /* Ruang antara item */
+  justify-content: center; /* Menyelaraskan item di tengah */
+}
 
     /* Heading */
     .heading-container {
-      text-align: center;
-    }
+      width: 100%; /* Pastikan kontainer mengambil lebar penuh */
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  justify-content: center; /* Menyelaraskan konten di tengah */
+  margin-top: 20px; /* Jarak atas jika diperlukan */
+}
 
     .heading {
       display: flex;
@@ -177,6 +180,8 @@
       flex: 1 1 calc(25% - 16px);
       /* Menjadi empat kolom */
       margin: 8px;
+      flex: 1 1 calc(25% - 16px); /* Atau sesuaikan lebar sesuai kebutuhan */
+      max-width: 270px; /* Pastikan batas maksimum untuk kartu */
     }
 
     .artikel-box a {

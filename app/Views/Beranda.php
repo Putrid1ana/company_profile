@@ -308,22 +308,25 @@
 
     /* artikel */
     .artikel-container {
-      width: 100%;
-      height: auto;
-      padding: 40px 0;
-      background: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: space-between;
-    }
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  background: white;
+  display: flex;
+  flex-direction: row; /* Mengubah dari column ke row */
+  align-items: flex-start; /* Menyelaraskan item di bagian atas */
+  flex-wrap: wrap; /* Memungkinkan item berpindah ke baris berikutnya */
+  gap: 16px; /* Ruang antara item */
+  justify-content: center; /* Menyelaraskan item di tengah */
+}
 
     /* Heading */
     .heading-container {
-      text-align: center;
-    }
+      width: 100%; /* Pastikan kontainer mengambil lebar penuh */
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  justify-content: center; /* Menyelaraskan konten di tengah */
+  margin-top: 20px; /* Jarak atas jika diperlukan */
+}
 
     .heading {
       display: flex;
@@ -356,6 +359,8 @@
       flex: 1 1 calc(25% - 16px);
       /* Menjadi empat kolom */
       margin: 8px;
+      flex: 1 1 calc(25% - 16px); /* Atau sesuaikan lebar sesuai kebutuhan */
+      max-width: 270px; /* Pastikan batas maksimum untuk kartu */
     }
 
     .artikel-box a {
@@ -780,54 +785,19 @@
     </div>
 
     <!-- Kotak Artikel -->
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
-            <div class="artikel-title">Mengapa Minum Susu Penting Untuk Kesehatan</div>
-            <div class="artikel-description">Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat....<br />24 Agustus 2024</div>
+    <?php foreach ($artikels as $artikel): ?>
+      <div class="artikel-box">
+        <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
+          <div class="artikel-content">
+            <div class="artikel-inner">
+              <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>" />
+              <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
+              <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br /><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
-            <div class="artikel-title">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
-            <div class="artikel-description">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-            <div class="artikel-title">Inilah Manfaat Susu Murni Beserta Efeknya</div>
-            <div class="artikel-description">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-            <div class="artikel-title">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
-            <div class="artikel-description">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
-          </div>
-        </div>
-      </a>
-    </div>
-
+        </a>
+      </div>
+    <?php endforeach; ?>
   </div>
 
 
@@ -913,36 +883,17 @@
       </div>
     </div>
 
-    <div class="activity-container">
-      <div class="activity-card">
-        <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
-          <img src="/aktifitas/ultramilk.jpg.png" alt="menuang susu" style="width: 100%; height: 220px;">
-          <div style="padding: 24px; text-align: center;">
-            <h3 style="font-size: 24px; font-weight: 700;">Penyajian Milk</h3>
-            <p style="font-size: 16px; color: #444444;">Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan. </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="activity-card">
-        <a href="<?= base_url('aktivitas/pemindahan-milk') ?>" style="text-decoration: none; color: inherit;">
-          <img src="/aktifitas/aktivitas.jpg.png" alt="susu kacang" style="width: 100%; height: 220px;">
-          <div style="padding: 24px; text-align: center;">
-            <h3 style="font-size: 24px; font-weight: 700;">Pemindahan Milk</h3>
-            <p style="font-size: 16px; color: #444444;">Proses yang cermat untuk menjaga kualitas susu dari sumber hingga siap untuk dikonsumsi.</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="activity-card">
-        <a href="<?= base_url('aktivitas/peternakan') ?>" style="text-decoration: none; color: inherit;">
-          <img src="/aktifitas/aktivitas2.jpg.png" alt="susu sapi putih" style="width: 100%; height: 220px;">
-          <div style="padding: 24px; text-align: center;">
-            <h3 style="font-size: 24px; font-weight: 700;">Peternakan</h3>
-            <p style="font-size: 16px; color: #444444;">Tempat di mana sapi-sapi dipelihara secara intensif untuk menghasilkan produk-produk pangan, seperti susu dan daging.</p>
-          </div>
-        </a>
-      </div>
+    <div class="activity-container" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <?php foreach ($activities as $aktivitas): ?>
+        <div class="activity-card" style="width: 235px; border-radius: 20px; overflow: hidden;">
+          <a href="<?= base_url('aktivitas/' . $aktivitas['nama_aktivitas_in']) ?>" style="text-decoration: none; color: inherit;">
+            <img src="/aktifitas/<?= esc($aktivitas['foto_aktivitas']) ?>" alt="menuang susu" style="width: 100%; height: 220px;">
+            <div style="padding: 24px; text-align: center;">
+              <h3 style="font-size: 24px; font-weight: 700;"><?= esc($aktivitas['nama_aktivitas_in']); ?></h3>
+            </div>
+          </a>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
 

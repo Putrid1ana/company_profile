@@ -10,8 +10,14 @@ class AktivitasController extends BaseController
     {
         $aktivitasModel = new AktivitasModel();
         $data['activities'] = $aktivitasModel->findAll(); // Ambil semua data aktivitas
-
         return view('aktivitas', $data);
+    }
+
+    public function beranda()
+    {
+        $aktivitasModel = new AktivitasModel();
+        $data['activities'] = $aktivitasModel->findAll(); // Ambil semua data aktivitas
+        return view('beranda', $data); // Menampilkan view beranda.php
     }
 
     public function show($id)
