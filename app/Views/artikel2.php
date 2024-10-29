@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susu Minuman Sehat Kaya Manfaat dan Berkah</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Susu Minuman Sehat Kaya Manfaat dan Berkah</title>
 
-     <!-- Meta Tags -->
+  <!-- Meta Tags -->
   <meta name="title" content="Susu Minuman Sehat Kaya Manfaat dan Berkah">
   <meta name="description" content="Susu adalah minuman sehat yang kaya akan manfaat dan berkah. Temukan manfaat susu dalam menjaga kesehatan tubuh, meningkatkan energi, dan mendukung gaya hidup sehat.">
 
@@ -245,14 +245,16 @@
         flex-direction: column;
         width: 100%;
         padding: 10px;
-    }
-    div[style*="flex: 2; padding-right: 20px;"] {
+      }
+
+      div[style*="flex: 2; padding-right: 20px;"] {
         padding-right: 0;
         margin-bottom: 20px;
-    }
-    div[style*="flex: 1;"] {
+      }
+
+      div[style*="flex: 1;"] {
         margin-top: 0;
-    }
+      }
 
       /* Footer */
       .footer {
@@ -278,7 +280,7 @@
 </head>
 
 <body style="margin: 0px;">
-       <!-- Banner Section -->
+  <!-- Banner Section -->
   <div class="banner">
     <img src="/articel/artikel.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
@@ -286,18 +288,18 @@
     </div>
   </div>
 
-        <!-- Navbar Section -->
+  <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
       <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
@@ -326,76 +328,76 @@
     });
   </script>
 
-        <!-- Content Section -->
-        <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
-            <!-- Artikel Utama -->
-            <div style="flex: 2; padding-right: 20px;">
-                <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;"  alt="susu minum sehat" src="/articel/artikel11.jpg" />
-                <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
-                    <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
-                    24 Juni 2024
-                    </div>
-                    <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
-                    SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT
-                    </div>
-                    <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
-                        <br>Susu…Hampir semua orang mengenal susu. Bahkan bagi masyarakat  Indonesia susu telah menjadi slogan pola makan sehat sejak dahulu kala yang dikenal dengan istilah “4 sehat 5 sempurna”.  Dimana komposisi 4 sehat meliputi : Makanan Pokok, Lauk Pauk, Sayur dan Buah, dan dianggap sempurna apabila ditambahkan yang ke-5, yaitu susu. Artinya dalam makanan kita sehari-hari sudah sehat tetapi belum sempurna sebelum ada tambahan susu. Pengertian lain dari sempurna ini adalah bahwa susu itu sendiri sudah sempurna meskipun sendirian. </br>
-
-                <br> Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai. Untuk golongan rawan yang sedang menjalani masa pertumbuhan seperti anak balita, anak sekolah, remaja dan  ibu hamil yang didalam tubuhnya sedang ada pertumbuhan janin, serta ibu menyusui yang memproduksi ASI untuk pertumbuhan anaknya, tambahan konsumsi susu dalam makanan mereka sehari-hari sangat-sangat dianjurkan agar tercukupi semua unsur gizi yang dibutuhkan untuk pertumbuhan sehingga tercapai pertumbuhan yang optimal. Dan bagi lansia susu perlu ditambahkan sebagai penyempurna makanan untuk menopang tulangnya agar tidak keropos.  Adapun bagi bayi usia 0-6 bulan susu (ASI) sudah sempurna sendirian, sehingga bayi tidak perlu diberikan makanan atau minuman tambahan lain selama 6 bulan pertama kehidupannya yang dikenal dengan istilah ASI Eksklusif. Karena penambahan selain ASI akan mengurangi jumlah ASI yang dapat diminum oleh bayi.</br>
-
-<br> Susu adalah cairan bergizi berwarna putih yang dihasilkan oleh kelenjar susu mamalia. Secara alami susu mengandung semua zat gizi penting yang diperlukan oleh tubuh yaitu protein, berbagai macam vitamin, berbagai mineral penting untuk pertumbuhan  serta lemak dan Karbohidrat. </br>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar "Baca Juga" -->
-            <div style="flex: 1;">
-                <div style="background: white; padding: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 2px #A6D4FF solid;">
-                    <div style="text-align: center; font-size: 24px; font-family: Inika; font-weight: 400; margin-bottom: 10px;">
-                        Baca Juga
-                    </div>
-                    <!-- Artikel 1 -->
-                    <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style="text-decoration: none; color: inherit;">
-                        <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" alt="susu minuman sehari-hari" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
-                            <div>
-                                <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Agustus 2024</div>
-                                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Mengapa Minum Susu Penting Untuk Kesehatan....</div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <hr style="border: 1px solid #A6D4FF;">
-
-                    <!-- Artikel 2 -->
-                    <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style="text-decoration: none; color: inherit;">
-                        <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" alt="susu murni kaya manfaat" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-                            <div>
-                                <div style="font-size: 14px; color: black; margin-bottom: 8px;">31 Desember 2022</div>
-                                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Inilah Manfaat Susu Murni Beserta Efek Sampingnya...</div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <hr style="border: 1px solid #A6D4FF;">
-
-                    <!-- Artikel 3 -->
-                    <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>" style="text-decoration: none; color: inherit;">
-                        <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" alt="olahan susu Sapi" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-                            <div>
-                                <div style="font-size: 14px; color: black; margin-bottom: 8px;">08 Agustus 2023</div>
-                                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan....</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+  <!-- Content Section -->
+  <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
+    <!-- Artikel Utama -->
+    <div style="flex: 2; padding-right: 20px;">
+      <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" alt="susu minum sehat" src="/articel/artikel11.jpg" />
+      <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
+        <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
+          24 Juni 2024
         </div>
+        <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
+          SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT
+        </div>
+        <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
+          <br>Susu…Hampir semua orang mengenal susu. Bahkan bagi masyarakat Indonesia susu telah menjadi slogan pola makan sehat sejak dahulu kala yang dikenal dengan istilah “4 sehat 5 sempurna”. Dimana komposisi 4 sehat meliputi : Makanan Pokok, Lauk Pauk, Sayur dan Buah, dan dianggap sempurna apabila ditambahkan yang ke-5, yaitu susu. Artinya dalam makanan kita sehari-hari sudah sehat tetapi belum sempurna sebelum ada tambahan susu. Pengertian lain dari sempurna ini adalah bahwa susu itu sendiri sudah sempurna meskipun sendirian. </br>
 
-        <!-- Footer -->
-        <div class="footer">
+          <br> Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai. Untuk golongan rawan yang sedang menjalani masa pertumbuhan seperti anak balita, anak sekolah, remaja dan ibu hamil yang didalam tubuhnya sedang ada pertumbuhan janin, serta ibu menyusui yang memproduksi ASI untuk pertumbuhan anaknya, tambahan konsumsi susu dalam makanan mereka sehari-hari sangat-sangat dianjurkan agar tercukupi semua unsur gizi yang dibutuhkan untuk pertumbuhan sehingga tercapai pertumbuhan yang optimal. Dan bagi lansia susu perlu ditambahkan sebagai penyempurna makanan untuk menopang tulangnya agar tidak keropos. Adapun bagi bayi usia 0-6 bulan susu (ASI) sudah sempurna sendirian, sehingga bayi tidak perlu diberikan makanan atau minuman tambahan lain selama 6 bulan pertama kehidupannya yang dikenal dengan istilah ASI Eksklusif. Karena penambahan selain ASI akan mengurangi jumlah ASI yang dapat diminum oleh bayi.</br>
+
+          <br> Susu adalah cairan bergizi berwarna putih yang dihasilkan oleh kelenjar susu mamalia. Secara alami susu mengandung semua zat gizi penting yang diperlukan oleh tubuh yaitu protein, berbagai macam vitamin, berbagai mineral penting untuk pertumbuhan serta lemak dan Karbohidrat. </br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar "Baca Juga" -->
+    <div style="flex: 1;">
+      <div style="background: white; padding: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 2px #A6D4FF solid;">
+        <div style="text-align: center; font-size: 24px; font-family: Inika; font-weight: 400; margin-bottom: 10px;">
+          Baca Juga
+        </div>
+        <!-- Artikel 1 -->
+        <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style="text-decoration: none; color: inherit;">
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <img style="width: 147px; height: auto;" alt="susu minuman sehari-hari" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+            <div>
+              <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Agustus 2024</div>
+              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Mengapa Minum Susu Penting Untuk Kesehatan....</div>
+            </div>
+          </div>
+        </a>
+
+        <hr style="border: 1px solid #A6D4FF;">
+
+        <!-- Artikel 2 -->
+        <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style="text-decoration: none; color: inherit;">
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <img style="width: 147px; height: auto;" alt="susu murni kaya manfaat" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+            <div>
+              <div style="font-size: 14px; color: black; margin-bottom: 8px;">31 Desember 2022</div>
+              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Inilah Manfaat Susu Murni Beserta Efek Sampingnya...</div>
+            </div>
+          </div>
+        </a>
+
+        <hr style="border: 1px solid #A6D4FF;">
+
+        <!-- Artikel 3 -->
+        <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>" style="text-decoration: none; color: inherit;">
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <img style="width: 147px; height: auto;" alt="olahan susu Sapi" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
+            <div>
+              <div style="font-size: 14px; color: black; margin-bottom: 8px;">08 Agustus 2023</div>
+              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan....</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
     <div class="footer-icons">
       <div>
         <a href="https://facebook.com" target="_blank">

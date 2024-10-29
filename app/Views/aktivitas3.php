@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peternakan </title>
 
-   <!-- Meta Tags -->
-   <meta name="title" content="Peternakan">
-   <meta name="description" content="Pelajari lebih lanjut tentang peternakan, termasuk cara pemeliharaan hewan, teknologi yang digunakan, dan peran penting peternakan dalam menyediakan produk pangan berkualitas.">
+  <!-- Meta Tags -->
+  <meta name="title" content="Peternakan">
+  <meta name="description" content="Pelajari lebih lanjut tentang peternakan, termasuk cara pemeliharaan hewan, teknologi yang digunakan, dan peran penting peternakan dalam menyediakan produk pangan berkualitas.">
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
@@ -228,7 +228,7 @@
 
       .hamburger {
         display: block;
-        
+
       }
 
       /* Banner */
@@ -276,7 +276,6 @@
         /* Further reduce font size for copyright */
       }
     }
-
   </style>
 </head>
 
@@ -284,16 +283,16 @@
 
   <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
       <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
@@ -322,8 +321,8 @@
     });
   </script>
 
- <!-- Banner Section -->
- <div class="banner">
+  <!-- Banner Section -->
+  <div class="banner">
     <img src="/articel/artikel.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
       <h1 class="banner-title">Aktivitas Healthy Milk</h1>
@@ -342,7 +341,7 @@
     <!-- Section Content with Image -->
     <div class="tentang-kami-content">
       <div>
-        <p>Peternakan sapi adalah tempat di mana sapi-sapi dipelihara secara intensif untuk menghasilkan produk-produk pangan, seperti susu dan daging, serta bahan baku lainnya yang memiliki nilai ekonomi tinggi. Peternakan ini dilengkapi dengan fasilitas yang memastikan sapi mendapatkan perawatan optimal, pakan berkualitas, dan lingkungan yang sehat. Peternakan sapi yang dikelola dengan baik juga menerapkan protokol kesehatan ketat untuk memastikan sapi bebas dari penyakit, 
+        <p>Peternakan sapi adalah tempat di mana sapi-sapi dipelihara secara intensif untuk menghasilkan produk-produk pangan, seperti susu dan daging, serta bahan baku lainnya yang memiliki nilai ekonomi tinggi. Peternakan ini dilengkapi dengan fasilitas yang memastikan sapi mendapatkan perawatan optimal, pakan berkualitas, dan lingkungan yang sehat. Peternakan sapi yang dikelola dengan baik juga menerapkan protokol kesehatan ketat untuk memastikan sapi bebas dari penyakit,
           sehingga produk yang dihasilkan aman, bernutrisi, dan berkualitas tinggi untuk konsumsi masyarakat.</p>
       </div>
       <div>
@@ -351,7 +350,7 @@
     </div>
   </div>
 
- <!-- Footer -->
+  <!-- Footer -->
   <div class="footer">
     <div class="footer-icons">
       <div>

@@ -148,8 +148,8 @@
       margin: 0 15px;
     }
 
-     /* Footer */
-     .footer {
+    /* Footer */
+    .footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -289,8 +289,9 @@
         margin-left: 0;
         height: 300px;
       }
-           /* Banner */
-           .banner-title {
+
+      /* Banner */
+      .banner-title {
         font-size: 24px;
       }
 
@@ -314,7 +315,6 @@
         /* Further reduce font size for copyright */
       }
     }
-
   </style>
 </head>
 
@@ -322,26 +322,26 @@
   <!-- Background Section -->
   <div style="width: 100%; height: 100vh; position: relative;">
 
-   <!-- Banner Section -->
-   <div class="banner">
+    <!-- Banner Section -->
+    <div class="banner">
       <img src="/contact/kontak.jpg" alt="Background Image">
       <div class="banner-overlay">
         <h1 class="banner-title">Kontak Healthy Milk</h1>
       </div>
     </div>
 
-     <!-- Navbar Section -->
-     <nav class="navbar">
-      <div class="logo">Healthy Milk</div>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo" id="logo">Healthy Milk</div>
       <ul class="nav-links">
-        <li><a href="/">Beranda</a></li>
-        <li><a href="/tentang">Tentang</a></li>
-        <li><a href="/artikel">Artikel</a></li>
-        <li><a href="/produk">Produk</a></li>
-        <li><a href="/aktivitas">Aktivitas</a></li>
-        <li><a href="/kontak">Kontak</a></li>
+        <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+        <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+        <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+        <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+        <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+        <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
         <li>
-          <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+          <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
             <option value="" hidden>Bahasa</option>
             <option value="id">Indonesia</option>
             <option value="en">English</option>
@@ -390,32 +390,32 @@
       </div>
     </div>
 
-     <!-- Footer -->
-     <div class="footer">
-        <div class="footer-icons">
-          <div>
-            <a href="https://facebook.com" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
-          <div>
-            <a href="https://twitter.com" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          <div>
-            <a href="https://youtube.com" target="_blank">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-          <div>
-            <a href="https://instagram.com" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-icons">
+        <div>
+          <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
         </div>
-        <div>Copyright 2024 Design by Healthy Milk</div>
+        <div>
+          <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://youtube.com" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
+      <div>Copyright 2024 Design by Healthy Milk</div>
+    </div>
 
 </body>
 

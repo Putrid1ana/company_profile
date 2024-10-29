@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan</title>
 
-     <!-- Meta Tags -->
+  <!-- Meta Tags -->
   <meta name="title" content="Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan">
   <meta name="description" content="Eksplorasi potensi olahan susu sapi perah sebagai bahan pangan bergizi. Temukan berbagai manfaat dan produk olahan susu yang dapat mendukung kebutuhan nutrisi harian Anda.">
 
@@ -245,14 +245,16 @@
         flex-direction: column;
         width: 100%;
         padding: 10px;
-    }
-    div[style*="flex: 2; padding-right: 20px;"] {
+      }
+
+      div[style*="flex: 2; padding-right: 20px;"] {
         padding-right: 0;
         margin-bottom: 20px;
-    }
-    div[style*="flex: 1;"] {
+      }
+
+      div[style*="flex: 1;"] {
         margin-top: 0;
-    }
+      }
 
       /* Footer */
       .footer {
@@ -278,7 +280,7 @@
 </head>
 
 <body style="margin: 0px;">
-       <!-- Banner Section -->
+  <!-- Banner Section -->
   <div class="banner">
     <img src="/articel/artikel.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
@@ -286,18 +288,18 @@
     </div>
   </div>
 
-        <!-- Navbar Section -->
+  <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
       <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
@@ -326,77 +328,76 @@
     });
   </script>
 
-
-        <!-- Content Section -->
-        <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
-            <!-- Artikel Utama -->
-            <div style="flex: 2; padding-right: 20px;">
-                <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" alt="susu bahan pangan" src="/articel/artikel11.jpg" />
-                <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
-                    <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
-                    08 Agustus 2023
-                    </div>
-                    <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
-                    Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan
-                    </div>
-                    <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
-                    <br> Susu sapi dan produk susu sapi merupakan bahan makanan yang sangat bermanfaat bagi manusia dan merupakan sumber kaya nutrisi yang mampu memenuhi kebutuhan gizi manusia. Peluang pasar untuk susu segar di Indonesia juga masih relatif besar, pasalnya anggapan masyarakat Indonesia saat ini menunjukkan peningkatan terhadap konsumsi susu, dibuktikan dengan banyaknya minat anak-anak membeli produk olahan susu cair. Berbagai kampanye penyadaran mengenai pentingnya mengonsumsi susu segar sejatinya perlu dilakukan untuk meningkatkan konsumsi susu sapi segar di Indonesia.  </br>
-
-                    <br> Pasar susu sapi di Indonesia salah satunya susu bubuk, mencapai 40-50% dan menunjukkan bahwa masyarakat lebih banyak memilih mengonsumsi susu bubuk daripada susu cair. Alasannya adalah susu bubuk memiliki daya tahan simpan yang lama serta kandungan lemaknya sudah digantikan dengan minyak sawit (palm oil). Pasar susu berikutnya yaitu susu kental manis, dengan persentase 30-40%. Susu kental manis memiliki daya tahan cukup lama dibandingkan susu segar dan biasa digunakan sebagai bahan baku makanan atau kue. </br>
-
-                    <br> Peternakan sapi di Kalurahan Glagaharjo, Kapanewon Cangkringan, Kabupaten Sleman dikenal sebagai salah satu sentra penghasil susu sapi terbesar di DIY. Kepala Dinas Pertanian, Pangan dan Perikanan (DP3) Kabupaten Sleman, Suparmono, mengatakan bahwa Glagaharjo merupakan kawasan lereng Merapi yang mempunyai populasi sapi perah terbanyak di Sleman sehingga sapi perah milik warga mendapat prioritas untuk dilestarikan dan mendapat alokasi vaksin. Di tengah ancaman erupsi Merapi, geliat kegiatan para peternak sapi di Kalurahan Glagaharjo masih sangat kuat. Kalurahan ini menjadi cikal bakal bagi lebih dari 500 peternak sapi yang menghasilkan 8.400 liter susu sapi per hari yang dipasok ke beberapa industri susu sapi besar di Indonesia seperti Nestle dan Ultra Jaya. </br> 
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar "Baca Juga" -->
-            <div style="flex: 1;">
-                <div style="background: white; padding: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 2px #A6D4FF solid;">
-                    <div style="text-align: center; font-size: 24px; font-family: Inika; font-weight: 400; margin-bottom: 10px;">
-                        Baca Juga
-                    </div>
-                    <!-- Artikel 1 -->
-                    <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style="text-decoration: none; color: inherit;">
-                        <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" alt="susu kesehatan" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
-                            <div>
-                                <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Agustus 2024</div>
-                                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Mengapa Minum Susu Penting Untuk Kesehatan....</div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <hr style="border: 1px solid #A6D4FF;">
-
-                    <!-- Artikel 2 -->
-                    <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>" style="text-decoration: none; color: inherit;">
-                        <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" alt="susu berkah" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
-                            <div>
-                                <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Juni 2024</div>
-                                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT.....</div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <hr style="border: 1px solid #A6D4FF;">
-
-                    <!-- Artikel 3 -->
-                    <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style="text-decoration: none; color: inherit;">
-                        <div style="display: flex; gap: 15px; margin-top: 20px;">
-                            <img style="width: 147px; height: auto;" alt="susu sapi berkah" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-                            <div>
-                                <div style="font-size: 14px; color: black; margin-bottom: 8px;">31 Desember 2022</div>
-                                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Inilah Manfaat Susu Murni Beserta Efek Sampingnya...</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+  <!-- Content Section -->
+  <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
+    <!-- Artikel Utama -->
+    <div style="flex: 2; padding-right: 20px;">
+      <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" alt="susu bahan pangan" src="/articel/artikel11.jpg" />
+      <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
+        <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
+          08 Agustus 2023
         </div>
+        <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
+          Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan
+        </div>
+        <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
+          <br> Susu sapi dan produk susu sapi merupakan bahan makanan yang sangat bermanfaat bagi manusia dan merupakan sumber kaya nutrisi yang mampu memenuhi kebutuhan gizi manusia. Peluang pasar untuk susu segar di Indonesia juga masih relatif besar, pasalnya anggapan masyarakat Indonesia saat ini menunjukkan peningkatan terhadap konsumsi susu, dibuktikan dengan banyaknya minat anak-anak membeli produk olahan susu cair. Berbagai kampanye penyadaran mengenai pentingnya mengonsumsi susu segar sejatinya perlu dilakukan untuk meningkatkan konsumsi susu sapi segar di Indonesia. </br>
 
-        <!-- Footer -->
-        <div class="footer">
+          <br> Pasar susu sapi di Indonesia salah satunya susu bubuk, mencapai 40-50% dan menunjukkan bahwa masyarakat lebih banyak memilih mengonsumsi susu bubuk daripada susu cair. Alasannya adalah susu bubuk memiliki daya tahan simpan yang lama serta kandungan lemaknya sudah digantikan dengan minyak sawit (palm oil). Pasar susu berikutnya yaitu susu kental manis, dengan persentase 30-40%. Susu kental manis memiliki daya tahan cukup lama dibandingkan susu segar dan biasa digunakan sebagai bahan baku makanan atau kue. </br>
+
+          <br> Peternakan sapi di Kalurahan Glagaharjo, Kapanewon Cangkringan, Kabupaten Sleman dikenal sebagai salah satu sentra penghasil susu sapi terbesar di DIY. Kepala Dinas Pertanian, Pangan dan Perikanan (DP3) Kabupaten Sleman, Suparmono, mengatakan bahwa Glagaharjo merupakan kawasan lereng Merapi yang mempunyai populasi sapi perah terbanyak di Sleman sehingga sapi perah milik warga mendapat prioritas untuk dilestarikan dan mendapat alokasi vaksin. Di tengah ancaman erupsi Merapi, geliat kegiatan para peternak sapi di Kalurahan Glagaharjo masih sangat kuat. Kalurahan ini menjadi cikal bakal bagi lebih dari 500 peternak sapi yang menghasilkan 8.400 liter susu sapi per hari yang dipasok ke beberapa industri susu sapi besar di Indonesia seperti Nestle dan Ultra Jaya. </br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar "Baca Juga" -->
+    <div style="flex: 1;">
+      <div style="background: white; padding: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 2px #A6D4FF solid;">
+        <div style="text-align: center; font-size: 24px; font-family: Inika; font-weight: 400; margin-bottom: 10px;">
+          Baca Juga
+        </div>
+        <!-- Artikel 1 -->
+        <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>" style="text-decoration: none; color: inherit;">
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <img style="width: 147px; height: auto;" alt="susu kesehatan" src="<?= base_url('articel/artikel1.jpg.png') ?>" />
+            <div>
+              <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Agustus 2024</div>
+              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Mengapa Minum Susu Penting Untuk Kesehatan....</div>
+            </div>
+          </div>
+        </a>
+
+        <hr style="border: 1px solid #A6D4FF;">
+
+        <!-- Artikel 2 -->
+        <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>" style="text-decoration: none; color: inherit;">
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <img style="width: 147px; height: auto;" alt="susu berkah" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+            <div>
+              <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Juni 2024</div>
+              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT.....</div>
+            </div>
+          </div>
+        </a>
+
+        <hr style="border: 1px solid #A6D4FF;">
+
+        <!-- Artikel 3 -->
+        <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style="text-decoration: none; color: inherit;">
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <img style="width: 147px; height: auto;" alt="susu sapi berkah" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
+            <div>
+              <div style="font-size: 14px; color: black; margin-bottom: 8px;">31 Desember 2022</div>
+              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Inilah Manfaat Susu Murni Beserta Efek Sampingnya...</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
     <div class="footer-icons">
       <div>
         <a href="https://facebook.com" target="_blank">

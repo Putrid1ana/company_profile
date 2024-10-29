@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Penyajian Milk</title>
 
-   <!-- Meta Tags -->
-   <meta name="title" content="Penyajian Milk">
-   <meta name="description" content="Temukan berbagai cara penyajian milk yang sehat dan lezat. Dapatkan inspirasi untuk menikmati susu dengan cara yang menyegarkan dan bergizi.">
+  <!-- Meta Tags -->
+  <meta name="title" content="Penyajian Milk">
+  <meta name="description" content="Temukan berbagai cara penyajian milk yang sehat dan lezat. Dapatkan inspirasi untuk menikmati susu dengan cara yang menyegarkan dan bergizi.">
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
@@ -228,7 +228,7 @@
 
       .hamburger {
         display: block;
-        
+
       }
 
       /* Banner */
@@ -276,7 +276,6 @@
         /* Further reduce font size for copyright */
       }
     }
-
   </style>
 </head>
 
@@ -284,16 +283,16 @@
 
   <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
       <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
@@ -322,16 +321,16 @@
     });
   </script>
 
- <!-- Banner Section -->
- <div class="banner">
+  <!-- Banner Section -->
+  <div class="banner">
     <img src="/articel/artikel.jpg" alt="Healthy Milk Banner" />
     <div class="banner-overlay">
       <h1 class="banner-title">Aktivitas Healthy Milk</h1>
     </div>
   </div>
 
-   <!-- Tentang Kami Section -->
-   <div style="max-width: none; min-height: 828px; background: linear-gradient(180deg, #A6D4FF 0%, white 21%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 12px;">
+  <!-- Tentang Kami Section -->
+  <div style="max-width: none; min-height: 828px; background: linear-gradient(180deg, #A6D4FF 0%, white 21%); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 12px;">
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
@@ -342,8 +341,8 @@
     <!-- Section Content with Image -->
     <div class="tentang-kami-content">
       <div>
-      <p>Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan. 
-        Disajikan dalam keadaan segar dan suhu yang optimal, setiap tegukan milk memberikan kelezatan alami susu yang kaya akan kalsium, protein, dan vitamin penting bagi tubuh. Cocok dinikmati kapan saja, baik pagi untuk memulai hari, setelah berolahraga untuk pemulihan energi, atau di malam hari untuk mendukung tidur yang nyenyak. Dengan berbagai varian, dari susu murni, rendah lemak, hingga susu nabati, penyajian milk dapat disesuaikan dengan kebutuhan dan gaya hidup Anda. Segelas milk bukan hanya sekadar minuman, tetapi pilihan sehat yang dapat diandalkan untuk menjaga kesehatan tulang, meningkatkan energi, dan mendukung kesejahteraan Anda setiap hari.</p>
+        <p>Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan.
+          Disajikan dalam keadaan segar dan suhu yang optimal, setiap tegukan milk memberikan kelezatan alami susu yang kaya akan kalsium, protein, dan vitamin penting bagi tubuh. Cocok dinikmati kapan saja, baik pagi untuk memulai hari, setelah berolahraga untuk pemulihan energi, atau di malam hari untuk mendukung tidur yang nyenyak. Dengan berbagai varian, dari susu murni, rendah lemak, hingga susu nabati, penyajian milk dapat disesuaikan dengan kebutuhan dan gaya hidup Anda. Segelas milk bukan hanya sekadar minuman, tetapi pilihan sehat yang dapat diandalkan untuk menjaga kesehatan tulang, meningkatkan energi, dan mendukung kesejahteraan Anda setiap hari.</p>
       </div>
       <div>
         <img src="/aktifitas/ultramilk.jpg.png" alt="Susu dan Croissant" />

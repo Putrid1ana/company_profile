@@ -358,24 +358,24 @@
   <nav class="navbar">
     <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-        <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
-        <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
-        <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
-        <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
-        <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
-        <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
-        <li>
-            <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
-                <option value="" hidden>Bahasa</option>
-                <option value="id">Indonesia</option>
-                <option value="en">English</option>
-            </select>
-        </li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
+      <li>
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+          <option value="" hidden>Bahasa</option>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
+      </li>
     </ul>
     <div class="hamburger">
-        <i class="fas fa-bars"></i>
+      <i class="fas fa-bars"></i>
     </div>
-</nav>
+  </nav>
 
   <!-- Script to toggle dropdown menu -->
   <script>
@@ -413,17 +413,17 @@
 
     <!-- Kotak Artikel -->
     <?php foreach ($artikels as $artikel): ?>
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>" />
-            <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
-            <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br /><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
+      <div class="artikel-box">
+        <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
+          <div class="artikel-content">
+            <div class="artikel-inner">
+              <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>" />
+              <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
+              <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br /><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
     <?php endforeach; ?>
 
     <!-- <div class="artikel-box">

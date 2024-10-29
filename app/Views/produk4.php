@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ultramilk</title>
 
-   <!-- Meta Tags -->
-   <meta name="title" content="Ultramilk">
-   <meta name="description" content="Ultramilk menghadirkan susu segar berkualitas tinggi dengan rasa lezat dan penuh gizi. Pilihan terbaik untuk kebutuhan nutrisi harian Anda dan keluarga.">
+  <!-- Meta Tags -->
+  <meta name="title" content="Ultramilk">
+  <meta name="description" content="Ultramilk menghadirkan susu segar berkualitas tinggi dengan rasa lezat dan penuh gizi. Pilihan terbaik untuk kebutuhan nutrisi harian Anda dan keluarga.">
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
@@ -226,7 +226,7 @@
 
       .hamburger {
         display: block;
-        
+
       }
 
       /* Banner */
@@ -274,7 +274,6 @@
         /* Further reduce font size for copyright */
       }
     }
-
   </style>
 </head>
 
@@ -282,16 +281,16 @@
 
   <!-- Navbar Section -->
   <nav class="navbar">
-    <div class="logo">Healthy Milk</div>
+    <div class="logo" id="logo">Healthy Milk</div>
     <ul class="nav-links">
-      <li><a href="/">Beranda</a></li>
-      <li><a href="/tentang">Tentang</a></li>
-      <li><a href="/artikel">Artikel</a></li>
-      <li><a href="/produk">Produk</a></li>
-      <li><a href="/aktivitas">Aktivitas</a></li>
-      <li><a href="/kontak">Kontak</a></li>
+      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
+      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
+      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
+      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
+      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
+      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
       <li>
-        <select style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
+        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
           <option value="" hidden>Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
