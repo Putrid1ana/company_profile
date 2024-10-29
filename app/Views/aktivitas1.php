@@ -335,7 +335,7 @@
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Penyajian Milk: Kesegaran dan Kesehatan dalam Satu Gelas</h1>
+      <h1>Penyajian-Milk</h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 

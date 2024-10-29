@@ -335,7 +335,7 @@
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Peternakan Sapi</h1>
+      <h1>Peternakan-Sapi</h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 
@@ -346,7 +346,7 @@
           sehingga produk yang dihasilkan aman, bernutrisi, dan berkualitas tinggi untuk konsumsi masyarakat.</p>
       </div>
       <div>
-        <img src="/aktifitas/ultramilk.jpg.png" alt="Susu dan Croissant" />
+        <img src="/aktifitas/aktivitas2.jpg.png" alt="Susu dan Croissant" />
       </div>
     </div>
   </div>

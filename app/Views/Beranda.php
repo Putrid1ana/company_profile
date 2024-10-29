@@ -734,9 +734,6 @@
         <i class="fas fa-check-double inner-circle"></i>
       </div>
       <div class="title">Local Farmer</div>
-      <div class="description">
-        Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
-      </div>
     </div>
 
     <!-- news 2 -->
@@ -745,9 +742,6 @@
         <i class="fas fa-check-double inner-circle"></i>
       </div>
       <div class="title">Dairy Product</div>
-      <div class="description">
-        Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
-      </div>
     </div>
 
     <!-- news 3 -->
@@ -756,9 +750,6 @@
         <i class="fas fa-check-double inner-circle"></i>
       </div>
       <div class="title">Tour Destination</div>
-      <div class="description">
-        Tortor arcu rutrum maecenas viverra<br />tincidunt justo. Tempor dictumst mi augue<br />rutrum sagittis dis habitant condimentum.
-      </div>
     </div>
   </div>
 

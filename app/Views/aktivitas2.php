@@ -335,7 +335,7 @@
     <!-- Section Title -->
     <div class="section-title">
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
-      <h1>Pemindahan Milk </h1>
+      <h1>Pemindahan-Milk </h1>
       <div style="width: 50px; height: 2px; background: #1F9CF7;"></div>
     </div>
 
@@ -347,7 +347,7 @@
           sehingga setiap tegukan yang Anda minum tetap berkualitas tinggi dan sehat.</p>
       </div>
       <div>
-        <img src="/aktifitas/ultramilk.jpg.png" alt="Susu dan Croissant" />
+        <img src="/aktifitas/aktivitas.jpg.png" alt="Susu dan Croissant" />
       </div>
     </div>
   </div>
