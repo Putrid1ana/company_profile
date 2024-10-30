@@ -12,71 +12,12 @@
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
+  <link rel="stylesheet" href="navbar.css">
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #FFFF;
-      padding: 15px 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .logo {
-      font-size: 30px;
-      font-family: Roboto;
-      font-weight: 700;
-      color: black;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: black;
-      font-size: 16px;
-      font-family: Poppins;
-    }
-
-    .nav-links a:hover {
-      color: #ddd;
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      font-size: 24px;
-      z-index: 1000;
-      color: black;
-      position: absolute;
-      right: 50px;
-      top: 15px;
-      padding: 0;
-    }
-
-    .hamburger i {
-      font-size: 24px;
-      color: black;
-      z-index: 1000;
-    }
 
     /* Banner Section */
     .banner {
@@ -267,28 +208,7 @@
 <body style="margin: 0px;">
 
   <!-- Navbar Section -->
-  <nav class="navbar">
-    <div class="logo" id="logo">Healthy Milk</div>
-    <ul class="nav-links">
-      <li><a href="/" class="nav-item" data-id="home">Beranda</a></li>
-      <li><a href="/tentang" class="nav-item" data-id="about">Tentang</a></li>
-      <li><a href="/artikel" class="nav-item" data-id="articles">Artikel</a></li>
-      <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
-      <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
-      <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
-      <li>
-        <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
-          <option value="" hidden>Bahasa</option>
-          <option value="id">Indonesia</option>
-          <option value="en">English</option>
-        </select>
-      </li>
-    </ul>
-    <div class="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
-
+  <?php include 'Partials/navbar-new.php'; ?>
   <!-- Script to toggle dropdown menu -->
   <script>
     const hamburger = document.querySelector('.hamburger');
