@@ -12,8 +12,8 @@
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
-  <link rel="stylesheet" href="navbar.css">
-
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -93,45 +93,6 @@
       max-width: 350px;
     }
 
-    /* Footer */
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: black;
-      padding: 20px;
-      box-sizing: border-box;
-      border-top: 1px solid rgba(255, 255, 255, 0.17);
-      position: relative;
-      bottom: 0;
-      color: white;
-    }
-
-    .footer-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .footer-icons div {
-      width: 32px;
-      height: 32px;
-      background: rgba(255, 255, 255, 0.17);
-      border-radius: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .footer-icons a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20px;
-      height: 20px;
-      color: white;
-      text-decoration: none;
-    }
-
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
 
@@ -182,25 +143,6 @@
         max-width: 100%;
       }
 
-      /* Footer */
-      .footer {
-        padding: 10px;
-      }
-
-      .footer-icons div {
-        width: 24px;
-        height: 24px;
-      }
-
-      .footer-icons a {
-        width: 16px;
-        height: 16px;
-      }
-
-      .footer {
-        font-size: 12px;
-        /* Further reduce font size for copyright */
-      }
     }
   </style>
 </head>
@@ -259,66 +201,7 @@
     </div>
   </div>
 
-  <!-- <div class="activity-container">
-      <div class="activity-card">
-        <a href="<?= base_url('aktivitas/penyajian-milk') ?>" style="text-decoration: none; color: inherit;">
-          <img src="/aktifitas/ultramilk.jpg.png" alt="menuang susu" style="width: 100%; height: 220px;">
-          <div style="padding: 24px; text-align: center;">
-            <h3 style="font-size: 24px; font-weight: 700;">Penyajian Milk</h3>
-            <p style="font-size: 16px; color: #444444;">Milk, minuman kaya nutrisi, disajikan untuk memenuhi kebutuhan gizi Anda dengan rasa yang lezat dan menyehatkan. </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="activity-card">
-        <a href="<?= base_url('aktivitas/pemindahan-milk') ?>" style="text-decoration: none; color: inherit;">
-          <img src="/aktifitas/aktivitas.jpg.png" alt="susu kacang" style="width: 100%; height: 220px;">
-          <div style="padding: 24px; text-align: center;">
-            <h3 style="font-size: 24px; font-weight: 700;">Pemindahan Milk</h3>
-            <p style="font-size: 16px; color: #444444;">Proses yang cermat untuk menjaga kualitas susu dari sumber hingga siap untuk dikonsumsi.</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="activity-card">
-        <a href="<?= base_url('aktivitas/peternakan') ?>" style="text-decoration: none; color: inherit;">
-          <img src="/aktifitas/aktivitas2.jpg.png" alt="susu sapi putih" style="width: 100%; height: 220px;">
-          <div style="padding: 24px; text-align: center;">
-            <h3 style="font-size: 24px; font-weight: 700;">Peternakan</h3>
-            <p style="font-size: 16px; color: #444444;">Tempat di mana sapi-sapi dipelihara secara intensif untuk menghasilkan produk-produk pangan, seperti susu dan daging.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    </div>
-
-
-  <!-- Footer -->
-  <div class="footer">
-    <div class="footer-icons">
-      <div>
-        <a href="https://facebook.com" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://twitter.com" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://youtube.com" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://instagram.com" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-    <div>Copyright 2024 Design by Healthy Milk</div>
-  </div>
+  <?php include 'Partials/footer.php'; ?>
 
 </body>
 

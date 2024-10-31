@@ -12,72 +12,13 @@
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #FFFF;
-      padding: 15px 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .logo {
-      font-size: 30px;
-      font-family: Roboto;
-      font-weight: 700;
-      color: black;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: black;
-      font-size: 16px;
-      font-family: Poppins;
-    }
-
-    .nav-links a:hover {
-      color: #ddd;
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      font-size: 24px;
-      z-index: 1000;
-      color: black;
-      position: absolute;
-      right: 50px;
-      top: 20px;
-      padding: 0;
-    }
-
-    .hamburger i {
-      font-size: 24px;
-      color: black;
-      z-index: 1000;
-    }
-
     /* Banner Section */
     .banner {
       width: 100%;
@@ -234,80 +175,9 @@
       word-wrap: break-word;
     }
 
-    /* Footer */
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: black;
-      padding: 20px;
-      box-sizing: border-box;
-      border-top: 1px solid rgba(255, 255, 255, 0.17);
-      position: relative;
-      bottom: 0;
-      color: white;
-    }
-
-    .footer-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .footer-icons div {
-      width: 32px;
-      height: 32px;
-      background: rgba(255, 255, 255, 0.17);
-      border-radius: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .footer-icons a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20px;
-      height: 20px;
-      color: white;
-      text-decoration: none;
-    }
 
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
-
-      .logo {
-        font-size: 20px;
-      }
-
-      /* Navbar */
-      .nav-links {
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: #FFFF;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 350px;
-        clip-path: circle(0px at 100% 0%);
-        transition: clip-path 0.5s ease-in-out;
-        padding-top: 50px;
-        z-index: 1000;
-      }
-
-      .nav-links.open {
-        clip-path: circle(100% at 50% 50%);
-      }
-
-      .nav-links li {
-        margin: 10px 0;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
       /* Banner */
       .banner-title {
         font-size: 24px;
@@ -334,25 +204,6 @@
         /* Membuat tiga kolom di layar kecil */
       }
 
-      /* Footer */
-      .footer {
-        padding: 10px;
-      }
-
-      .footer-icons div {
-        width: 24px;
-        height: 24px;
-      }
-
-      .footer-icons a {
-        width: 16px;
-        height: 16px;
-      }
-
-      .footer {
-        font-size: 12px;
-        /* Further reduce font size for copyright */
-      }
     }
   </style>
 </head>
@@ -431,70 +282,9 @@
       </div>
     <?php endforeach; ?>
 
-    <!-- <div class="artikel-box">
-      <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
-            <div class="artikel-title">Susu Minuman Sehat Kaya Manfaat dan Berkah</div>
-            <div class="artikel-description">Apabila kita kaitkan dengan ilmu gizi saat ini istilah tersebut sangat sesuai....<br />24 Juni 2024</div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-            <div class="artikel-title">Inilah Manfaat Susu Murni Beserta Efeknya</div>
-            <div class="artikel-description">Manfaat susu murni dapat diperoleh karena susu ini mengandung nutrisi.....<br /> 31 Desember 2022</div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="artikel-box">
-      <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>">
-        <div class="artikel-content">
-          <div class="artikel-inner">
-            <img class="artikel-image" alt="meminum susu" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-            <div class="artikel-title">Potensi Olahan Susu Sapi sebagai Bahan Pangan</div>
-            <div class="artikel-description">Susu sapi dan produk susu merupakan bahan makanan yang sangat bermanfaat...<br />8 Agustus 2023</div>
-          </div>
-        </div>
-      </a>
-    </div> -->
-
   </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <div class="footer-icons">
-      <div>
-        <a href="https://facebook.com" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://twitter.com" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://youtube.com" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://instagram.com" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-    <div>Copyright 2024 Design by Healthy Milk</div>
-  </div>
+  <?php include 'Partials/footer.php'; ?>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 

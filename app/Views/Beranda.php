@@ -13,6 +13,8 @@
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="<?= current_url() ?>">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
 
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -112,77 +114,6 @@
       font-family: Roboto;
       font-weight: 700;
       line-height: 24px;
-    }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #FFFF;
-      padding: 15px 20px;
-      position: fixed;
-      /* Menjadikan navbar tetap */
-      top: 0;
-      /* Tetap di bagian atas halaman */
-      left: 0;
-      width: 100%;
-      /* Memastikan navbar mengambil seluruh lebar layar */
-      z-index: 100;
-      /* Pastikan navbar berada di atas elemen lainnya */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Memberikan bayangan untuk efek lebih jelas */
-    }
-
-    .logo {
-      font-size: 30px;
-      font-family: Roboto;
-      font-weight: 700;
-      color: black;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: black;
-      font-size: 16px;
-      font-family: Poppins;
-    }
-
-    .nav-links a:hover {
-      color: #ddd;
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      font-size: 24px;
-      z-index: 1000;
-      color: black;
-      position: absolute;
-      /* Pastikan posisinya ditetapkan secara absolut */
-      right: 50px;
-      /* Geser ke kanan */
-      top: 20px;
-      /* Geser ke bawah agar tidak terlalu ke atas */
-      padding: -20px;
-      /* Tambahkan padding agar lebih mudah di-klik */
-    }
-
-    .hamburger i {
-      font-size: 24px;
-      color: black;
-      z-index: 1000;
-      /* Pastikan ikon berada di depan elemen lainnya */
     }
 
     /* Banner Section */
@@ -308,25 +239,34 @@
 
     /* artikel */
     .artikel-container {
-  width: 100%;
-  height: auto;
-  padding: 40px 0;
-  background: white;
-  display: flex;
-  flex-direction: row; /* Mengubah dari column ke row */
-  align-items: flex-start; /* Menyelaraskan item di bagian atas */
-  flex-wrap: wrap; /* Memungkinkan item berpindah ke baris berikutnya */
-  gap: 16px; /* Ruang antara item */
-  justify-content: center; /* Menyelaraskan item di tengah */
-}
+      width: 100%;
+      height: auto;
+      padding: 40px 0;
+      background: white;
+      display: flex;
+      flex-direction: row;
+      /* Mengubah dari column ke row */
+      align-items: flex-start;
+      /* Menyelaraskan item di bagian atas */
+      flex-wrap: wrap;
+      /* Memungkinkan item berpindah ke baris berikutnya */
+      gap: 16px;
+      /* Ruang antara item */
+      justify-content: center;
+      /* Menyelaraskan item di tengah */
+    }
 
     /* Heading */
     .heading-container {
-      width: 100%; /* Pastikan kontainer mengambil lebar penuh */
-  display: flex; /* Menggunakan flexbox untuk tata letak */
-  justify-content: center; /* Menyelaraskan konten di tengah */
-  margin-top: 20px; /* Jarak atas jika diperlukan */
-}
+      width: 100%;
+      /* Pastikan kontainer mengambil lebar penuh */
+      display: flex;
+      /* Menggunakan flexbox untuk tata letak */
+      justify-content: center;
+      /* Menyelaraskan konten di tengah */
+      margin-top: 20px;
+      /* Jarak atas jika diperlukan */
+    }
 
     .heading {
       display: flex;
@@ -359,8 +299,10 @@
       flex: 1 1 calc(25% - 16px);
       /* Menjadi empat kolom */
       margin: 8px;
-      flex: 1 1 calc(25% - 16px); /* Atau sesuaikan lebar sesuai kebutuhan */
-      max-width: 270px; /* Pastikan batas maksimum untuk kartu */
+      flex: 1 1 calc(25% - 16px);
+      /* Atau sesuaikan lebar sesuai kebutuhan */
+      max-width: 270px;
+      /* Pastikan batas maksimum untuk kartu */
     }
 
     .artikel-box a {
@@ -439,79 +381,8 @@
       max-width: 350px;
     }
 
-    /* Footer */
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: black;
-      padding: 20px;
-      box-sizing: border-box;
-      border-top: 1px solid rgba(255, 255, 255, 0.17);
-      position: relative;
-      bottom: 0;
-      color: white;
-    }
-
-    .footer-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .footer-icons div {
-      width: 32px;
-      height: 32px;
-      background: rgba(255, 255, 255, 0.17);
-      border-radius: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .footer-icons a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20px;
-      height: 20px;
-      color: white;
-      text-decoration: none;
-    }
-
     /* Responsive Design for Mobile */
     @media (max-width: 768px) {
-
-      .logo {
-        font-size: 20px;
-      }
-
-      /* Navbar */
-      .nav-links {
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: #FFFF;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 350px;
-        clip-path: circle(0px at 100% 0%);
-        transition: clip-path 0.5s ease-in-out;
-        padding-top: 50px;
-        z-index: 1000;
-      }
-
-      .nav-links.open {
-        clip-path: circle(100% at 50% 50%);
-      }
-
-      .nav-links li {
-        margin: 10px 0;
-      }
-
-      .hamburger {
-        display: block;
-      }
 
       /* Banner */
       .banner div div {
@@ -651,26 +522,6 @@
       .footer-container>div {
         text-align: center;
         /* Pusatkan teks dalam kolom */
-      }
-
-      /* Footer */
-      .footer {
-        padding: 10px;
-      }
-
-      .footer-icons div {
-        width: 24px;
-        height: 24px;
-      }
-
-      .footer-icons a {
-        width: 16px;
-        height: 16px;
-      }
-
-      .footer {
-        font-size: 12px;
-        /* Further reduce font size for copyright */
       }
     }
   </style>
@@ -814,22 +665,29 @@
     <!-- Container with horizontal scroll -->
     <div class="card-container" style="display: flex; overflow-x: auto; padding: 0 30px; gap: 10px;">
       <!-- Card 1 -->
+      <?php foreach ($products as $produk): ?>
       <div class="card">
         <div class="card-icon-container">
           <div class="card-icon"></div>
         </div>
         <div class="card-content">
-          <span class="content-card">Minuman Greenfields adalah produk susu dan turunan susu yang diproduksi oleh PT Greenfields Indonesia.<br /></span>
-          <span>• Susu segar Greenfields <br />• Yogurt Greenfields</span>
+      <?php
+      $deskripsi_produk = $produk['deskripsi_produk_in'];
+      $kata = explode(' ', $deskripsi_produk);
+      $kata_terbatas = array_slice($kata, 0, 15);
+      $deskripsi_terbatas = implode(' ', $kata_terbatas);
+      ?>
+      <span class="content-card"><?= trim($deskripsi_terbatas) . (count($kata) > 5 ? '...' : ''); ?></span>
         </div>
         <div class="card-footer">
-          <img alt="susu Greenfields" src="<?= base_url('galeri/galeri.jpg.png') ?>" />
-          <div>Greenfields</div>
+          <img alt="susu Greenfields" src="/product/<?= esc($produk['foto_produk']) ?>" alt="susu greenfields" />
+          <div><?= $produk['nama_produk_in'] ?></div>
         </div>
       </div>
+      <?php endforeach; ?>
 
       <!-- Card 2 -->
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-icon-container">
           <div class="card-icon"></div>
         </div>
@@ -838,13 +696,13 @@
           <span>• Ichitan Brown Sugar Milk <br />• Ichitan Thai Milk Green Tea</span>
         </div>
         <div class="card-footer">
-          <img alt="susu Ichitan" src="<?= base_url('galeri/galeri1.jpg.png') ?>" />
+          <img alt="susu Ichitan" src="<?= base_url('product/icithan.jpg.png') ?>" />
           <div>Ichitan</div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Card 3 -->
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-icon-container">
           <div class="card-icon"></div>
         </div>
@@ -852,13 +710,13 @@
           <span class="content-card">Silk Nextmilk adalah susu nabati yang terbuat dari campuran gandum, kelapa, dan kedelai. Silk Milk hadir dalam berbagai rasa dan varian, mulai dari rasa plain, vanilla, hingga cokelat, dan sering digunakan dalam berbagai resep.<br /></span>
         </div>
         <div class="card-footer">
-          <img alt="susu Silk" src="<?= base_url('galeri/galeri2.jpg.png') ?>" />
+          <img alt="susu Silk" src="<?= base_url('product/silk.jpg.png') ?>" />
           <div>Silk Milk</div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Card 4 -->
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-icon-container">
           <div class="card-icon"></div>
         </div>
@@ -866,10 +724,10 @@
           <span class="content-card">Ultra Milk merupakan susu segar alami yang diproses dengan teknologi Ultra High Temperature (UHT). Susu Ultra Milk mengandung berbagai nutrisi, seperti protein, karbohidrat, vitamin, dan mineral seperti kalsium, magnesium, dan fosfor.<br /></span>
         </div>
         <div class="card-footer">
-          <img alt="susu Ultra" src="<?= base_url('galeri/galeri3.jpg.png') ?>" />
+          <img alt="susu Ultra" src="<?= base_url('product/ultramilk1.jpg.png') ?>" />
           <div>Ultra Milk</div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -947,32 +805,7 @@
     <div style="width: 100%; height: 100px; background: url('wave.png') no-repeat center center; background-size: cover; margin-top: 20px;"></div>
   </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <div class="footer-icons">
-      <div>
-        <a href="https://facebook.com" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://twitter.com" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://youtube.com" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-      <div>
-        <a href="https://instagram.com" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-    <div>Copyright 2024 Design by Healthy Milk</div>
-  </div>
+  <?php include 'Partials/footer.php'; ?>
 
 </body>
 
