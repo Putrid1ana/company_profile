@@ -14,6 +14,7 @@
   <link rel="canonical" href="<?= current_url() ?>">
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/footer.css">
+  
   <!-- Link untuk FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -151,6 +152,7 @@
 
   <!-- Navbar Section -->
   <?php include 'Partials/navbar-new.php'; ?>
+
   <!-- Script to toggle dropdown menu -->
   <script>
     const hamburger = document.querySelector('.hamburger');

@@ -8,13 +8,13 @@
     <li><a href="/produk" class="nav-item" data-id="products">Produk</a></li>
     <li><a href="/aktivitas" class="nav-item" data-id="activities">Aktivitas</a></li>
     <li><a href="/kontak" class="nav-item" data-id="contact">Kontak</a></li>
-    <li>
+    <!-- <li>
       <select id="language-select" style="padding: 5px; font-family: Inika; font-size: 16px; margin-right: 28px;">
         <option value="" hidden>Bahasa</option>
         <option value="id">Indonesia</option>
         <option value="en">English</option>
       </select>
-    </li>
+    </li> -->
   </ul>
   <div class="hamburger">
     <i class="fas fa-bars"></i>
