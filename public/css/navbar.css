@@ -20,12 +20,14 @@
       font-family: Roboto;
       font-weight: 700;
       color: black;
+      padding: 10px;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
       align-items: center;
+      padding: 10px;
     }
 
     .nav-links li {
@@ -50,7 +52,7 @@
       z-index: 1000;
       color: black;
       position: absolute;
-      right: 50px;
+      right: 20px;
       top: 20px;
       padding: 0;
     }
