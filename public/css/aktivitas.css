@@ -1,0 +1,126 @@
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: auto;
+    background: #0E1A18;
+    position: relative;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 26, 24, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-title {
+    color: white;
+    font-size: 48px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /* Section Title */
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .section-title h1 {
+    color: #384F4B;
+    font-size: 32px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    margin: 0 15px;
+  }
+
+ /* aktivitas */
+ .activity-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activity-card {
+  width: 350px;
+  margin: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+  border-radius: 6px;
+  background: white;
+  position: relative;
+}
+
+.activity-container {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.activity-card {
+  width: calc(100% - 24px);
+  max-width: 350px;
+}
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+
+    .logo {
+      font-size: 20px;
+    }
+
+    /* Navbar */
+    .nav-links {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #FFFF;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 350px;
+      clip-path: circle(0px at 100% 0%);
+      transition: clip-path 0.5s ease-in-out;
+      padding-top: 50px;
+      z-index: 1000;
+    }
+
+    .nav-links.open {
+      clip-path: circle(100% at 50% 50%);
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .hamburger {
+      display: block;
+
+    }
+
+    /* Banner */
+    .banner-title {
+      font-size: 24px;
+    }
+
+    .activity-container {
+      flex-direction: column;
+    }
+
+    .activity-card {
+      width: calc(100% - 24px);
+      max-width: 100%;
+    }
+
+  }

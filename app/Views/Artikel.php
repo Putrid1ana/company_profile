@@ -23,7 +23,8 @@
 
   <?php foreach ($artikels as $artikel): ?>
     <div class="artikel-box">
-      <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
+    <a href="<?= base_url('artikel/' . esc($artikel['slug'])) ?>">
+
         <div class="artikel-content">
           <div class="artikel-inner">
             <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>">

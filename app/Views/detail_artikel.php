@@ -163,25 +163,35 @@
   <div style="display: flex; justify-content: space-between; width: 90%; padding: 20px; background: white;">
     <!-- Artikel Utama -->
     <div style="flex: 2; padding-right: 20px;">
-      <img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" alt="susu sapi import" src="/articel/artikel11.jpg" />
+     <!-- Gambar Artikel Utama -->
+<img style="width: 100%; height: auto; border: 5px #A6D4FF solid;" 
+     alt="<?= esc($artikel['judul_artikel']) ?>" 
+     src="<?= base_url('articel/' . esc($artikel['foto_artikel'])) ?>" />
+
       <div style="padding: 20px; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 5px #A6D4FF solid; margin-top: 20px;">
-        <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
-          24 Agustus 2024
-        </div>
-        <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
-          Mengapa Minum Susu Penting Untuk Kesehatan
-        </div>
-        <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
-          <br> Mayoritas orang pasti suka minum susu. Bahkan hingga muncul istilah ‘jangan lupa nyusu’ seringkali terdengar. Selain rasanya yang enak, susu juga mengandung ragam nutrisi penting yang dapat menjaga organ tubuh senantiasa berfungsi dengan baik serta melindungi tubuh dari berbagai penyakit.
-          Susu juga dapat dijadikan salah satu cara untuk memperoleh hidup sehat. Mengonsumsi susu secara rutin mampu menjaga asupan nutrisi harian tetap terjaga. Secara umum, manfaat susu bagi usia dewasa adalah mencegah terserang berbagai penyakit, seperti penyakit kardiovaskular dan osteoporosis. Sementara untuk anak-anak, mengonsumsi susu dapat membantu tumbuh kembangnya.
-          Tubuh memerlukan ragam nutrisi guna menjaga organ-organ pada tubuh berfungsi dengan baik serta melindungi dari berbagai zat atau kuman penyebab penyakit.</br>
+      <div style="color: black; font-size: 14px; font-family: Inika; font-weight: 400;">
+    <?= date('d F Y', strtotime($artikel['created_at'])) ?>
+    </div>
+    <div style="color: black; font-size: 32px; font-family: Roboto; font-weight: 700; margin-top: 10px;">
+        <?= esc($artikel['judul_artikel']) ?>
+    </div>
+    <div style="color: black; font-size: 16px; font-family: Times New Roman; font-weight: 400; margin-top: 20px; line-height: 1.6;">
+    <?php 
+    // Memecah deskripsi menjadi array paragraf berdasarkan baris baru
+    $paragraf = explode("\n", $artikel['deskripsi_artikel']); 
+    foreach ($paragraf as $p): 
+        if (trim($p)): // Memastikan tidak ada paragraf kosong
+    ?>
+        <p style="text-indent: 2em; margin-top: 10px;">
+            <?= esc($p) ?>
+        </p>
+    <?php 
+        endif;
+    endforeach; 
+    ?>
+</div>
 
-          <br> Tak hanya itu, susu kerap dijadikan ‘taktik’ oleh para orang tua agar buah hatinya dapat selalu dapat mengonsumsi makanan sehat. Karena tidak jarang anak-anak begitu sulit untuk makan dan kerap ‘pilih-pilih’ terhadap makanan (picky eater).
-          Selain itu, susu juga dapat dijadikan sebagai bahan dasar untuk diolah menjadi ragam hidangan yang menarik, seperti smoothies, campuran jus atau pudding.
-          Susu merupakan sumber nutrisi yang baik, jadi sudah sepatutnya untuk dikonsumsi secara rutin sebagai salah satu cara menerapkan gaya hidup sehat. Jangan lupa untuk memperhatikan kandungan gizi dan kalori yang tertera pada kemasan ketika membeli susu. Juga jangan lupa untuk memperhatikan frekuensi minum susu pada anak. Konsumsi susu yang disarankan untuk anak adalah 2 kali sehari.
-          Untuk para orang tua, tidak perlu ragu untuk berkonsultasi dengan dokter guna menentukan jenis susu apa yang cocok serta jumlah konsumsi susu yang tepat untuk buah hati berdasarkan kebutuhan dan kondisi kesehatannya. Download aplikasi IHC Telemed di App Store dan Google Play dan nikmati layanan konsultasi langsung dengan dokter IHC dimanapun dan kapanpun. IHC Telemed, sehat dalam genggaman. </br>
 
-        </div>
       </div>
     </div>
 
@@ -192,41 +202,26 @@
           Baca Juga
         </div>
         <!-- Artikel 1 -->
-        <a href="<?= base_url('artikel/susu-minuman-sehat-kaya-manfaat-dan-berkah-namun-kurang-peminat') ?>" style="text-decoration: none; color: inherit;">
+        <?php foreach ($referensiLainnya as $ref): ?>
+          <a href="<?= base_url('artikel/' . $ref['slug']) ?>" style="text-decoration: none; color: inherit;">
           <div style="display: flex; gap: 15px; margin-top: 20px;">
-            <img style="width: 147px; height: auto;" alt="susu banyak manfaat" src="<?= base_url('articel/artikel2.jpg.png') ?>" />
+          <img style="width: 147px; height: auto;" 
+                 alt="<?= esc($ref['judul_artikel']) ?>" 
+                 src="<?= base_url('articel/' . esc($ref['foto_artikel'])) ?>" />
             <div>
-              <div style="font-size: 14px; color: black; margin-bottom: 8px;">24 Juni 2024</div>
-              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">SUSU MINUMAN SEHAT KAYA MANFAAT DAN BERKAH NAMUN KURANG PEMINAT....</div>
+            <div style="font-size: 14px; color: black; margin-bottom: 8px;">
+                    <?= date('d F Y', strtotime($ref['created_at'])) ?>
+                </div>
+                <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">
+                    <?= esc($ref['judul_artikel']) ?>
+                </div>
             </div>
           </div>
         </a>
+     
 
         <hr style="border: 1px solid #A6D4FF;">
-
-        <!-- Artikel 2 -->
-        <a href="<?= base_url('artikel/inilah-manfaat-susu-murni-beserta-efek-sampingnya') ?>" style="text-decoration: none; color: inherit;">
-          <div style="display: flex; gap: 15px; margin-top: 20px;">
-            <img style="width: 147px; height: auto;" alt="susu murni dari sapi" src="<?= base_url('articel/artikel3.jpg.png') ?>" />
-            <div>
-              <div style="font-size: 14px; color: black; margin-bottom: 8px;">31 Desember 2022</div>
-              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Inilah Manfaat Susu Murni Beserta Efek Sampingnya...</div>
-            </div>
-          </div>
-        </a>
-
-        <hr style="border: 1px solid #A6D4FF;">
-
-        <!-- Artikel 3 -->
-        <a href="<?= base_url('artikel/potensi-olahan-susu-sapi-perah-sebagai-bahan-pangan') ?>" style="text-decoration: none; color: inherit;">
-          <div style="display: flex; gap: 15px; margin-top: 20px;">
-            <img style="width: 147px; height: auto;" alt="susu untuk bahan pangan" src="<?= base_url('articel/artikel4.jpg.png') ?>" />
-            <div>
-              <div style="font-size: 14px; color: black; margin-bottom: 8px;">08 Agustus 2023</div>
-              <div style="font-size: 16px; color: blue; font-family: Inika; font-weight: 400;">Potensi Olahan Susu Sapi Perah sebagai Bahan Pangan....</div>
-            </div>
-          </div>
-        </a>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>

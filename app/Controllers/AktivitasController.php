@@ -26,6 +26,23 @@ class AktivitasController extends BaseController
         $data['aktivitas'] = $aktivitasModel->find($id); // Mengambil data aktivitas berdasarkan ID
         return view('aktivitas', $data);
     }
+
+    public function detail($slug)
+    {
+        // Membuat instance model aktivitas
+        $aktivitasModel = new AktivitasModel();
+        
+        // Mengambil detail aktivitas berdasarkan slug
+        $aktivitas = $aktivitasModel->where('slug', $slug)->first();
+
+        // Jika aktivitas tidak ditemukan, tampilkan error
+        if (!$aktivitas) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Aktivitas tidak ditemukan.");
+        }
+
+        // Menyimpan data aktivitas ke dalam view
+        return view('detail_aktivitas', ['aktivitas' => $aktivitas]);
+    }
 }
 
 

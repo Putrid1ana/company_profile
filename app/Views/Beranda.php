@@ -26,16 +26,12 @@
       display: flex;
       overflow-x: scroll;
       white-space: nowrap;
-      /* Keep cards on a single row */
       -ms-overflow-style: none;
-      /* Hide scrollbar on IE and Edge */
       scrollbar-width: none;
-      /* Hide scrollbar on Firefox */
     }
 
     .card-container::-webkit-scrollbar {
       display: none;
-      /* Hide scrollbar on Chrome, Safari and Opera */
     }
 
     /* Card styling */
@@ -48,7 +44,6 @@
       flex-direction: column;
       padding: 18px;
       margin-right: 16px;
-      /* Space between cards */
     }
 
     .card-icon-container {
@@ -75,21 +70,16 @@
       font-family: Roboto;
       font-weight: 400;
       line-height: 30px;
-      /* Better line height */
       overflow-wrap: break-word;
-      /* Break long words */
       word-wrap: break-word;
     }
 
-    /* Ensure long text stays inside */
     .card-content span {
       display: block;
       width: 100%;
-      /* Ensure span takes full width */
       word-wrap: break-word;
       overflow-wrap: break-word;
       white-space: normal;
-      /* Ensure text wraps to new lines */
     }
 
 
@@ -119,34 +109,52 @@
     /* Banner Section */
     .banner {
       width: 100%;
-      height: auto;
-      background: #0E1A18;
-      position: relative;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-    }
-
-    .banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(14, 26, 24, 0.50);
+      height: 100vh;
+      background-image: url('/profile.jpg');
+      background-size: cover;
+      background-position: center;
       display: flex;
+      align-items: center;
       justify-content: center;
+    }
+
+    .banner-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
 
-    .banner-title {
-      color: white;
-      font-size: 48px;
-      font-family: Inter, sans-serif;
-      font-weight: 700;
+    .banner-overlay {
+      background: rgba(42, 43, 63, 0.75);
+      padding: 40px;
       text-align: center;
+      color: white;
+      max-width: 800px;
+    }
+
+    .banner h1 {
+      font-size: 4vw;
+      font-family: Roboto;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .banner p {
+      font-size: 1.5vw;
+      font-family: Poppins;
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    .banner a {
+      padding: 10px 34px;
+      background: #0D6EFD;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-family: Nunito;
+      font-weight: 700;
     }
 
     /* Section Title */
@@ -173,10 +181,8 @@
       max-width: 1440px;
       margin: 0 auto;
       height: auto;
-      /* Change height to auto for flexibility */
       align-items: flex-start;
       flex-wrap: wrap;
-      /* Allow items to wrap to next line */
     }
 
     .news-item {
@@ -191,7 +197,6 @@
       justify-content: center;
       position: relative;
       transition: all 0.3s;
-      /* Add transition for hover effects */
     }
 
     .news-blue {
@@ -210,12 +215,9 @@
 
     .inner-circle {
       width: 35px;
-      /* Use a standard width for the inner circles */
       height: 35px;
-      color: black;
-      /* Set color untuk ikon centang */
+      color: white;
       font-size: 36px;
-      /* Atur ukuran ikon */
     }
 
     .title {
@@ -245,27 +247,18 @@
       background: white;
       display: flex;
       flex-direction: row;
-      /* Mengubah dari column ke row */
       align-items: flex-start;
-      /* Menyelaraskan item di bagian atas */
       flex-wrap: wrap;
-      /* Memungkinkan item berpindah ke baris berikutnya */
       gap: 16px;
-      /* Ruang antara item */
       justify-content: center;
-      /* Menyelaraskan item di tengah */
     }
 
     /* Heading */
     .heading-container {
       width: 100%;
-      /* Pastikan kontainer mengambil lebar penuh */
       display: flex;
-      /* Menggunakan flexbox untuk tata letak */
       justify-content: center;
-      /* Menyelaraskan konten di tengah */
       margin-top: 20px;
-      /* Jarak atas jika diperlukan */
     }
 
     .heading {
@@ -297,12 +290,9 @@
       justify-content: center;
       align-items: flex-start;
       flex: 1 1 calc(25% - 16px);
-      /* Menjadi empat kolom */
       margin: 8px;
       flex: 1 1 calc(25% - 16px);
-      /* Atau sesuaikan lebar sesuai kebutuhan */
       max-width: 270px;
-      /* Pastikan batas maksimum untuk kartu */
     }
 
     .artikel-box a {
@@ -385,50 +375,37 @@
     @media (max-width: 768px) {
 
       /* Banner */
-      .banner div div {
-        padding: 20px;
-      }
-
       .banner h1 {
         font-size: 8vw;
-        /* Memperbesar ukuran font agar proporsional di mobile */
       }
 
       .banner p {
         font-size: 3.5vw;
-        /* Memperbesar ukuran font deskripsi di mobile */
         margin: 15px 0;
       }
 
       .banner a {
         padding: 8px 24px;
-        /* Menyesuaikan padding tombol agar pas di layar kecil */
       }
 
       /* news */
       .news-item {
         width: calc(100% - 20px);
-        /* Full width minus gap */
         height: auto;
-        /* Allow height to adjust */
         margin-bottom: 20px;
-        /* Add spacing between items */
       }
 
       .icon-circle {
         width: 50px;
-        /* Smaller icons for smaller screens */
         height: 50px;
       }
 
       .title {
         font-size: 18px;
-        /* Slightly smaller font for titles */
       }
 
       .description {
         font-size: 14px;
-        /* Smaller font for descriptions */
       }
 
       /* icon */
@@ -439,12 +416,10 @@
 
       div[style*="font-size: 48px;"] {
         font-size: 24px;
-        /* Ukuran font lebih kecil di layar mobile */
       }
 
       div[style*="margin-right: 20px;"] {
         margin-right: 10px;
-        /* Kurangi jarak margin untuk ikon */
       }
 
       /* Article Cards */
@@ -460,27 +435,21 @@
 
       .article-card div {
         font-size: 12px;
-        /* Sesuaikan ukuran font agar lebih pas di layar kecil */
       }
 
       .artikel-box {
         flex: 1 1 calc(33.33% - 16px);
-        /* Membuat tiga kolom di layar kecil */
       }
 
       /* galeri*/
       .card-container {
         flex-direction: column;
-        /* Change to column layout */
         align-items: center;
-        /* Center cards */
       }
 
       .card {
         width: 100%;
-        /* Full width for cards on small screens */
         margin-bottom: 20px;
-        /* Space between cards */
       }
 
       /* Aktivitas */
@@ -512,16 +481,12 @@
       /* Footer atas */
       .footer-container {
         flex-direction: column;
-        /* Susun kolom secara vertikal pada layar kecil */
         align-items: center;
-        /* Pusatkan kolom pada layar kecil */
         gap: 20px;
-        /* Beri jarak antar kolom */
       }
 
       .footer-container>div {
         text-align: center;
-        /* Pusatkan teks dalam kolom */
       }
     }
   </style>
@@ -531,7 +496,7 @@
 
   <!-- Navbar Section -->
   <?php include 'Partials/navbar-new.php'; ?>
-  
+
   <!-- Script to toggle dropdown menu -->
   <script>
     const hamburger = document.querySelector('.hamburger');
@@ -553,14 +518,15 @@
 
   <!-- Banner Section -->
   <div class="banner">
-    <div style="width: 100%; height: 100vh; background-image: url('/profile.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-      <div style="background: rgba(42, 43, 63, 0.75); padding: 40px; text-align: center; color: white; max-width: 800px;">
-        <h1 style="font-size: 4vw; font-family: Roboto; font-weight: 700; margin: 0;">Welcome To My Healthy Milk</h1>
-        <p style="font-size: 1.5vw; font-family: Poppins; font-style: italic; margin: 20px 0;">Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
-        <a href="tentang" style="padding: 10px 34px; background: #0D6EFD; border-radius: 30px; color: white; text-decoration: none; font-family: Nunito; font-weight: 700;">Baca Selengkapnya</a>
+    <div class="banner-content">
+      <div class="banner-overlay">
+        <h1>Welcome To My Healthy Milk</h1>
+        <p>Selamat datang di Healthy Milk, tempat terbaik untuk menemukan susu yang sehat dan berkualitas tinggi. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat.</p>
+        <a href="tentang">Baca Selengkapnya</a>
       </div>
     </div>
   </div>
+
 
   <!-- news -->
   <div class="news-container">
@@ -617,18 +583,19 @@
 
     <!-- Kotak Artikel -->
     <?php foreach ($artikels as $artikel): ?>
-      <div class="artikel-box">
-        <a href="<?= base_url('artikel/minum-susu-sehat-itu-penting') ?>">
-          <div class="artikel-content">
-            <div class="artikel-inner">
-              <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>" />
-              <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
-              <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br /><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
-            </div>
+    <div class="artikel-box">
+    <a href="<?= base_url('artikel/' . esc($artikel['slug'])) ?>">
+
+        <div class="artikel-content">
+          <div class="artikel-inner">
+            <img class="artikel-image" alt="meminum susu" src="/articel/<?= esc($artikel['foto_artikel']) ?>">
+            <div class="artikel-title"><?= $artikel['judul_artikel'] ?></div>
+            <div class="artikel-description"><?= substr($artikel['deskripsi_artikel'], 0, 100) ?>...<br><?= date('d F Y', strtotime($artikel['created_at'])) ?></div>
           </div>
-        </a>
-      </div>
-    <?php endforeach; ?>
+        </div>
+      </a>
+    </div>
+  <?php endforeach; ?>
   </div>
 
 
@@ -646,68 +613,26 @@
     <div class="card-container" style="display: flex; overflow-x: auto; padding: 0 30px; gap: 10px;">
       <!-- Card 1 -->
       <?php foreach ($products as $produk): ?>
-      <div class="card">
-        <div class="card-icon-container">
-          <div class="card-icon"></div>
+        <div class="card">
+          <div class="card-icon-container">
+            <div class="card-icon"></div>
+          </div>
+          <div class="card-content">
+            <?php
+            $deskripsi_produk = $produk['deskripsi_produk_in'];
+            $kata = explode(' ', $deskripsi_produk);
+            $kata_terbatas = array_slice($kata, 0, 15);
+            $deskripsi_terbatas = implode(' ', $kata_terbatas);
+            ?>
+            <span class="content-card"><?= trim($deskripsi_terbatas) . (count($kata) > 5 ? '...' : ''); ?></span>
+          </div>
+          <div class="card-footer">
+            <img alt="susu Greenfields" src="/product/<?= esc($produk['foto_produk']) ?>" alt="susu greenfields" />
+            <div><?= $produk['nama_produk_in'] ?></div>
+          </div>
         </div>
-        <div class="card-content">
-      <?php
-      $deskripsi_produk = $produk['deskripsi_produk_in'];
-      $kata = explode(' ', $deskripsi_produk);
-      $kata_terbatas = array_slice($kata, 0, 15);
-      $deskripsi_terbatas = implode(' ', $kata_terbatas);
-      ?>
-      <span class="content-card"><?= trim($deskripsi_terbatas) . (count($kata) > 5 ? '...' : ''); ?></span>
-        </div>
-        <div class="card-footer">
-          <img alt="susu Greenfields" src="/product/<?= esc($produk['foto_produk']) ?>" alt="susu greenfields" />
-          <div><?= $produk['nama_produk_in'] ?></div>
-        </div>
-      </div>
       <?php endforeach; ?>
 
-      <!-- Card 2 -->
-      <!-- <div class="card">
-        <div class="card-icon-container">
-          <div class="card-icon"></div>
-        </div>
-        <div class="card-content">
-          <span class="content-card">Minuman Ichitan adalah minuman siap saji yang diproduksi oleh PT Ichi Tan Indonesia. Ichitan menawarkan berbagai jenis minuman, seperti:<br /></span>
-          <span>• Ichitan Brown Sugar Milk <br />• Ichitan Thai Milk Green Tea</span>
-        </div>
-        <div class="card-footer">
-          <img alt="susu Ichitan" src="<?= base_url('product/icithan.jpg.png') ?>" />
-          <div>Ichitan</div>
-        </div>
-      </div> -->
-
-      <!-- Card 3 -->
-      <!-- <div class="card">
-        <div class="card-icon-container">
-          <div class="card-icon"></div>
-        </div>
-        <div class="card-content">
-          <span class="content-card">Silk Nextmilk adalah susu nabati yang terbuat dari campuran gandum, kelapa, dan kedelai. Silk Milk hadir dalam berbagai rasa dan varian, mulai dari rasa plain, vanilla, hingga cokelat, dan sering digunakan dalam berbagai resep.<br /></span>
-        </div>
-        <div class="card-footer">
-          <img alt="susu Silk" src="<?= base_url('product/silk.jpg.png') ?>" />
-          <div>Silk Milk</div>
-        </div>
-      </div> -->
-
-      <!-- Card 4 -->
-      <!-- <div class="card">
-        <div class="card-icon-container">
-          <div class="card-icon"></div>
-        </div>
-        <div class="card-content">
-          <span class="content-card">Ultra Milk merupakan susu segar alami yang diproses dengan teknologi Ultra High Temperature (UHT). Susu Ultra Milk mengandung berbagai nutrisi, seperti protein, karbohidrat, vitamin, dan mineral seperti kalsium, magnesium, dan fosfor.<br /></span>
-        </div>
-        <div class="card-footer">
-          <img alt="susu Ultra" src="<?= base_url('product/ultramilk1.jpg.png') ?>" />
-          <div>Ultra Milk</div>
-        </div>
-      </div> -->
     </div>
   </div>
 
@@ -724,7 +649,7 @@
     <div class="activity-container" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
       <?php foreach ($activities as $aktivitas): ?>
         <div class="activity-card" style="width: 235px; border-radius: 20px; overflow: hidden;">
-          <a href="<?= base_url('aktivitas/' . $aktivitas['nama_aktivitas_in']) ?>" style="text-decoration: none; color: inherit;">
+          <a href="<?= base_url('aktivitas/' . $aktivitas['slug']) ?>" style="text-decoration: none; color: inherit;">
             <img src="/aktifitas/<?= esc($aktivitas['foto_aktivitas']) ?>" alt="menuang susu" style="width: 100%; height: 220px;">
             <div style="padding: 24px; text-align: center;">
               <h3 style="font-size: 24px; font-weight: 700;"><?= esc($aktivitas['nama_aktivitas_in']); ?></h3>

@@ -21,4 +21,21 @@ class ProdukController extends BaseController
         dd($data); // Mengambil data artikel berdasarkan ID
         return view('produk', $data);
     }
+
+    public function detail($slug)
+    {
+        // Membuat instance model produk
+        $produkModel = new ProdukModel();
+        
+        // Mengambil detail produk berdasarkan slug
+        $produk = $produkModel->where('slug', $slug)->first();
+
+        // Jika produk tidak ditemukan, tampilkan error
+        if (!$produk) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Produk tidak ditemukan.");
+        }
+
+        // Menyimpan data produk ke dalam view
+        return view('detail_produk', ['produk' => $produk]);
+    }
 }

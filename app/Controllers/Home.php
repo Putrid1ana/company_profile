@@ -24,26 +24,6 @@ class Home extends BaseController
         return view('artikel');
     }
 
-    public function Artikel1(): string
-    {
-        return view('Artikel1');
-    }
-    
-    public function Artikel2(): string
-    {
-        return view('Artikel2');
-    }
-
-    public function Artikel3(): string
-    {
-        return view('Artikel3');
-    }
-
-    public function Artikel4(): string
-    {
-        return view('Artikel4');
-    }
-
     public function produk(): string
     {
         return view('produk');
